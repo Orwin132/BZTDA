@@ -293,3 +293,4 @@ D:\колледж\4 курс\Практика\Web\NardSmena\obj\Debug\net7.0\Nar
 D:\колледж\4 курс\Практика\Web\NardSmena\obj\Debug\net7.0\NardSmena.Migrations.UpdateMigration_New.resources
 D:\колледж\4 курс\Практика\Web\NardSmena\obj\Debug\net7.0\NardSmena.Migrations.UpdateSprDet.resources
 D:\колледж\4 курс\Практика\Web\NardSmena\obj\Debug\net7.0\NardSmena.csproj.Up2Date
+D:\колледж\4 курс\Практика\Web\NardSmena\obj\Debug\net7.0\NardSmena.sourcelink.json

@@ -7,6 +7,11 @@
 	header {
 		display: none !important;
 	}
+
+    .focus-ring:focus {
+        box-shadow: 0 0 0 0.2rem rgba(255, 0, 0, 0.35);
+        border-color: lightcoral;
+    }
 </style>
 
 <div class="container mt-5">
@@ -26,13 +31,17 @@
             <form asp-action="Create" method="post">
                 <div class="form-group mb-2">
                     <label for="name" class="control-label">Новая роль</label>
-                    <input id="name" name="name" class="form-control" required />
+                    <input id="name" name="name" class="form-control focus-ring" required />
                     <span oninvalid="name" class="text-danger"></span>
                 </div>
 
-                <div class="form-group">
-                    <button type="submit" class="btn btn-success"><i class="bi bi-key-fill"></i> Создать</button>
-                    <a asp-action="Index" class="btn btn-secondary"><i class="bi bi-x-circle-fill"></i> Отмена</a>
+                <div class="form-group mt-3">
+                    <div class="row">
+                        <div class="col">
+                            <button type="submit" class="btn btn-outline-success me-3"><i class="bi bi-key-fill"></i> Создать</button>
+                            <a asp-action="Index" class="btn btn-outline-danger"><i class="bi bi-x-circle-fill"></i> Отмена</a>
+                        </div>
+                    </div>
                 </div>
             </form>
         </div>

@@ -22,7 +22,7 @@
 
     <div class="row">
         <div class="col-md-12">
-            <table class="table table-bordered table-hover">
+            <table class="table table-bordered table-hover text-center">
                 <thead>
                     <tr>
                         <th>ФИО</th>
@@ -53,11 +53,17 @@
                             </td>
                             <td>@user.UserName</td>
                             <td>
-                                <div class="btn-group" role="group" aria-label="Действия">
-                                    <a class="btn btn-primary" href="@Url.Action("Edit", new { id = user.Id })"><i class="bi bi-pencil-fill"></i> Изменить</a>
-                                    <form asp-action="Delete" asp-route-id="@user.Id" method="post">
+                                <div class="container-fluid d-flex align-items-center justify-content-center" role="group" aria-label="Действия">
+                                    <div class="row">
+                                        <div class="col">
+                                            <a class="btn btn-success" href="@Url.Action("Edit", new { id = user.Id })" style="width: 120px"><i class="bi bi-pencil-fill"></i> Изменить</a>
+                                        </div>
+                                        <div class="col">
+                                            <form asp-action="Delete" asp-route-id="@user.Id" method="post">
                                         <button type="submit" class="btn  btn-danger"><i class="bi bi-archive-fill"></i> Удалить</button>
                                     </form>
+                                        </div>
+                                    </div>
                                 </div>
                             </td>
                         </tr>
@@ -69,7 +75,7 @@
 
     <div class="row mt-4">
         <div class="col-md-12">
-            <a class="btn btn-success" href="@Url.Action("Create")">Добавить нового пользователя</a>
+            <a class="btn btn-outline-danger" href="@Url.Action("Create")"><i class="bi bi-person-fill-add"></i> Добавить нового пользователя</a>
         </div>
     </div>
 </div>

@@ -130,19 +130,19 @@
         <div class="col-md-12 col-lg-3">
             <div class="d-flex flex-column align-items-center mt-3 mx-lg-3">
                 <h5 class="text-center">Сортировка</h5>
-                <input type="radio" class="btn-check" name="btnradio" id="btnradio1" autocomplete="off" onclick="sortTable(0, false)" />
+                <input type="radio" class="btn-check" name="btnradio" id="btnradio1" autocomplete="off" onclick="sortTable(1, false)" />
                 <label class="btn btn-outline-danger mb-2 labelSort" for="btnradio1">Код детали</label>
 
-                <input type="radio" class="btn-check" name="btnradio" id="btnradio2" autocomplete="off" onclick="sortTable(1, false)" />
+                <input type="radio" class="btn-check" name="btnradio" id="btnradio2" autocomplete="off" onclick="sortTable(2, false)" />
                 <label class="btn btn-outline-danger mb-2 labelSort" for="btnradio2">Наименование</label>
 
-                <input type="radio" class="btn-check" name="btnradio" id="btnradio3" autocomplete="off" onclick="sortTable(2, false)" />
+                <input type="radio" class="btn-check" name="btnradio" id="btnradio3" autocomplete="off" onclick="sortTable(3, false)" />
                 <label class="btn btn-outline-danger mb-2 labelSort" for="btnradio3">Шифр</label>
 
-                <input type="radio" class="btn-check" name="btnradio" id="btnradio4" autocomplete="off" onclick="sortTable(3, true)" />
+                <input type="radio" class="btn-check" name="btnradio" id="btnradio4" autocomplete="off" onclick="sortTable(4, false)" />
                 <label class="btn btn-outline-danger mb-2 labelSort" for="btnradio4">Время</label>
 
-                <input type="radio" class="btn-check" name="btnradio" id="btnradio5" autocomplete="off" onclick="sortTable(4, true)" />
+                <input type="radio" class="btn-check" name="btnradio" id="btnradio5" autocomplete="off" onclick="sortTable(5, true)" />
                 <label class="btn btn-outline-danger mb-2 labelSort" for="btnradio5">Расценка</label>
                 <div class="form-floating mt-3 mb-3">
                     <input type="text" class="form-control focus-ring" id="filtr" />
@@ -333,14 +333,14 @@
         <div class="modal-content">
             <div class="modal-header">
                 <h5 class="modal-title">Подтверждение удаления</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть"></button>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть" style="border: none; box-shadow: none"></button>
             </div>
             <div class="modal-body">
                 Вы действительно хотите удалить запись?
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Отмена</button>
-                <button type="button" class="btn btn-danger"><i class="bi bi-trash"></i> Удалить</button>
+                <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Отмена</button>
+                <button type="button" class="btn btn-outline-danger"><i class="bi bi-trash"></i> Удалить</button>
             </div>
         </div>
     </div>
@@ -351,14 +351,14 @@
         <div class="modal-content">
             <div class="modal-header">
                 <h5 class="modal-title">Подтверждение удаления</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть"></button>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть" style="border: none; box-shadow: none"></button>
             </div>
             <div class="modal-body">
                 Вы действительно хотите удалить запись?
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Отмена</button>
-                <button type="button" class="btn btn-danger"><i class="bi bi-trash"></i> Удалить</button>
+                <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Отмена</button>
+                <button type="button" class="btn btn-outline-danger"><i class="bi bi-trash"></i> Удалить</button>
             </div>
         </div>
     </div>
