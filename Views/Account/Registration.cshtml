@@ -1,0 +1,110 @@
+﻿@{
+	ViewData["Title"] = "Регистрация";
+}
+@model NardSmena.Models.RegisterViewModel
+<style>
+    html {
+        background-color: #F8F8FF;
+    }
+
+    header {
+        display: none;
+    }
+
+    footer {
+        display: none;
+    }
+
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+    }
+
+    #authorize {
+        outline: none !im;
+        color: #347DD1;
+    }
+
+        #registration:focus {
+            outline: none !important;
+            box-shadow: none !important;
+        }
+</style>
+
+
+<div class="d-flex justify-content-center align-items-center">
+    <div class="w-50 bg-white p-4 rounded shadow">
+        <form id="registration" method="post" asp-controller="Account" asp-action="Registration">
+            <div class="mb-3">
+                <div class="container d-flex align-items-center justify-content-center mb-2">
+                    <img src="~/logo.png" width="64" height="64" />
+                </div>
+
+                <h1 class="text-center">Регистрация</h1>
+                <label for="UserName" class="form-label">Введите логин:</label>
+                <input type="text" id="Authorize" name="UserName" class="form-control" asp-for="UserName" />
+            </div>
+
+            <div class="mb-3">
+                <label for="Password" class="form-label">Введите пароль:</label>
+                <input type="password" id="Password" name="Password" class="form-control" asp-for="Password">
+            </div>
+
+            <div class="mb-3">
+                <label for="ConfirmPassword" class="form-label">Подтверждение пароля:</label>
+                <input type="password" id="ConfirmPassword" name="ConfirmPassword" class="form-control" asp-for="ConfirmPassword" />
+            </div>
+
+            <div class="mb-3">
+                <label for="FIO" class="form-label">Введите ФИО:</label>
+                <input type="text" id="FIO" class="form-control" name="FIO" asp-for="FIO" />
+            </div>
+
+            <div class="mb-3">
+                <label for="Department" class="form-label">Введите отдел:</label>
+                <input type="text" class="form-control" id="Department" name="Department" asp-for="Department" />
+            </div>
+
+            <div class="d-flex justify-content-center">
+                <a asp-controller="Account" asp-action="Login" id="authorize" class="btn text-decoration-underline">Есть аккаунт? Авторизуйтесь</a>
+            </div>
+
+            <div class="d-flex justify-content-end">
+                <button type="submit" class="btn btn-outline-danger w-50 mt-3"><i class="bi bi-person-plus-fill"></i> Зарегистрироваться</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+
+
+<script>
+
+    $(document).ready(function () {
+
+        var alert = $(".alert");
+
+        if (alert.length) {
+            setTimeout(function () {
+                alert.fadeOut('slow');
+            }, 3000);
+        }
+    });
+
+</script>
+
+@if (!ViewData.ModelState.IsValid)
+{
+    <div class="alert alert-danger alert-dismissible position-fixed bottom-0 end-0 m-3" role="alert">
+        <i class="bi bi-exclamation-triangle-fill"></i> При отправке данных произошли следующие ошибки:
+        <ul>
+            @foreach (var error in ViewData.ModelState.Values.SelectMany(v => v.Errors))
+            {
+                <li>@error.ErrorMessage</li>
+            }
+        </ul>
+    </div>
+}

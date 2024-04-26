@@ -1,0 +1,56 @@
+﻿@model IEnumerable<Microsoft.AspNetCore.Identity.IdentityRole>
+@{
+	ViewData["Title"] = "Управление ролями";
+}
+
+<style>
+    header {
+        display: none !important;
+    }
+</style>
+
+<div class="container mt-5">
+    <h2 class="mb-4">Список ролей</h2>
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a asp-action="Index" asp-controller="Home">Главная</a></li>
+            <li class="breadcrumb-item"><a asp-action="Index" asp-controller="User">Dashboard</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Roles</li>
+        </ol>
+    </nav>
+
+    <div class="row">
+        <div class="col-md-12 text-center">
+            <table class="table table-bordered table-hover">
+                <thead>
+                    <tr>
+                        <th>Название роли</th>
+                        <th>Действие</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var role in Model)
+                    {
+                        <tr>
+                            <td>@role.Name</td>
+                            <td>
+                                <div class="btn-group" role="group" aria-label="Действия">
+                                    <form asp-action="Delete" asp-route-id="@role.Id" method="post">
+                                        <button type="submit" class="btn  btn-danger "><i class="bi bi-archive-fill"></i> Удалить</button>
+                                    </form>
+                                </div>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <div class="row mt-4">
+        <div class="col-md-12">
+            <a class="btn btn-success" href="@Url.Action("Create")"><i class="bi bi-key-fill"></i> Добавить новую роль</a>
+            <a class="btn btn-primary" href="@Url.Action("UserList")"><i class="bi bi-person-fill"></i> Список пользователей</a>
+        </div>
+    </div>
+</div>

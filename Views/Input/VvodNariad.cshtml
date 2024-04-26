@@ -1,0 +1,178 @@
+﻿@{
+    ViewData["Title"] = "Ввод нарядов";
+}
+
+
+<style>
+    #card1, #card2 {
+        height: 500px;
+        overflow-y: auto;
+    }
+
+    #excel {
+        color: green;
+        font-weight: 700;
+    }
+
+    .digit-button {
+        width: 100%;
+        margin-bottom: 1vh;
+    }
+</style>
+
+<div class="container mt-5 mb-5">
+    <div class="row">
+        <div class="col-md-10">
+            <div id="card1" class="card mb-3">
+                <div class="card-body">
+                    <table class="table table-hover table-bordered">
+                        <thead class="text-center">
+                            <tr>
+                                <th>Таб №</th>
+                                <th>Фамилия И.О.</th>
+                                <th>Профессия</th>
+                                <th>Вид опл.</th>
+                                <th>Сумма</th>
+                                <th>Норма времени</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                          
+                        </tbody>
+                    </table>
+                    <div class="input-group ms-1 mb-3 w-50">
+                        <input type="text" class="form-control" placeholder="Участок" aria-describedby="button-addon1">
+                        <button class="btn btn-outline-secondary" type="button" id="button-addon1">Найти</button>
+                    </div>
+                </div>
+            </div>
+            <div id="card2" class="card">
+                <div class="card-body">
+                    <table class="table table-hover table-bordered">
+                        <thead class="text-center">
+                            <tr>
+                                <th>День</th>
+                                <th>Шифр</th>
+                                <th>Код оп.</th>
+                                <th>Кол-во</th>
+                                <th>Расценка</th>
+                                <th>Сумма</th>
+                                <th>Н.врем.</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-2">
+            <div class="container position-fixed">
+                <div class="dropdown">
+                    <button class="btn btn-outline dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <i class="bi bi-printer"></i> Печать
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">Полная печать (дни)</a></li>
+                        <li><a class="dropdown-item" href="#">Сокращенная печать</a></li>
+                        <li><a class="dropdown-item" href="#">Полная печать (месяц)</a></li>
+                        <li><a class="dropdown-item" href="#">Полная печать с доп.премией (месяц)</a></li>
+                        <li><a class="dropdown-item" href="#">Печать (вредность)</a></li>
+                        <li><a class="dropdown-item" href="#">Печать по дневной норме времени</a></li>
+                        <li><a class="dropdown-item" href="#">Печать по дневной норме времени менее 100%</a></li>
+                        <li><a class="dropdown-item" href="#">Экспорт данных в <span id="excel"><i class="bi bi-file-excel"></i> EXCEL</span></a></li>
+                    </ul>
+                </div>
+                <div class="dropdown">
+                    <button class="btn btn-outline dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <i class="bi bi-check2-all"></i> Выделение
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">Отметить все</a></li>
+                        <li><a class="dropdown-item" href="#">Разотметить все</a></li>
+                    </ul>
+                </div>
+                <div class="dropdown">
+                    <button class="btn btn-outline dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <i class="bi bi-pc-display"></i> Операции
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">Перерасчёт</a></li>
+                        <li><a class="dropdown-item" id="modalMonthButton" data-bs-target="#modalMonth" data-bs-toggle="modal">Данные Отличник качества</a></li>
+                    </ul>
+                </div>
+                <button class="btn btn-outline" type="button">
+                    <i class="bi bi-pie-chart"></i> Диаграмма
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+ <div class="modal fade" id="modalMonth" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="exampleModalLabel">Ввод значения месяца</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть"></button>
+            </div>
+                <div class="modal-body">
+                    <form method="post" asp-action="VvodNariad">
+                        <div class="form-group">
+                            <input type="hidden" id="selectedMonth" name="month" />
+                             <div class="row text-center d-flex justify-content-center">
+                                @for (int i = 1; i < 7; i++)
+                                {
+                                    <div class="col"><button type="button" class="btn btn-outline-primary btn-lg digit-button" onclick="showToast(@i)" data-digit="@i">@i</button></div>
+                                }
+                             </div>
+                             <div class="row text-center d-flex justify-content-center">
+                                 @for (int i = 7; i < 13; i++)
+                                {
+                                    <div class="col"><button type="button" class="btn btn-outline-primary btn-lg digit-button" onclick="showToast(@i)" data-digit="@i">@i</button></div>
+                                }
+                            </div>
+                         </div>
+
+                        <button type="submit" class="btn btn-primary justify-content-end">Отправить</button>
+                    </form>
+                 </div>
+        </div>
+    </div>
+</div>
+
+<div class="alert alert-info alert-dismissible position-fixed bottom-0 end-0 m-3 d-none" role="alert" id="infoAlert">
+    <i class="bi bi-info-circle-fill"></i> Вы выбрали цифру <span class="selected-digit"></span>
+</div>
+
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        var digitButtons = document.querySelectorAll('.digit-button');
+
+        digitButtons.forEach(function (button) {
+            button.addEventListener('click', function () {
+
+                var digitValue = button.getAttribute('data-digit');
+
+                document.getElementById('selectedMonth').value = digitValue;
+            });
+        });
+    });
+
+    function showToast(digit) {
+        var infoAlertElement = document.querySelector('#infoAlert');
+        infoAlertElement.classList.remove('d-none');
+
+        document.querySelector('#infoAlert .selected-digit').innerText = digit;
+
+        var infoAlert = new bootstrap.Alert(infoAlertElement);
+        infoAlert.show();
+
+        setTimeout(function () {
+            infoAlertElement.classList.add('d-none');
+        }, 2000);
+    }
+</script>
+

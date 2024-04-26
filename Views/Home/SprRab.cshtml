@@ -1,0 +1,69 @@
+﻿@{
+	ViewData["Title"] = "Справочник по работающим";
+}
+@model NardSmena.Models.CombinedViewModelSprRab
+
+<div class="container-fluid" style="margin-top: 3rem">
+    <div class="row">
+        <div class="col-md-6">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Табельный №</th>
+                        <th>Цех</th>
+                        <th>Участок</th>
+                        <th>ФИО</th>
+                        <th>Профессия</th>
+                    </tr>
+                </thead>
+                <tbody>
+                   @foreach (var sprRab in Model.SprRabList)
+                    {
+                        <tr>
+                            <td>@sprRab.TabNomer</td>
+                            <td>@sprRab.Ceh</td>
+                            <td>@sprRab.Uch</td>
+                            <td>@sprRab.FIO</td>
+                            <td>@sprRab.PROFF</td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+        <div class="col-md-6">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Код</th>
+                        <th>Профессия</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var sprRab in Model.SprRabList)
+                    {
+                        <tr>
+                            <td>@sprRab.KodProfessii</td>
+                            <td>@sprRab.PROFF</td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+
+    <div class="row mt-3">
+        <div class="col-md-6">
+            <div class="form-floating mb-3">
+                <input type="text" class="form-control focus-ring" id="search-id" placeholder="Введите табельный №">
+                <label for="search-id">Поиск по табельному №</label>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="form-floating mb-3">
+                <input type="text" class="form-control focus-ring" id="search-surname" placeholder="Введите фамилию">
+                <label for="search-surname">Поиск по фамилии</label>
+            </div>
+        </div>
+    </div>
+</div>

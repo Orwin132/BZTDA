@@ -1,0 +1,30 @@
+﻿@{
+	ViewData["Title"] = "Доступ запрещен";
+}
+
+<style>
+	header {
+		display: none !important;
+	}
+
+	footer {
+		display: none !important;
+	}
+</style>
+
+<div class="container">
+	<div class="row d-flex align-items-center justify-content-center">
+		<div class="col">
+			<div class="container d-flex align-items-center justify-content-center flex-column" style="width: 100vw; height: 90vh">
+				<img src="~/images/logo.png" width="128" height="128" alt="Logo" />
+				<h1 class="display-3 text-danger fw-bold text-center">Access Denied</h1>
+				<h4 class="display-6 mt-5">Доступ к запрашиваемой странице запрещен!</h4>
+				<h4 class="display-6">Access to the requested page is denied!</h4>
+				<div class="container d-flex align-items-end justify-content-end">
+					<a class="btn btn-outline-danger" href="@ViewBag.Referrer" style="margin-right: 10rem; margin-top: 2rem">Вернуться</a>
+				</div>
+			</div>
+			
+		</div>
+	</div>
+</div>

@@ -1,0 +1,54 @@
+﻿.btn-check ~ .btn {
+    width: 70%;
+}
+
+.highlight {
+    background-color: gainsboro !important;
+}
+
+#selectAll, #deselectAll:hover {
+    cursor: pointer;
+}
+
+table {
+    width: 75%;
+}
+
+#main-container {
+    max-width: 100% !important;
+}
+
+.labelSort {
+    box-shadow: none !important;
+}
+
+input[type="checkbox"]:checked {
+    background-color: red;
+    border-color: red;
+}
+
+input[type="checkbox"]:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+input[type="radio"]:checked {
+    background-color: red;
+    border: none;
+
+}
+
+input[type="radio"]:focus {
+    border: none;
+    box-shadow: none;
+    outline-color: none;
+}
+
+.focus-ring:focus {
+    box-shadow: 0 0 0 0.2rem rgba(255, 0, 0, 0.35);
+    border-color: lightcoral
+}
+
+.higlight-td {
+    background-color: 
+}

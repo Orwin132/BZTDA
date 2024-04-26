@@ -1,0 +1,72 @@
+﻿@{
+    ViewData["Title"] = "Dashboard";
+}
+
+<style>
+    body {
+        background-color: #FFFAFA;
+    }
+
+    .container {
+        padding: 20px;
+    }
+
+    .card-deck {
+        margin-top: 20px;
+    }
+
+    header {
+        display: none !important;
+    }
+</style>
+
+<div class="container mt-5">
+        <h2 class="display-4 mb-4">Dashboard</h2>
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a asp-action="Index" asp-controller="Home">Главная</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Dashboard</li>
+            </ol>
+        </nav>
+
+        <div class="row">
+            <div class="col-lg-6 col-sm-12">
+                <div class="card mb-4 shadow">
+                    <img class="card-img-top" src="~/images/users_managament.jpg" alt="Фоновое изображение" style="height:350px" />
+                    <div class="card-body">
+                        <h5 class="card-title">Управление пользователями</h5>
+                        <p class="card-text">Отображение и редактирование информации о пользователях.</p>
+                        <a asp-action="UserManagement" asp-controller="User" class="btn btn-outline-danger">Просмотр</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-6 col-sm-12">
+                <div class="card mb-4 shadow">
+                    <img class="card-img-top" src="~/images/add_user.jpg" alt="Фоновое изображение" style="height:350px" />
+                    <div class="card-body">
+                        <h5 class="card-title">Управление ролями</h5>
+                    <p class="card-text">Отображение и изменение информации о ролях.</p>
+                        <a class="btn btn-outline-danger" asp-action="Index" asp-controller="Roles">Просмотр</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-12 col-sm-12 d-flex align-items-center justify-content-center">
+                <div class="card shadow" style="margin-bottom: 7rem; width: 640px;">
+                    <img class="card-img-top" src="~/images/access.jpg" alt="Фоновое изображение" style="height: 350px;" />
+                    <div class="card-body">
+                        <h5 class="card-title">Запросы на выдачу роли</h5>
+                        <p class="card-text">Уведомления на выдачу роли от зарегистрировавшихся пользователей.</p>
+                        <a class="btn btn-outline-danger position-relative" asp-action="Index" asp-controller="RoleAssignment">
+                            Просмотр
+                        <span id="rowCount" class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                            
+                        </span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+</div>
+
+<script src="~/js/Admin/indexEvent.js"></script>

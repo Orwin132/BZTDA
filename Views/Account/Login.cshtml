@@ -1,0 +1,122 @@
+﻿@{
+    ViewData["Title"] = "Авторизация";
+    var hasError = !ViewData.ModelState.IsValid;
+    var modelStateEntry = ViewData.ModelState[""];
+    var errorMessage = modelStateEntry == null ? null : modelStateEntry.Errors.FirstOrDefault()?.ErrorMessage;
+}
+
+
+<style>
+    html {
+        background-color: #F8F8FF;
+    }
+
+    header {
+        display: none;
+    }
+
+    footer {
+        display:none;
+    }
+
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+    }
+
+    #registration {
+        outline: none;
+        color: #347DD1;
+    }
+
+    #registration:focus {
+        outline: none !important;
+        box-shadow: none !important;
+    }
+
+    #RememberMe {
+        outline: none;
+        box-shadow: none;
+    }
+
+    #RememberMe:checked {
+        background-color: red;
+        border-color: red;
+    }
+
+    #RememberMe:focus {
+        border-color: red;
+    }
+
+    input[type="text"]:focus, input[type="password"]:focus {
+        outline: none;
+        box-shadow: none;
+    }
+</style>
+
+@model NardSmena.Models.LoginViewModel
+<div class="d-flex justify-content-center align-items-center">
+    <div class="w-50 bg-white p-4 rounded shadow">
+        <form id="authorization" method="post" asp-controller="Account" asp-action="Login" asp-validation-summary="ModelOnly">
+            <input type="hidden" name="ReturnUrl" asp-for="ReturnUrl" />
+            <div class="mb-3">
+                <div class="container d-flex align-items-center justify-content-center mb-2">
+                    <img src="~/logo.png" width="64" height="64" />
+                </div>
+                
+                <h1 class="text-center">Авторизация</h1>
+                <label for="UserName" class="form-label">Введите логин:</label>
+                <input type="text" id="UserName" name="UserName" class="form-control" asp-for="UserName" />
+            </div>
+
+            <div class="mb-3">
+                <label for="Password" class="form-label">Введите пароль:</label>
+                <input type="password" id="Password" name="Password" class="form-control" asp-for="Password">
+            </div>
+
+            <div class="mb-3">
+                <input class="form-check-input" type="checkbox" id="RememberMe" asp-for="RememberMe" name="RememberMe" checked="@((bool?)ViewBag.RememberMe ?? false)">
+                <label class="form-check-label" for="RememberMe">
+                    Запомнить вход
+                </label>
+            </div>
+
+            <div class="d-flex justify-content-center">
+                <a asp-controller="Account" asp-action="Registration" id="registration" class="btn text-decoration-underline">Нет аккаунта? Зарегистрируйтесь</a>
+            </div>
+
+            <div class="d-flex justify-content-end">
+                <button type="submit" class="btn btn-outline-danger w-25">Вход</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+
+
+<script>
+
+    $(document).ready(function () {
+
+        var alert = $(".alert");
+
+        if (alert.length) {
+            setTimeout(function () {
+                alert.fadeOut('slow');
+            }, 3000);
+        }
+    });
+
+</script>
+
+@if (!ViewData.ModelState.IsValid)
+{
+    <div class="alert alert-danger  position-fixed bottom-0 end-0 w-25 m-3" role="alert">
+        <h5 classs=alert-heading>Авторизация</h5>
+        <p><i class="bi bi-exclamation-circle-fill"></i> Неверный логин или пароль. Проверьте введенные данные и повторите попытку</p>
+    </div>
+}
+

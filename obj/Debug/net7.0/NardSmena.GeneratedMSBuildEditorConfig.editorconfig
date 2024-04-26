@@ -1,0 +1,123 @@
+is_global = true
+build_property.TargetFramework = net7.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = NardSmena
+build_property.RootNamespace = NardSmena
+build_property.ProjectDir = D:\колледж\4 курс\Практика\Web\NardSmena\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
+build_property.RazorLangVersion = 7.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = D:\колледж\4 курс\Практика\Web\NardSmena
+build_property._RazorSourceGeneratorDebug = 
+
+[D:/колледж/4 курс/Практика/Web/NardSmena/Views/Account/AccessDenied.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxBY2Nlc3NEZW5pZWQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/колледж/4 курс/Практика/Web/NardSmena/Views/Account/Login.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxMb2dpbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/колледж/4 курс/Практика/Web/NardSmena/Views/Account/Registration.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxSZWdpc3RyYXRpb24uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/колледж/4 курс/Практика/Web/NardSmena/Views/HomeImport/Import.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZUltcG9ydFxJbXBvcnQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/колледж/4 курс/Практика/Web/NardSmena/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/колледж/4 курс/Практика/Web/NardSmena/Views/Home/SprOperation.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxTcHJPcGVyYXRpb24uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/колледж/4 курс/Практика/Web/NardSmena/Views/Home/SprRab.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxTcHJSYWIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/колледж/4 курс/Практика/Web/NardSmena/Views/Home/Tabel.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxUYWJlbC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/колледж/4 курс/Практика/Web/NardSmena/Views/Home/Uchet.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxVY2hldC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/колледж/4 курс/Практика/Web/NardSmena/Views/Input/VvodBrigad.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSW5wdXRcVnZvZEJyaWdhZC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/колледж/4 курс/Практика/Web/NardSmena/Views/Input/VvodNariad.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSW5wdXRcVnZvZE5hcmlhZC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/колледж/4 курс/Практика/Web/NardSmena/Views/RoleAssignment/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUm9sZUFzc2lnbm1lbnRcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/колледж/4 курс/Практика/Web/NardSmena/Views/Roles/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUm9sZXNcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/колледж/4 курс/Практика/Web/NardSmena/Views/Roles/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUm9sZXNcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/колледж/4 курс/Практика/Web/NardSmena/Views/Roles/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUm9sZXNcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/колледж/4 курс/Практика/Web/NardSmena/Views/Roles/UserList.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUm9sZXNcVXNlckxpc3QuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/колледж/4 курс/Практика/Web/NardSmena/Views/Settings/Settings.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2V0dGluZ3NcU2V0dGluZ3MuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/колледж/4 курс/Практика/Web/NardSmena/Views/Shared/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/колледж/4 курс/Практика/Web/NardSmena/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/колледж/4 курс/Практика/Web/NardSmena/Views/User/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclxDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/колледж/4 курс/Практика/Web/NardSmena/Views/User/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclxFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/колледж/4 курс/Практика/Web/NardSmena/Views/User/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/колледж/4 курс/Практика/Web/NardSmena/Views/User/UserManagement.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclxVc2VyTWFuYWdlbWVudC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/колледж/4 курс/Практика/Web/NardSmena/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/колледж/4 курс/Практика/Web/NardSmena/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/колледж/4 курс/Практика/Web/NardSmena/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-r17vt8kbk3

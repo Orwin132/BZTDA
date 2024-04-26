@@ -1,0 +1,75 @@
+﻿@{
+	ViewData["Title"] = "Назначение ролей";
+}
+
+<style>
+	header {
+		display: none !important;
+	}
+
+	.btn {
+		outline:none !important;
+		box-shadow: none !important;
+	}
+</style>
+
+@model List<RoleAssignmentViewModel>
+
+<div class="container mt-5">
+	<h2 class="mb-4">Назначение роли пользователям</h2>
+	<nav aria-label="breadcumb">
+		<ol class="breadcrumb">
+			<li class="breadcrumb-item"><a asp-controller="Home" asp-action="Index">Главная</a></li>
+			<li class="breadcrumb-item"><a asp-controller="User" asp-action="Index">Dashboard</a></li>
+			<li class="breadcrumb-item active" aria-current="page">RoleAssignment</li>
+		</ol>
+	</nav>
+
+	<div class="container">
+		<table class="table text-center">
+			<caption class="caption-top">Данная страница служит платформой для приема заявлений о назначении роли, выбранным пользователем в процессе заполнения формы</caption>
+			<thead>
+				<tr>
+					<th>#</th>
+					<th>ФИО</th>
+					<th>Отдел</th>
+					<th>Роль</th>
+					<th>Действия</th>
+				</tr>
+			</thead>
+				<tbody>
+					@foreach (var item in Model)
+					{
+						<tr class="tr-info">
+							<td>@item.RoleAssignmentId</td>
+							<td>@item.FIO</td>
+							<td>@item.Department</td>
+							<td>@item.SelectedRole</td>
+							<td class="w-25">
+								<div class="row gy-3">
+								<form method="post" id="approveForm_@item.RoleAssignmentId" asp-controller="RoleAssignment" asp-action="ApproveRole">
+										<div class="col d-flex align-items-center justify-content-center">
+											<button type="submit" class="btn btn-outline-success" data-role-assignment-id="@item.RoleAssignmentId" data-role="@item.SelectedRole"><i class="bi bi-check-lg"></i></button>
+										</div>
+									</form>
+
+									<form method="post" id="rejectForm_@item.RoleAssignmentId" asp-controller="RoleAssignment" asp-action="RejectRole">
+										<div class="col d-flex align-items-center justify-content-center">
+											<button type="submit" id="rejectButton_@item.RoleAssignmentId" class="btn btn-outline-danger" data-role-assignment-id="@item.RoleAssignmentId"><i class="bi bi-x-lg"></i></button>
+										</div>
+									</form>
+								</div>
+							</td>
+						</tr>
+					}
+				</tbody>
+		</table>
+	</div>
+</div>
+
+	<div id="alert-response" class="alert alert-success alert-dismissible position-fixed mb-custom bottom-0 end-0 m-2 rounded-3" role="alert" style="margin-bottom:7rem !important; z-index: 9999; display: none">
+		<i class="bi bi-check-circle-fill"></i>
+	</div>
+
+
+<script src="~/js/Admin/indexPost.js"></script>

@@ -1,0 +1,32 @@
+﻿.mb-custom {
+    margin-bottom: 100px !important;
+}
+
+.form-container {
+    margin-top: 10rem;
+}
+
+.container-input {
+    margin-top: 2rem;
+}
+
+.container-button {
+    margin-top: 2rem;
+}
+
+#selectRoles {
+    outline: none;
+    box-shadow: none;
+    outline-color: none;
+}
+
+#btnPostRole {
+    outline: none;
+    box-shadow: none;
+}
+
+input {
+    outline: none !important;
+    box-shadow: none !important;
+    outline-color: black !important;
+}

@@ -1,0 +1,386 @@
+﻿@{
+	ViewData["Title"] = "Справочник по деталям и операциям";
+    <link href="~/css/SprOperationStyle.css" rel="stylesheet" />
+}
+@model NardSmena.Models.CombinedViewModelSprOperation
+
+<div class="container-fluid mt-3 mb-4">
+    <div class="row">
+        <div class="col-md-12 col-lg-9">
+            <div class="container">
+                <div class="input-group mb-2 w-25">
+                    <input type="text" class="focus-ring form-control" placeholder="Строка" aria-describedby="confirmDeleteButton">
+                    <button class="btn btn-outline-danger" type="button" id="confirmDeleteButton" data-bs-toggle="modal" data-bs-target="#confirmModalDelete">Удалить</button>
+                </div>
+                <div class="table-responsive">
+                    <table class="table table-hover table-bordered caption-top" id="table2" data-rash-rascenki-url="@Url.Action("RashRascenki", "Home")" data-copy-details-url="@Url.Action("CopyOperation", "Home")">
+                        <thead class="text-center">
+                            <tr>
+                                <th>Выбор</th>
+                                <th>Код детали</th>
+                                <th>Наименование</th>
+                                <th>Шифр</th>
+                                <th>Общее время</th>
+                                <th>Расценка</th>
+                            </tr>
+                        </thead>
+                        <tbody class="text-center" id="tbody2">
+                            @foreach (var sprOper in Model.SprOperList)
+                            {
+                                var sprDet = Model.SprDetList.FirstOrDefault(d => d.KodDetal == sprOper.KodDetal);
+                                <tr>
+                                    <td>
+                                        <div class="form-check d-flex align-items-center justify-content-center">
+                                            <input type="radio" name="selection" class="form-check-input" style="width:25px; height: 25px" />
+                                        </div>
+                                    </td>
+                                    <td class="d-flex align-items-center justify-content-center">
+                                        <input type="text" class="focus-ring form-control w-auto" value="@sprOper.KodDetal" />
+                                    </td>
+                                    <td>
+                                        <input type="text" class="focus-ring form-control" value="@sprDet?.NameDetal" />
+                                    </td>
+                                    <td>
+                                        <input type="text" class="focus-ring form-control" value="@sprDet?.ShifrDetal" />
+                                    </td>
+                                    <td>
+                                        <input type="text" class="focus-ring form-control" value="@sprOper.TimeComput" />
+                                    </td>
+                                    <td>
+                                        <input type="text" class="focus-ring form-control" value="@sprOper.Rascenka" />
+                                    </td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="container mb-5 mt-3" id="table2">
+                <div class="input-group mb-2 mt-2 w-75">
+                    <button class="btn btn-outline-danger" type="button" id="confirmDeleteButton2" data-bs-toggle="modal" data-bs-target="#confirmModalDelete2">Удалить строку</button>
+                </div>
+                <div class="table-responsive">
+                    <table class="table table-hover table-bordered" id="table" data-rash-rascenki-url="@Url.Action("RashRascenki", "Home")">
+                        <thead class="text-center">
+                            <tr>
+                                <th style="width: 5vw">Обх.</th>
+                                <th style="width: 5vw">Код операции</th>
+                                <th>Название</th>
+                                <th style="width: 5vw">Разряд</th>
+                                <th style="width: 5vw">Гр.тарифа</th>
+                                <th style="width: 5vw">Расч.вр.</th>
+                                <th style="width: 5vw">% вредн.</th>
+                                <th style="width: 5vw">Доп. %</th>
+                                <th style="width: 5vw">Вр.изгот-ия</th>
+                                <th style="width: 5vw">Расценка</th>
+                                <th>Коэф ДВ</th>
+                            </tr>
+                        </thead>
+                        <tbody class="text-center">
+                            @foreach (var sprOper in Model.SprOperList)
+                            {
+                                <tr>
+                                    <td>
+                                        <div class="d-flex align-items-center justify-content-center">
+                                             <input type="text" class="focus-ring form-control w-50 text-center" value="@sprOper.FlagObhoda" />
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <input type="text" class="focus-ring form-control" value="@sprOper.KodOperation" />
+                                    </td>
+                                    <td>
+                                        <input type="text" class="focus-ring form-control" value="@sprOper.NameOperation" />
+                                     </td>
+                                    <td>
+                                        <div class="d-flex align-items-center justify-content-center">
+                                            <input type="text" class="focus-ring form-control w-50 text-center" value="@sprOper.Razriad" />
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="d-flex align-items-center justify-content-center">
+                                            <input type="text" class="focus-ring form-control w-50 text-center" value="@sprOper.GrTarif" />
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <input type="text" class="focus-ring form-control" value="@sprOper.TimeComput" />
+                                    </td>
+                                    <td>
+                                        <div class="d-flex align-items-center justify-content-center">
+                                            <input type="text" class="focus-ring form-control w-75" value="@sprOper.Vrednost" />
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="d-flex align-items-center justify-content-center">
+                                            <input type="text" class="focus-ring form-control w-50 text-center" value="@sprOper.DpPrem" />
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <input type="text" class="focus-ring form-control" value="@sprOper.Rascenka" />
+                                    </td>
+                                    <td>
+                                        <input type="text" class="focus-ring form-control" value="@sprOper.KoefDV" />
+                                    </td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-12 col-lg-3">
+            <div class="d-flex flex-column align-items-center mt-3 mx-lg-3">
+                <h5 class="text-center">Сортировка</h5>
+                <input type="radio" class="btn-check" name="btnradio" id="btnradio1" autocomplete="off" onclick="sortTable(0, false)" />
+                <label class="btn btn-outline-danger mb-2 labelSort" for="btnradio1">Код детали</label>
+
+                <input type="radio" class="btn-check" name="btnradio" id="btnradio2" autocomplete="off" onclick="sortTable(1, false)" />
+                <label class="btn btn-outline-danger mb-2 labelSort" for="btnradio2">Наименование</label>
+
+                <input type="radio" class="btn-check" name="btnradio" id="btnradio3" autocomplete="off" onclick="sortTable(2, false)" />
+                <label class="btn btn-outline-danger mb-2 labelSort" for="btnradio3">Шифр</label>
+
+                <input type="radio" class="btn-check" name="btnradio" id="btnradio4" autocomplete="off" onclick="sortTable(3, true)" />
+                <label class="btn btn-outline-danger mb-2 labelSort" for="btnradio4">Время</label>
+
+                <input type="radio" class="btn-check" name="btnradio" id="btnradio5" autocomplete="off" onclick="sortTable(4, true)" />
+                <label class="btn btn-outline-danger mb-2 labelSort" for="btnradio5">Расценка</label>
+                <div class="form-floating mt-3 mb-3">
+                    <input type="text" class="form-control focus-ring" id="filtr" />
+                    <label for="filtr">Фильтр</label>
+                </div>
+                <div class="form-check mb-3">
+                    <input type="checkbox" class="form-check-input" id="flexCheckPremia" />
+                    <label class="form-check-label" for="flexCheckPremia">Доп.премия</label>
+                </div>
+                <div class="dropdown d-flex flex-column align-items-center justify-content-center mb-2 mx-5">
+                    <button class="btn btn-outline dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <i class="bi bi-printer"></i> Печать
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">Печать</a></li>
+                        <li><a class="dropdown-item" href="#">Полная быстрая печать</a></li>
+                        <li><a class="dropdown-item" href="#">Сокращенная быстрая печать</a></li>
+                        <li><a class="dropdown-item" href="#">Норма за 8ч. и 7ч.</a></li>
+                    </ul>
+                    <div class="dropdown mb-2">
+                        <button class="btn btn-outline dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="bi bi-check2-all"></i> Выделение
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" id="selectAll">Отметить все</a></li>
+                            <li><a class="dropdown-item" id="deselectAll">Разотметить все</a></li>
+                        </ul>
+                    </div>
+                    <button class="btn btn-outline mb-2" type="button"><i class="bi bi-clipboard-data"></i> Сравнительный анализ</button>
+                    <button class="btn btn-outline mb-2" type="button"><i class="bi bi-calculator"></i> Перерасчет</button>
+                    <button id="tarifButton" class="btn btn-outline mb-2" type="button" data-bs-toggle="modal" data-bs-target="#tarifModal"><i class="bi bi-table"></i> Тарифная сетка</button>
+                    
+
+                    <div class="modal fade" id="tarifModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h1 class="modal-title fs-5" id="exampleModalLabel">Тарифная сетка разрядов</h1>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <div class="container">
+                                        <table class="table table-striped">
+                                            <thead>
+                                                <tr>
+                                                    <th scope="col">Разряд</th>
+                                                    <th scope="col">Тариф 1</th>
+                                                    <th scope="col">Тариф 2</th>
+                                                    <th scope="col">Тариф 3</th>
+                                                    <th scope="col">MTarif</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                @foreach (var tarif in Model.TarifList)
+                                                {
+                                                    <tr>
+                                                        <td scope="col"><b>@tarif.Razriad</b></td>
+                                                        <td>@tarif.Tarif1</td>
+                                                        <td>@tarif.Tarif</td>
+                                                        <td>@tarif.Tarif3</td>
+                                                        <td>@tarif.MTarif</td>
+                                                    </tr>
+                                                }
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <button class="btn btn-outline mb-2" type="button" data-bs-toggle="modal" data-bs-target="#fondModal"><i class="bi bi-clock"></i> Месячный фонд раб.времени</button>
+                    <div class="modal fade" id="fondModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h1 class="modal-title fs-5" id="exampleModalLabel">Фонд рабочего времени</h1>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <div class="container">
+                                        <table class="table table-striped">
+                                            <thead>
+                                                <tr>
+                                                    <th scope="col">Месяц</th>
+                                                    <th scope="col">Часы</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <th scope="row">Январь</th>
+                                                    <td>160</td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">Февраль</th>
+                                                    <td>168</td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">Март</th>
+                                                    <td>167</td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">Апрель</th>
+                                                    <td>175</td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">Май</th>
+                                                    <td>166</td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">Июнь</th>
+                                                    <td>160</td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">Июль</th>
+                                                    <td>175</td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">Август</th>
+                                                    <td>176</td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">Сентябрь</th>
+                                                    <td>168</td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">Октябрь</th>
+                                                    <td>184</td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">Ноябрь</th>
+                                                    <td>151</td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">Декабрь</th>
+                                                    <td>158</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <button class="btn btn-outline" type="button" data-bs-toggle="modal" data-bs-target="#otpuskModal"><i class="bi bi-brightness-high"></i> Дни к отпуску по вредности</button>
+                    <div class="modal fade" id="otpuskModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h1 class="modal-title fs-5" id="exampleModalLabel">Дни к отпуску за вредность</h1>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <div class="container">
+                                        <table class="table table-striped">
+                                            <thead>
+                                                <tr>
+                                                    <th scope="col">Процент доплат</th>
+                                                    <th scope="col">Дни к отпуску</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                               @foreach (var otpVred in Model.OtpVredList)
+                                                {
+                                                    <tr>
+                                                        <td>@otpVred.ProcDopl</td>
+                                                        <td>@otpVred.GodOtpVr</td>
+                                                    </tr>
+                                                }
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="modal fade" tabindex="-1" aria-hidden="true" aria-labelledby="confirmModalLabel" id="confirmModalDelete">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Подтверждение удаления</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть"></button>
+            </div>
+            <div class="modal-body">
+                Вы действительно хотите удалить запись?
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Отмена</button>
+                <button type="button" class="btn btn-danger"><i class="bi bi-trash"></i> Удалить</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" tabindex="-1" aria-hidden="true" aria-labelledby="confirmModalLabel2" id="confirmModalDelete2">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Подтверждение удаления</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть"></button>
+            </div>
+            <div class="modal-body">
+                Вы действительно хотите удалить запись?
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Отмена</button>
+                <button type="button" class="btn btn-danger"><i class="bi bi-trash"></i> Удалить</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" tabindex="-1" aria-hidden="true" aria-labelledby="confirmModalLabel3" id="confirmModalCopy">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Подтверждение копирования</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть"></button>
+            </div>
+            <div class="modal-body">
+                Вы действительно хотите скопировать текущую деталь с операциями?
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Отмена</button>
+                <button type="button" class="btn btn-success"><i class="bi bi-copy"></i> Скопировать</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="~/js/SprOperation/SprOperationHandler.js"></script>
+<script src="~/js/SprOperation/SprOperationRequests.js"></script>

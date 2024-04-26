@@ -1,0 +1,140 @@
+﻿@{
+	ViewData["Title"] = "Учет количества деталей";
+}
+
+<style>
+    .form-check, .card {
+        width: 100%;
+    }
+
+    .btn-check ~ .btn {
+        width: 100%;
+    }
+
+    #table1, #table2 {
+        width: 100%;
+        height: 500px;
+        overflow-y: auto;
+    }
+</style>
+
+<div class="container mt-3 mb-4">
+	<div class="row">
+		<div class="col-md-9">
+            <div id="table1" class="container">
+                <table class="table table-hover table-bordered">
+                    <thead class="text-center">
+                        <tr>
+                            <th>День</th>
+                            <th>Код детали</th>
+                            <th>Код операции</th>
+                            <th>Количество деталей</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                       
+                    </tbody>
+                </table>
+            </div>
+            <div class="container mb-5 mt-3" id="table2">
+                <table class="table table-hover table-bordered">
+                    <thead class="text-center">
+                        <tr>
+                            <th>Код детали</th>
+                            <th>Наименование дет.</th>
+                            <th>Код операции</th>
+                            <th>Наименование опер.</th>
+                            <th>Количество</th>
+                            <th>Участок</th>
+                            <th>Таб. №</th>
+                            <th>ФИО</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                    </tbody>
+                </table>
+            </div>
+            </div>
+        <div class="col-md-3">
+            <div class="d-flex flex-column align-items-end mt-3">
+                        <h5>Месяц обновления</h5>
+                        <button class="btn btn-outline" type="button"><i class="bi bi-arrow-repeat"></i> Обновить данные</button>
+                        <button class="btn btn-outline" type="button">Корректировка количества</button>
+                        <button class="btn btn-outline" type="button">Сведения по ОТиЗ</button>
+                <button class="btn btn-outline mb-3" type="button" style="color:green;"><i class="bi bi-file-earmark-excel"></i> Excel</button>
+                <div class="form-check mb-2">
+                    <input class="btn-check" type="checkbox" id="checkbox1">
+                    <label class="btn btn-outline-danger" for="checkbox1">За участок</label>
+                </div>
+                <div id="fields1" class="mb-2" style="display: none;">
+                    <div class="input-group">
+                        <span class="input-group-text">С</span>
+                        <input class="form-control" type="text">
+                        <span class="input-group-text">ПО</span>
+                        <input class="form-control" type="text" />
+                    </div>
+                </div>
+                <div class="form-check mb-2">
+                    <input class="btn-check" type="checkbox" id="checkbox2">
+                    <label class="btn btn-outline-danger" for="checkbox2">Период</label>
+                </div>
+                <div id="fields2" class="mb-2" style="display: none;">
+                    <input class="form-control" type="text" />
+                </div>
+                <div class="form-check mb-2">
+                    <input class="btn-check" type="checkbox" id="checkbox3">
+                    <label class="btn btn-outline-danger" for="checkbox3">Детали</label>
+                </div>
+                <div id="fields3" class="mb-2" style="display: none;">
+                    <input class="form-control" type="text">
+                </div>
+                <div class="form-check mb-2">
+                    <h5>Сортировка</h5>
+                    <input type="radio" class="btn-check" name="btnradio" id="btnradio1" autocomplete="off" checked />
+                    <label class="btn btn-outline-danger" for="btnradio1">Учет для БОТиЗ</label>
+                </div>
+                <div class="form-check mb-2">
+                    <input type="radio" class="btn-check" name="btnradio" id="btnradio2" autocomplete="off" />
+                    <label class="btn btn-outline-danger" for="btnradio2">Учет для мастеров</label>
+                </div>
+                <div id="fields4" style="display: none;" class="mb-2">
+                    <div class="card">
+                        <div class="card-body">
+                            <h6>Сортировка по</h6>
+                            <input type="radio" class="btn-check" name="btnradioSort" id="btnradio3" autocomplete="off" checked />
+                            <label class="btn btn-outline-danger mb-2" for="btnradio3">участок, деталь</label>
+
+                            <input type="radio" class="btn-check" name="btnradioSort" id="btnradio4" autocomplete="off" />
+                            <label class="btn btn-outline-danger" for="btnradio4">деталь, участок</label>
+                        </div>
+                    </div>
+                </div>
+                <button class="btn btn-outline mb-5" type="button"><i class="bi bi-printer"></i> Печать</button>
+                </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    document.getElementById('checkbox1').addEventListener('change', function () {
+        document.getElementById('fields1').style.display = this.checked ? 'block' : 'none';
+    });
+    document.getElementById('checkbox2').addEventListener('change', function () {
+        document.getElementById('fields2').style.display = this.checked ? 'block' : 'none';
+    });
+    document.getElementById('checkbox3').addEventListener('change', function () {
+        document.getElementById('fields3').style.display = this.checked ? 'block' : 'none';
+    });
+
+
+    var radios = document.getElementsByName('btnradio');
+
+
+    for (var i = 0; i < radios.length; i++) {
+        radios[i].addEventListener('change', function () {
+            document.getElementById('fields4').style.display = document.getElementById('btnradio2').checked ? 'block' : 'none';
+        });
+    }
+
+</script>

@@ -1,0 +1,50 @@
+﻿@{
+	ViewData["Title"] = "Список пользователей";
+}
+@model IEnumerable<NardSmena.Models.User>
+
+<style>
+	header {
+		display: none !important;
+	}
+</style>
+
+<div class="container mt-5">
+    <h2 class="mb-4">Список пользователей</h2>
+<nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a asp-action="Index" asp-controller="Home">Главная</a></li>
+        <li class="breadcrumb-item"><a asp-action="Index" asp-controller="User">Dashboard</a></li>
+        <li class="breadcrumb-item"><a asp-action="Index" asp-controller="Roles">Roles</a></li>
+        <li class="breadcrumb-item active">UserList</li>
+    </ol>
+</nav>
+
+<div class="row">
+    <div class="col-md-12 text-center">
+        <table class="table table-bordered table-hover">
+            <thead>
+                <tr>
+                    <th>ФИО</th>
+                    <th>Логин</th>
+                    <th>Действие</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var user in Model)
+                {
+                    <tr>
+                        <td>@user.FIO</td>
+                        <td>@user.UserName</td>
+                        <td>
+                            <div class="btn-group" role="group" aria-label="Действие">
+                                <a class="btn btn-primary" asp-action="Edit" asp-route-userid="@user.Id"><i class="bi bi-pencil-fill"></i> Права доступа</a>
+                            </div>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
+</div>

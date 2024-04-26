@@ -1,0 +1,113 @@
+﻿@{
+	ViewData["Title"] = "Ввод бригадных нарядов";
+}
+
+<style>
+	#card1, #card2, #card3 {
+		height: 500px;
+	}
+</style>
+
+<div class="container mb-3">
+	<div class="row">
+		<div class="col-md-10">
+			<div id="card1" class="card mt-3">
+				<div class="card-body">
+					<h4>Ввод нарядов на бригады</h4>
+					<table class="table">
+					<thead>
+						<tr>
+							<th scope="col">№ нар</th>
+							<th scope="col">Название нар.</th>
+							<th scope="col">Код опл.</th>
+							<th scope="col">Сумма</th>
+							<th scope="col">Время, час</th>
+						</tr>
+					</thead>
+					<tbody>
+						
+					</tbody>
+				</table>
+			</div>
+		</div>
+	<div id="card2" class="card mt-3">
+		<div class="card-body">
+			<h4>Ввод состава рабочих бригадного наряда</h4>
+			<table class="table">
+				<thead>
+					<tr>
+						<th scope="col">Таб №</th>
+						<th scope="col">ФИО	</th>
+						<th scope="col">Код опл.</th>
+						<th scope="col">КТУ</th>
+						<th scope="col">Сумма</th>
+						<th scope="col">Н.врем</th>
+					</tr>
+				</thead>
+				<tbody>
+					
+				</tbody>
+			</table>
+		</div>
+	</div>
+		<div id="card3" class="card  mb-3 mt-3">
+			<div class="card-body">
+				<h4>Ввод выполненной работы всей бригадой</h4>
+				<table class="table">
+					<thead>
+						<tr>
+							<th scope="col">День</th>
+							<th scope="col">Шифр</th>
+							<th scope="col">Наименование</th>
+							<th scope="col">Код(ы) операции</th>
+							<th scope="col">Кол-во</th>
+							<th scope="col">Расценка</th>
+							<th scope="col">Н.врем</th>
+							<th scope="col">Сумма</th>
+						</tr>
+					</thead>
+					<tbody>
+						
+					</tbody>
+				</table>
+			</div>
+		</div>
+		</div>
+		<div class="col-md-2">
+			<div class="d-flex flex-column align-items-end position-fixed mt-3">
+				<div class="dropdown">
+					<button class="btn btn-outline dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+						<i class="bi bi-printer"></i> Печать
+					</button>
+					<ul class="dropdown-menu">
+						<li><a class="dropdown-item" href="#">Печать бр.нарядов</a></li>
+						<li><a class="dropdown-item" href="#">Печать расч.листов</a></li>
+						<li><a class="dropdown-item" href="#">Печать бр.нарядов с коррект.</a></li>
+						<li><a class="dropdown-item" href="#">Печать расч.лист с коррект.</a></li>
+					</ul>
+				</div>
+				<div class="dropdown">
+					<button class="btn btn-outline dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+						<i class="bi bi-pc-display"></i> Действие
+					</button>
+					<ul class="dropdown-menu">
+						<li><a class="dropdown-item" href="#">Переброс в другой месяц</a></li>
+						<li><a class="dropdown-item" href="#">Перерасчёт</a></li>
+						<li><a class="dropdown-item" href="#">Переброс на другой день</a></li>
+						<li><a class="dropdown-item" href="#">Полная печать с доп.премией (месяц)</a></li>
+					</ul>
+				</div>
+				<div class="dropdown">
+					<button class="btn btn-outline dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+						<i class="bi bi-check2-all"></i> Выделение
+					</button>
+					<ul class="dropdown-menu">
+						<li><a class="dropdown-item" href="#">Отметить все</a></li>
+						<li><a class="dropdown-item" href="#">Разотметить все</a></li>
+					</ul>
+				</div>
+				<button class="btn btn-outline" type="button"><i class="bi bi-pie-chart"></i> Диаграмма</button>
+			</div>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,119 @@
+﻿@{
+	ViewData["Title"] = "Импорт";
+}
+
+<style>
+    .mb-custom {
+        margin-bottom: 100px !important;
+    }
+</style>
+
+<div class="container mt-5">
+    <div class="card">
+        <div class="card-header text-white" style="background-color:#e35d6a;">
+            <h2 class="mb-0">Справочник по работающим</h2>
+        </div>
+        <div class="card-body">
+            <form id="uploadForm" method="post" enctype="multipart/form-data">
+                <div class="input-group mb-3">
+                    <input type="file" id="file" name="file" accept=".dbf" style="display:none;" />
+                    <input type="text" id="filepath" class="form-control" placeholder="Путь к файлу" aria-label="Путь к файлу" aria-describedby="basic-addon2" readonly>
+                    <div class="input-group-append">
+                        <button class="btn btn-outline-secondary" type="button" id="browse">Обзор</button>
+                    </div>
+                </div>
+                <button type="submit" class="btn btn-primary">Импортировать</button>
+            </form>
+            <div class="card mt-2">
+                <div class="card-body">
+                    <div class="card-title">
+                        <h5>Информация</h5>
+                    </div>
+                    <div class="card-text">
+                        Вы сможете преобразовать файл
+                        справочника по работающим из своей старой программы
+                        <strong>"ZARPLATA"</strong>.
+                        Для преобразования Вы должны указать путь, где находиться
+                        старый файл с помощью кнопки <strong>"Обзор"</strong>.
+                        На странице <strong>"Параметры"</strong> Вы можете указать путь по умолчанию.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script>
+    // Ожидаем загрузку документа
+    $(document).ready(function () {
+        // Перехватываем отправку формы
+        $("#uploadForm").submit(function (e) {
+            e.preventDefault(); // предотвращаем стандартное поведение формы
+
+            var formData = new FormData(this);
+
+            // Отправляем запрос на сервер для загрузки файла
+            $.ajax({
+                url: "/HomeImport/UploadFile",
+                type: "POST",
+                data: formData,
+                contentType: false,
+                processData: false,
+                success: function (result) {
+                    if (result.success) {
+                        showMessage("success", result.message);
+                    } else {
+                        showMessage("danger", result.message);
+                    }
+                },
+                error: function () {
+                    showMessage("danger", "Произошла ошибка при отправке запроса на сервер.");
+                }
+            });
+        });
+
+        function showMessage(type, message) {
+            $("#resultMessage").remove();
+
+
+            var alertDiv = $("<div>").addClass("alert alert-dismissible position-fixed bottom-0 end-0 m-2 mb-custom rounded-3").attr("id", "resultMessage");
+            
+
+            alertDiv.append($("<i>").addClass("bi bi-check-circle-fill"));
+            alertDiv.append(document.createTextNode(" " + message));
+
+            if (type === "success") {
+                alertDiv.addClass("alert-success");
+            } else if (type === "danger") {
+                alertDiv.addClass("alert-danger");
+            }
+
+            $("body").append(alertDiv);
+
+            // Автоматическое скрытие сообщения через 5 секунд
+            setTimeout(function () {
+                alertDiv.fadeOut("slow", function () {
+                    $(this).remove();
+                });
+            }, 5000);
+        }
+    });
+
+    $(document).ready(function () {
+        $("#browse").click(function () {
+            $("#file").click();
+        });
+
+        $("#file").change(function () {
+            updateFilePath();
+        });
+
+        function updateFilePath() {
+            var filePath = $("#file").val();
+            $("#filepath").val(filePath);
+        }
+    });
+</script>
+
+

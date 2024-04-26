@@ -1,0 +1,216 @@
+﻿@{
+    var theme = Context.Session.GetString("Theme") as string ?? "light-mode";
+}
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"]</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/NardSmena.styles.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/preloader.css" />
+    <link rel="stylesheet" href="~/css/sprRab.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <link rel="shortcut icon" href="~/logo.png" type="image/x-icon" />
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="~/js/SprOperation/data-tables/sprOperation.js"></script>
+    <script src="~/js/dataTables.bootstrap4.js"></script>
+
+    <style>
+        .dropdown-item:focus {
+            outline: none !important;
+            background-color: red;
+            color:white !important;
+        }
+        #btnLogout:focus
+        {
+            outline:none !important;
+            background-color: red !important;
+            color:white !important;
+        }
+
+        .logo-img {
+            filter: brightness(0) invert(1);
+        }
+        
+        .nav-item {
+            font-size: 1.05em;
+        }
+
+        .nav-link {
+            font-weight: bold;
+        }
+
+        .btn {
+            outline: none !important;
+            box-shadow: none !important;
+        }
+
+        body {
+            transition: background-color 0.5s ease;
+        }
+
+        .dark-mode {
+            background-color: #212529;
+            color: white;
+        }
+
+        .light-mode {
+            background-color: white;
+            color: black;
+        }
+
+        .card {
+            border: none;
+            color: black !important;
+        }
+
+        .dark-mode #NameUser {
+            background-color: #adb5bd;
+            border: none;
+        }
+
+        .dark-mode .btnClear, .dark-mode .btnSave {
+            color: white;
+            border-color: white;
+            transition: background-color 0.5s ease;
+        }
+
+        .dark-mode input[type="text"] {
+            color:black;
+        }
+
+        .dark-mode .btnClear:hover, .dark-mode .btnSave:hover {
+            border-color: #b02a37;
+            background-color: #b02a37;
+        }
+
+        .dark-mode .footer {
+            background-color: #343a40 !important;
+        }
+    </style>
+</head>
+<body class="@theme" id="body">
+    <div class="mask">
+        <div class="loader"></div>
+    </div>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-danger">
+            <div class="container">
+                <a asp-action="Index" asp-controller="Home" class="navbar-brand d-flex align-items-center justify-content-center">
+                    <img src="~/images/logo.png" class="logo-img" width="48" height="48" alt="Logo" />
+                    <span class="navbar-brand logo fw-bold" style="margin: 0 10px">BZTDA</span>
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item d-flex justify-content-center align-items-center">
+                            <a class="nav-link" asp-controller="Home" asp-action="Index">Главная</a>
+                        </li>
+                        @if (User.IsInRole("admin"))
+                        {
+                            <li class="nav-item d-flex justify-content-center align-items-center">
+                                <a class="nav-link" asp-controller="HomeImport" asp-action="Import" asp-area="">Импорт</a>
+                            </li>
+                        }
+                        @if (User.IsInRole("admin"))
+                        {
+                            <li class="nav-item d-flex justify-content-center align-items-center">
+                                <a class="nav-link" href="#">Экспорт</a>
+                            </li>
+                        }
+                        @if (User.IsInRole("admin"))
+                        {
+                            <li class="nav-item d-flex justify-content-center align-items-center">
+                                <a class="nav-link" asp-controller="Input" asp-action="VvodNariad">Индивидуальщики</a>
+                            </li>
+                        }
+                        @if (User.IsInRole("admin"))
+                        {
+                            <li class="nav-item d-flex justify-content-center align-items-center">
+                                <a class="nav-link" asp-controller="Input" asp-action="VvodBrigad">Бригады</a>
+                            </li>
+                        }
+                        @if (User.IsInRole("admin"))
+                        {
+                            <li class="nav-item d-flex justify-content-center align-items-center">
+                                <a class="nav-link" asp-controller="Home" asp-action="Tabel">Табель</a>
+                            </li>
+                        }
+                        @if (User.IsInRole("admin"))
+                        {
+                            <li class="nav-item d-flex justify-content-center align-items-center">
+                                <a class="nav-link" asp-controller="Home" asp-action="Uchet">Учет</a>
+                            </li>
+                        }
+                        @if (User.IsInRole("ceh1") || User.IsInRole("ceh2") || User.IsInRole("admin"))
+                        {
+                            <li class="nav-item d-flex justify-content-center align-items-center">
+                                <a class="nav-link" asp-controller="Home" asp-action="SprOperation">Детали и операции</a>
+                            </li>
+                        }
+                        @if (User.IsInRole("admin"))
+                        {
+                            <li class="nav-item d-flex justify-content-center align-items-center">
+                                <a class="nav-link" asp-controller="Home" asp-action="SprRab">Работающие</a>
+                            </li>
+                        }
+                        <li class="nav-item dropdown d-flex justify-content-center align-items-center">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Сервис
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                <li><a class="dropdown-item text-dark" asp-controller="Settings" asp-action="Settings">Параметры</a></li>
+                                @if (User.IsInRole("admin"))
+                                {
+                                    <li><a class="dropdown-item text-dark" href="#">Удаление нарядов</a></li>
+                                    <li><a class="dropdown-item text-dark" href="#">Копирование за день</a></li>
+                                }
+                                <li><hr class="dropdown-divider"></li>
+                                <li>
+                                    <form id="logoutForm" asp-controller="Account" asp-action="Logout" method="post">
+                                        <button id="btnLogout" class="dropdown-item text-dark" type="submit">Выход</button>
+                                    </form>
+                                </li>
+                            </ul>
+                        </li>
+                        @if (User.IsInRole("admin"))
+                        {
+                            <li class="nav-item d-flex justify-content-center align-items-center">
+                                <a class="nav-link" asp-controller="User" asp-action="Index" asp-role="Admin">Dashboard</a>
+                            </li>
+                        }
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+
+    <div id="main-container" class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer class="footer mt-auto py-3 bg-dark">
+        <div class="container text-center" id="footer">
+            <span class="text-muted">&copy 2024 ОАО "БЗТДиА"</span>
+        </div>
+    </footer>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

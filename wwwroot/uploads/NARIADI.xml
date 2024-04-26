@@ -1,0 +1,15 @@
+<Nariadi>
+	<Main>
+		<Name>Tanya</Name>
+		<LastDateOn>25.10.2023</LastDateOn>
+		<LastTimeOn>11:55:35</LastTimeOn>
+		<Precession>3</Precession>
+		<MTarif>214960</MTarif>
+	</Main>
+	<Locate>
+		<DirImportRab>D:\Практика\Nar_1\Sprdet.DB</DirImportRab>
+		<DirExportSWPZar>D:\Практика\Zarplata</DirExportSWPZar>
+		<DirDataBase>D:\Практика</DirDataBase>
+		<DirDataBaseIst>D:\Практика</DirDataBaseIst>
+	</Locate>
+</Nariadi>

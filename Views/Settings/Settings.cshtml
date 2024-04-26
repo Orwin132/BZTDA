@@ -1,0 +1,148 @@
+﻿@{
+	ViewData["Title"] = "Параметры";
+}
+
+<style>
+    .button-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    input[type="checkbox"] {
+        outline: none !important;
+        box-shadow: none !important;
+    }
+</style>
+
+<div class="container-fluid mt-5">
+	<h4 id="list-item-1">Общие</h4>
+	<p>
+		<div class="row">
+			<div class="col">
+				<input type="text" id="NameUser" class="form-control" placeholder="Имя пользователя" aria-label="Имя" value="@User.Identity.Name" disabled>
+			</div>
+			<div class="col">
+				<input type="text" id="CalculationAccuracy" class="form-control" placeholder="Точность вычисления" aria-label="Фамилия">
+			</div>
+			<div class="col">
+				<input type="text" id="MonthlyRate" class="form-control" placeholder="Месячный тариф для расчета вредности" />
+			</div>
+		</div>
+	</p>
+	<h4 id="list-item-2">Местоположение</h4>
+	<p>
+		<div class="row">
+			<div class="col mb-1">
+                <div class="container">
+                    <div class="card">
+                        <div class="card-header text-white" style="background-color:#e35d6a;">
+                            <h5 class="mb-0">Справочник по работающим</h5>
+                        </div>
+                        <div class="card-body">
+                            <form method="post" enctype="multipart/form-data">
+                                <div class="input-group mb-3">
+                                    <input type="file" id="file" name="file" style="display:none;" />
+                                    <input type="text" id="filepath1" class="form-control" placeholder="Путь к файлу" aria-label="Путь к файлу" aria-describedby="basic-addon2" readonly>
+                                    <div class="input-group-append">
+                                        <button class="btn btn-outline-secondary" type="button" id="browse">Обзор</button>
+                                    </div>
+                                </div>
+                                <button type="submit" class="btn btn-primary">Загрузить</button>
+                            </form>
+                            <div class="card mt-2">
+                                <div class="card-body">
+                                    <div class="card-title">
+                                        <h5>Информация</h5>
+                                    </div>
+                                    <div class="card-text">
+                                        Coming soon...
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+			</div>
+
+            <div class="col mb-1">
+                <div class="container">
+                    <div class="card">
+                        <div class="card-header text-white" style="background-color:#e35d6a;">
+                            <h5 class="mb-0">База данных</h5>
+                        </div>
+                        <div class="card-body">
+                            <form method="post" enctype="multipart/form-data">
+                                <div class="input-group mb-3">
+                                    <input type="file" id="file" name="file" style="display:none;" />
+                                    <input type="text" id="filepath2" class="form-control" placeholder="Путь к файлу" aria-label="Путь к файлу" aria-describedby="basic-addon2" readonly>
+                                    <div class="input-group-append">
+                                        <button class="btn btn-outline-secondary" type="button" id="browse">Обзор</button>
+                                    </div>
+                                </div>
+                                <button type="submit" class="btn btn-primary">Загрузить</button>
+                            </form>
+                            <div class="card mt-2">
+                                <div class="card-body">
+                                    <div class="card-title">
+                                        <h5>Информация</h5>
+                                    </div>
+                                    <div class="card-text">
+                                        Coming soon...
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="container">
+                    <div class="card">
+                        <div class="card-header text-white" style="background-color:#e35d6a;">
+                            <h5 class="mb-0">Копирование дневной выработки</h5>
+                        </div>
+                        <div class="card-body">
+                            <form method="post" enctype="multipart/form-data">
+                                <div class="input-group mb-3">
+                                    <input type="file" id="file" name="file" style="display:none;" />
+                                    <input type="text" id="filepath3" class="form-control" placeholder="Путь к файлу" aria-label="Путь к файлу" aria-describedby="basic-addon2" readonly>
+                                    <div class="input-group-append">
+                                        <button class="btn btn-outline-secondary" type="button" id="browse">Обзор</button>
+                                    </div>
+                                </div>
+                                <button type="submit" class="btn btn-primary">Загрузить</button>
+                            </form>
+                            <div class="card mt-2">
+                                <div class="card-body">
+                                    <div class="card-title">
+                                        <h5>Информация</h5>
+                                    </div>
+                                    <div class="card-text">
+                                        База данных источник для копирования дневной выработки
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+		</div>
+	</p>
+	<h4 id="list-item-3">Тема</h4>
+	<p>
+        <div class="form-check form-switch">
+            <input type="checkbox" class="form-check-input" style="width: 100px; height: 30px" onclick="switchTheme()" />
+        </div>
+    </p>
+</div>
+
+<div class="button-container mb-5">
+    <button class="btn btn-outline-dark me-2 btnClear" id="btnClear" type="submit">Очистить поля</button>
+    <button class="btn btn-outline-dark btnSave" id="btnSave" type="submit" asp-action="SwitchTheme" asp-controller="Settings">Сохранить</button>
+</div>
+
+<script src="~/js/Settings/settings.js"></script>
+
+
