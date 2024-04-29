@@ -86,7 +86,7 @@
                                         </div>
                                     </td>
                                     <td>
-                                        <input type="text" class="focus-ring form-control" value="@sprOper.KodOperation" />
+                                        <input type="text" class="focus-ring form-control text-center" value="@sprOper.KodOperation" />
                                     </td>
                                     <td>
                                         <input type="text" class="focus-ring form-control" value="@sprOper.NameOperation" />
@@ -102,7 +102,7 @@
                                         </div>
                                     </td>
                                     <td>
-                                        <input type="text" class="focus-ring form-control" value="@sprOper.TimeComput" />
+                                        <input type="text" class="focus-ring form-control text-center" value="@sprOper.TimeComput" />
                                     </td>
                                     <td>
                                         <div class="d-flex align-items-center justify-content-center">
@@ -115,10 +115,17 @@
                                         </div>
                                     </td>
                                     <td>
-                                        <input type="text" class="focus-ring form-control" value="@sprOper.Rascenka" />
+                                        <div class="d-flex align-items-center justify-content-center">
+                                            <input type="text" class="focus-ring form-control text-center" value="@sprOper.TimeOperation" />
+                                        </div>
                                     </td>
                                     <td>
-                                        <input type="text" class="focus-ring form-control" value="@sprOper.KoefDV" />
+                                        <input type="text" class="focus-ring form-control text-center" value="@sprOper.Rascenka" />
+                                    </td>
+                                    <td>
+                                        <div class="d-flex align-items-center justify-content-center">
+                                            <input type="text" class="focus-ring form-control text-center" value="@sprOper.KoefDV" />
+                                        </div>
                                     </td>
                                 </tr>
                             }
@@ -375,12 +382,21 @@
                 Вы действительно хотите скопировать текущую деталь с операциями?
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Отмена</button>
-                <button type="button" class="btn btn-success"><i class="bi bi-copy"></i> Скопировать</button>
+                <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Отмена</button>
+                <button type="button" class="btn btn-outline-success"><i class="bi bi-copy"></i> Скопировать</button>
             </div>
         </div>
     </div>
 </div>
+
+<div class="alert alert-primary position-fixed bottom-0 end-0 alert-dismissible fade show" role="alert" style="z-index: 5">
+    <h5>Информация</h5>
+    <div>
+        <span>Для копирования записи из первой таблицы, выделите строку в ячейке <strong class="text-decoration-underline">Выбор</strong></span>
+    </div>
+    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+</div>
+
 
 <script src="~/js/SprOperation/SprOperationHandler.js"></script>
 <script src="~/js/SprOperation/SprOperationRequests.js"></script>
