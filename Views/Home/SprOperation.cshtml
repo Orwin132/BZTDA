@@ -9,7 +9,7 @@
         <div class="col-md-12 col-lg-9">
             <div class="container">
                 <div class="input-group mb-2 w-25">
-                    <input type="text" class="focus-ring form-control" placeholder="Строка" aria-describedby="confirmDeleteButton">
+                    <input id="kodDetalDelete" type="text" class="focus-ring form-control" placeholder="Строка" aria-describedby="confirmDeleteButton">
                     <button class="btn btn-outline-danger" type="button" id="confirmDeleteButton" data-bs-toggle="modal" data-bs-target="#confirmModalDelete">Удалить</button>
                 </div>
                 <div class="table-responsive">
@@ -347,7 +347,7 @@
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Отмена</button>
-                <button type="button" class="btn btn-outline-danger"><i class="bi bi-trash"></i> Удалить</button>
+                <button id="btnDeleteRow" type="button" class="btn btn-outline-danger"><i class="bi bi-trash"></i> Удалить</button>
             </div>
         </div>
     </div>
@@ -398,21 +398,28 @@
         <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
     </div>
 
-    <div id="alertCopy" class="alert alert-warning alert-dismissible fade show" role="alert" style="display: none">
+    <div id="alertCopy" class="alert alert-warning fade show" role="alert" style="display: none">
         <i class="bi bi-exclamation-triangle-fill"></i> <span>Пожалуйста, выберите строку для копирования</span>
-        <button type="button" class="btn-close" data-dismiss="alert" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-        </button>
     </div>
 
-    <div id="alertSuccessCopy" class="alert alert-success alert-dismissible fade show" role="alert" style="display: none">
+    <div id="alertSuccessCopy" class="alert alert-success fade show" role="alert" style="display: none">
         <i class="bi bi-check-circle-fill"></i> <span class="text-successCopy"></span>
-        <button type="button" class="btn-close" data-dismiss="alert" aria-label="Close"></button>
     </div>
 
-    <div id="errorAlertCopy" class="alert alert-danger alert-dismissible fade show" role="alert" style="display: none">
+    <div id="errorAlertCopy" class="alert alert-danger fade show" role="alert" style="display: none">
         <i class="bi bi-x-circle-fill"></i> <span class="text-errorCopy"></span>
-        <button type="button" class="btn-close" data-dismiss="alert" aria-label="Close"></button>
+    </div>
+
+    <div id="warningAlertDelete" class="alert alert-warning fade show" role="alert" style="display: none">
+        <i class="bi bi-exclamation-triangle-fill"></i> <span>Пожалуйста, введите код детали для удаления</span>
+    </div>
+
+    <div id="alertSuccessDelete" class="alert alert-success fade show" role="alert" style="display: none">
+        <i class="bi bi-check-circle-fill"></i> <span class="text-successDeleteRow"></span>
+    </div>
+
+    <div id="alertErrorDelete" class="alert alert-danger fade show" role="alert" style="display: none">
+        <i class="bi bi-x-circle-fill"></i> <span class="text-errorDeleteRow"></span>
     </div>
 </div>
 

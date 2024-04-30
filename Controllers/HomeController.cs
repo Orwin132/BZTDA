@@ -145,18 +145,33 @@ namespace NardSmena.Controllers
         [HttpPost]
         public async Task<ActionResult> DeleteRow(string kodDetalDelete)
         {
-            var kodDetal = await _context.SprDet.FirstOrDefaultAsync(d => d.KodDetal == kodDetalDelete);
-
-            if (kodDetal == null)
+            try
             {
-                return NotFound();
+                var kodDetal = await _context.SprDet.FirstOrDefaultAsync(d => d.KodDetal == kodDetalDelete);
+
+                if (kodDetal == null)
+                {
+                    return Json(new { success = false, message = "Запись не найдена" });
+                }
+
+                // Найти все связанные записи в таблице Sproper
+                var relatedRecords = await _context.Sproper.Where(s => s.KodDetal == kodDetalDelete).ToListAsync();
+
+                // Удалить все связанные записи
+                _context.Sproper.RemoveRange(relatedRecords);
+
+                // Удалить саму запись
+                _context.SprDet.Remove(kodDetal);
+                await _context.SaveChangesAsync();
+
+                return Json(new { success = true, message = "Текущая запись была успешно удалена!" });
             }
-
-            _context.SprDet.Remove(kodDetal);
-            await _context.SaveChangesAsync();
-
-            return RedirectToAction("SprOperation", "Home");
+            catch (Exception ex)
+            {
+                return Json(new { success = false, message = $"Произошла ошибка при удалении записи: {ex.Message}" });
+            }
         }
+
 
         public IActionResult RashRascenki()
         {

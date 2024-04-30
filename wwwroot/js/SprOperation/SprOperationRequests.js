@@ -34,15 +34,42 @@ $(document).ready(function () {
         console.log('Copy data for rows: ', cell);
     }
 
-    $("#confirmDeleteButton").click(function () {
+    $('#btnDeleteRow').click(function () {
+        var kodDetalDelete = $('#kodDetalDelete').val();
+
+        if (kodDetalDelete.length === 0) {
+            $('#confirmModalDelete').modal('hide');
+
+            setTimeout(function () {
+                $('#warningAlertDelete').show();
+
+                setTimeout(function () {
+                    $('#warningAlertDelete').fadeOut();
+                }, 6000);
+            }, 400);
+
+            return;
+        }
+
         $.ajax({
-            url: '/HomeController/DeleteRecord',
-            type: 'POST',
+            url: '/Home/DeleteRow',
+            method: 'POST',
             data: {
-                id: id
+                kodDetalDelete: kodDetalDelete
             },
             success: function (result) {
-                console.log('Operation succesful');
+                if (result.success) {
+                    localStorage.setItem('showSuccessAlertDelete', 'true');
+                    localStorage.setItem('alertMessageDelete', result.message);
+                } else {
+                    localStorage.setItem('showErrorAlertDelete', 'true');
+                    localStorage.setItem('errorMessageDelete', result.message);
+                }
+                location.reload();
+            },
+            error: function () {
+                localStorage.setItem('showErrorAlertDelete', 'true');
+                localStorage.setItem('errorMessageDelete', 'Произошла ошибка при выполнении AJAX запроса');
             }
         });
     });
@@ -85,15 +112,16 @@ $(document).ready(function () {
             success: function (result) {
                 if (result.success) {
                     localStorage.setItem('showSuccessAlert', 'true');
+                    localStorage.setItem('alertMessageCopy', result.message);
                 } else {
                     localStorage.setItem('showErrorAlert', 'true');
-                    localStorage.setItem('alertMessage', result.message);
+                    localStorage.setItem('alertMessageCopy', result.message);
                 }
                 location.reload();
             },
             error: function () {
                 localStorage.setItem('showErrorAlert', 'true');
-                localStorage.setItem('alertMessage', 'Произошла ошибка при выполнении AJAX запроса');
+                localStorage.setItem('alertMessageCopy', 'Произошла ошибка при выполнении AJAX запроса');
                 location.reload();
             }
         });
@@ -102,24 +130,50 @@ $(document).ready(function () {
     $(document).ready(function () {
         if (localStorage.getItem('showSuccessAlert') === 'true') {
             $('#alertSuccessCopy').show();
+            $('.text-successCopy').text(localStorage.getItem('alertMessageCopy'));
 
             setTimeout(function () {
                 $('#alertSuccessCopy').fadeOut();
             }, 3000);
 
             localStorage.removeItem('showSuccessAlert');
+            localStorage.removeItem('alertMessageCopy');
         }
 
         if (localStorage.getItem('showErrorAlert') === 'true') {
             $('#errorAlertCopy').show();
-            $('.text-errorCopy').text(localStorage.getItem('alertMessage'));
+            $('.text-errorCopy').text(localStorage.getItem('alertMessageCopy'));
 
             setTimeout(function () {
                 $('#errorAlertCopy').fadeOut();
             }, 10000);
 
             localStorage.removeItem('showErrorAlert');
-            localStorage.removeItem('alertMessage');
+            localStorage.removeItem('alertMessageCopy');
+        }
+
+        if (localStorage.getItem('showSuccessAlertDelete') === 'true') {
+            $('#alertSuccessDelete').show();
+            $('.text-successDeleteRow').text(localStorage.getItem('alertMessageDelete'));
+
+            setTimeout(function () {
+                $('#alertSuccessDelete').fadeOut();
+            }, 3000);
+
+            localStorage.removeItem('showSuccessAlertDelete');
+            localStorage.removeItem('alertMessageDelete');
+        }
+
+        if (localStorage.getItem('showErrorAlertDelete') === 'true') {
+            $('#alertErrorDelete').show();
+            $('.text-errorDeleteRow').text(localStorage.getItem('errorMessageDelete'));
+
+            setTimeout(function () {
+                $('#alertErrorDelete').fadeOut();
+            }, 3000);
+
+            localStorage.removeItem('showErrorAlertDelete');
+            localStorage.removeItem('errorMessageDelete');
         }
     });
 });
