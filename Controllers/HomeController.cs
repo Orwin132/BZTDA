@@ -4,6 +4,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Filters;
 using Microsoft.EntityFrameworkCore;
 using NardSmena.Models;
+using System.Data.SqlClient;
 using System.Security.Claims;
 
 namespace NardSmena.Controllers
@@ -83,53 +84,76 @@ namespace NardSmena.Controllers
         }
 
         [HttpPost]
-        public ActionResult CopyOperation(int id)
+        public async Task<ActionResult> CopyOperation(string id)
         {
-            var originalDetail = _context.SprDet.Find(id);
+            try
+            {
+                var originalDetail = await _context.SprDet.FindAsync(id);
 
-            if (originalDetail == null)
+                if (originalDetail == null)
+                {
+                    return NotFound();
+                }
+
+                if (originalDetail.KodDetal.Length >= 25)
+                {
+                    return new StatusCodeResult(400);
+                }
+
+                var copyDetail = new SprDet
+                {
+                    KodDetal = originalDetail.KodDetal + "_Копия",
+                    NameDetal = originalDetail.NameDetal + "_Копия",
+                    ShifrDetal = originalDetail.ShifrDetal + "_Копия",
+                };
+
+                _context.SprDet.Add(copyDetail);
+               await _context.SaveChangesAsync();
+
+                var operations = _context.Sproper.Where(op => op.KodDetal == originalDetail.KodDetal).ToList();
+
+                foreach (var operation in operations)
+                {
+                    var copyOperation = new Sproper
+                    {
+                        KodDetal = copyDetail.KodDetal,
+                        KodOperation = operation.KodOperation,
+                        NameOperation = operation.NameOperation,
+                        Razriad = operation.Razriad,
+                        TimeComput = operation.TimeComput,
+                        TimeOperation = operation.TimeOperation,
+                        Procent = operation.Procent,
+                        Rascenka = operation.Rascenka,
+                        GrTarif = operation.GrTarif,
+                        DpPrem = operation.DpPrem,
+                        KoefDV = operation.KoefDV
+                    };
+
+                    _context.Sproper.Add(copyOperation);
+                }
+
+               await _context.SaveChangesAsync();
+
+                return Json(new { success = true, message = "Текущая деталь успешно скопирована!" });
+            } 
+            catch (Exception ex)
+            {
+                return Json(new {success = false, message = $"Произошла ошибка при копировании строки: {ex.Message}"});
+            }
+        }
+
+        [HttpPost]
+        public async Task<ActionResult> DeleteRow(string kodDetalDelete)
+        {
+            var kodDetal = await _context.SprDet.FirstOrDefaultAsync(d => d.KodDetal == kodDetalDelete);
+
+            if (kodDetal == null)
             {
                 return NotFound();
             }
 
-            if (originalDetail.KodDetal.Length >= 25)
-            {
-                return new StatusCodeResult(400);
-            }
-
-            var copyDetail = new SprDet
-            {
-                KodDetal = originalDetail.KodDetal + "_Копия",
-                NameDetal = originalDetail.NameDetal,
-                ShifrDetal = originalDetail.ShifrDetal + "_Копия"
-            };
-
-            _context.SprDet.Add(copyDetail);
-            _context.SaveChanges();
-
-            var operations = _context.Sproper.Where(op => op.KodDetal == originalDetail.KodDetal).ToList();
-
-            foreach (var operation in operations)
-            {
-                var copyOperation = new Sproper
-                {
-                    KodDetal = copyDetail.KodDetal,
-                    KodOperation = operation.KodOperation,
-                    NameOperation = operation.NameOperation,
-                    Razriad = operation.Razriad,
-                    TimeComput = operation.TimeComput,
-                    TimeOperation = operation.TimeOperation,
-                    Procent = operation.Procent,
-                    Rascenka = operation.Rascenka,
-                    GrTarif = operation.GrTarif,
-                    DpPrem = operation.DpPrem,
-                    KoefDV = operation.KoefDV
-                };
-
-                _context.Sproper.Add(copyOperation);
-            }
-
-            _context.SaveChanges();
+            _context.SprDet.Remove(kodDetal);
+            await _context.SaveChangesAsync();
 
             return RedirectToAction("SprOperation", "Home");
         }
@@ -233,11 +257,18 @@ namespace NardSmena.Controllers
 
         public override void OnActionExecuted(ActionExecutedContext filterContext)
         {
-            base.OnActionExecuted(filterContext);
-
-            if (_context.ChangeTracker.HasChanges())
+            try
             {
-                _context.SaveChanges();
+                base.OnActionExecuted(filterContext);
+
+                if (_context.ChangeTracker.HasChanges())
+                {
+                    _context.SaveChanges();
+                }
+            }
+            catch (DbUpdateException ex)
+            {
+                TempData["ErrorMessage"] = $"Произошла ошибка при сохранении изменений в базе данных: {ex.Message}";
             }
         }
     }

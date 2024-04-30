@@ -3,28 +3,28 @@
   "WorkspaceRootPath": "D:\\\u043A\u043E\u043B\u043B\u0435\u0434\u0436\\4 \u043A\u0443\u0440\u0441\\\u041F\u0440\u0430\u043A\u0442\u0438\u043A\u0430\\Web\\NardSmena\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{8644A159-F75B-4F79-A61B-1F6FF1F25F73}|NardSmena.csproj|d:\\\u043A\u043E\u043B\u043B\u0435\u0434\u0436\\4 \u043A\u0443\u0440\u0441\\\u043F\u0440\u0430\u043A\u0442\u0438\u043A\u0430\\web\\nardsmena\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8644A159-F75B-4F79-A61B-1F6FF1F25F73}|NardSmena.csproj|solutionrelative:controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{8644A159-F75B-4F79-A61B-1F6FF1F25F73}|NardSmena.csproj|d:\\\u043A\u043E\u043B\u043B\u0435\u0434\u0436\\4 \u043A\u0443\u0440\u0441\\\u043F\u0440\u0430\u043A\u0442\u0438\u043A\u0430\\web\\nardsmena\\wwwroot\\js\\sproperation\\sproperationrequests.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{8644A159-F75B-4F79-A61B-1F6FF1F25F73}|NardSmena.csproj|solutionrelative:wwwroot\\js\\sproperation\\sproperationrequests.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{8644A159-F75B-4F79-A61B-1F6FF1F25F73}|NardSmena.csproj|d:\\\u043A\u043E\u043B\u043B\u0435\u0434\u0436\\4 \u043A\u0443\u0440\u0441\\\u043F\u0440\u0430\u043A\u0442\u0438\u043A\u0430\\web\\nardsmena\\views\\home\\sproperation.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{8644A159-F75B-4F79-A61B-1F6FF1F25F73}|NardSmena.csproj|solutionrelative:views\\home\\sproperation.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8644A159-F75B-4F79-A61B-1F6FF1F25F73}|NardSmena.csproj|d:\\\u043A\u043E\u043B\u043B\u0435\u0434\u0436\\4 \u043A\u0443\u0440\u0441\\\u043F\u0440\u0430\u043A\u0442\u0438\u043A\u0430\\web\\nardsmena\\models\\sproper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8644A159-F75B-4F79-A61B-1F6FF1F25F73}|NardSmena.csproj|solutionrelative:models\\sproper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{8644A159-F75B-4F79-A61B-1F6FF1F25F73}|NardSmena.csproj|d:\\\u043A\u043E\u043B\u043B\u0435\u0434\u0436\\4 \u043A\u0443\u0440\u0441\\\u043F\u0440\u0430\u043A\u0442\u0438\u043A\u0430\\web\\nardsmena\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8644A159-F75B-4F79-A61B-1F6FF1F25F73}|NardSmena.csproj|solutionrelative:controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{8644A159-F75B-4F79-A61B-1F6FF1F25F73}|NardSmena.csproj|d:\\\u043A\u043E\u043B\u043B\u0435\u0434\u0436\\4 \u043A\u0443\u0440\u0441\\\u043F\u0440\u0430\u043A\u0442\u0438\u043A\u0430\\web\\nardsmena\\wwwroot\\css\\sproperationstyle.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
       "RelativeMoniker": "D:0:0:{8644A159-F75B-4F79-A61B-1F6FF1F25F73}|NardSmena.csproj|solutionrelative:wwwroot\\css\\sproperationstyle.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8644A159-F75B-4F79-A61B-1F6FF1F25F73}|NardSmena.csproj|d:\\\u043A\u043E\u043B\u043B\u0435\u0434\u0436\\4 \u043A\u0443\u0440\u0441\\\u043F\u0440\u0430\u043A\u0442\u0438\u043A\u0430\\web\\nardsmena\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{8644A159-F75B-4F79-A61B-1F6FF1F25F73}|NardSmena.csproj|solutionrelative:views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{8644A159-F75B-4F79-A61B-1F6FF1F25F73}|NardSmena.csproj|d:\\\u043A\u043E\u043B\u043B\u0435\u0434\u0436\\4 \u043A\u0443\u0440\u0441\\\u043F\u0440\u0430\u043A\u0442\u0438\u043A\u0430\\web\\nardsmena\\wwwroot\\js\\sproperation\\sproperationhandler.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
       "RelativeMoniker": "D:0:0:{8644A159-F75B-4F79-A61B-1F6FF1F25F73}|NardSmena.csproj|solutionrelative:wwwroot\\js\\sproperation\\sproperationhandler.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8644A159-F75B-4F79-A61B-1F6FF1F25F73}|NardSmena.csproj|d:\\\u043A\u043E\u043B\u043B\u0435\u0434\u0436\\4 \u043A\u0443\u0440\u0441\\\u043F\u0440\u0430\u043A\u0442\u0438\u043A\u0430\\web\\nardsmena\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{8644A159-F75B-4F79-A61B-1F6FF1F25F73}|NardSmena.csproj|solutionrelative:views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{8644A159-F75B-4F79-A61B-1F6FF1F25F73}|NardSmena.csproj|d:\\\u043A\u043E\u043B\u043B\u0435\u0434\u0436\\4 \u043A\u0443\u0440\u0441\\\u043F\u0440\u0430\u043A\u0442\u0438\u043A\u0430\\web\\nardsmena\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -38,7 +38,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Document",
@@ -51,8 +51,7 @@
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAC0AAABUAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-01-31T11:10:56.574Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Bookmark",
@@ -60,15 +59,15 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Sproper.cs",
-              "DocumentMoniker": "D:\\\u043A\u043E\u043B\u043B\u0435\u0434\u0436\\4 \u043A\u0443\u0440\u0441\\\u041F\u0440\u0430\u043A\u0442\u0438\u043A\u0430\\Web\\NardSmena\\Models\\Sproper.cs",
-              "RelativeDocumentMoniker": "Models\\Sproper.cs",
-              "ToolTip": "D:\\\u043A\u043E\u043B\u043B\u0435\u0434\u0436\\4 \u043A\u0443\u0440\u0441\\\u041F\u0440\u0430\u043A\u0442\u0438\u043A\u0430\\Web\\NardSmena\\Models\\Sproper.cs",
-              "RelativeToolTip": "Models\\Sproper.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-29T13:20:15.523Z",
+              "DocumentIndex": 0,
+              "Title": "SprOperationRequests.js",
+              "DocumentMoniker": "D:\\\u043A\u043E\u043B\u043B\u0435\u0434\u0436\\4 \u043A\u0443\u0440\u0441\\\u041F\u0440\u0430\u043A\u0442\u0438\u043A\u0430\\Web\\NardSmena\\wwwroot\\js\\SprOperation\\SprOperationRequests.js",
+              "RelativeDocumentMoniker": "wwwroot\\js\\SprOperation\\SprOperationRequests.js",
+              "ToolTip": "D:\\\u043A\u043E\u043B\u043B\u0435\u0434\u0436\\4 \u043A\u0443\u0440\u0441\\\u041F\u0440\u0430\u043A\u0442\u0438\u043A\u0430\\Web\\NardSmena\\wwwroot\\js\\SprOperation\\SprOperationRequests.js",
+              "RelativeToolTip": "wwwroot\\js\\SprOperation\\SprOperationRequests.js",
+              "ViewState": "AQIAABwAAAAAAAAAAAAcwCsAAAAoAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2024-04-30T09:41:15.347Z",
               "EditorCaption": ""
             },
             {
@@ -79,14 +78,14 @@
               "RelativeDocumentMoniker": "wwwroot\\css\\SprOperationStyle.css",
               "ToolTip": "D:\\\u043A\u043E\u043B\u043B\u0435\u0434\u0436\\4 \u043A\u0443\u0440\u0441\\\u041F\u0440\u0430\u043A\u0442\u0438\u043A\u0430\\Web\\NardSmena\\wwwroot\\css\\SprOperationStyle.css",
               "RelativeToolTip": "wwwroot\\css\\SprOperationStyle.css",
-              "ViewState": "AQIAAC0AAAAAAAAAAAAAADUAAAARAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAADkAAAAYAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
               "WhenOpened": "2024-04-29T12:59:40.289Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "Index.cshtml",
               "DocumentMoniker": "D:\\\u043A\u043E\u043B\u043B\u0435\u0434\u0436\\4 \u043A\u0443\u0440\u0441\\\u041F\u0440\u0430\u043A\u0442\u0438\u043A\u0430\\Web\\NardSmena\\Views\\Home\\Index.cshtml",
               "RelativeDocumentMoniker": "Views\\Home\\Index.cshtml",
@@ -94,31 +93,30 @@
               "RelativeToolTip": "Views\\Home\\Index.cshtml",
               "ViewState": "AQIAADAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-04-29T12:35:30.073Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-29T12:35:30.073Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "HomeController.cs",
               "DocumentMoniker": "D:\\\u043A\u043E\u043B\u043B\u0435\u0434\u0436\\4 \u043A\u0443\u0440\u0441\\\u041F\u0440\u0430\u043A\u0442\u0438\u043A\u0430\\Web\\NardSmena\\Controllers\\HomeController.cs",
               "RelativeDocumentMoniker": "Controllers\\HomeController.cs",
               "ToolTip": "D:\\\u043A\u043E\u043B\u043B\u0435\u0434\u0436\\4 \u043A\u0443\u0440\u0441\\\u041F\u0440\u0430\u043A\u0442\u0438\u043A\u0430\\Web\\NardSmena\\Controllers\\HomeController.cs",
               "RelativeToolTip": "Controllers\\HomeController.cs",
-              "ViewState": "AQIAALUAAAAAAAAAAAAYwKEAAABIAAAA",
+              "ViewState": "AQIAAHQAAAAAAAAAAAAAAI4AAAAJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-04-29T12:24:33.157Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 4,
               "Title": "SprOperationHandler.js",
               "DocumentMoniker": "D:\\\u043A\u043E\u043B\u043B\u0435\u0434\u0436\\4 \u043A\u0443\u0440\u0441\\\u041F\u0440\u0430\u043A\u0442\u0438\u043A\u0430\\Web\\NardSmena\\wwwroot\\js\\SprOperation\\SprOperationHandler.js",
               "RelativeDocumentMoniker": "wwwroot\\js\\SprOperation\\SprOperationHandler.js",
               "ToolTip": "D:\\\u043A\u043E\u043B\u043B\u0435\u0434\u0436\\4 \u043A\u0443\u0440\u0441\\\u041F\u0440\u0430\u043A\u0442\u0438\u043A\u0430\\Web\\NardSmena\\wwwroot\\js\\SprOperation\\SprOperationHandler.js",
               "RelativeToolTip": "wwwroot\\js\\SprOperation\\SprOperationHandler.js",
-              "ViewState": "AQIAABwAAAAAAAAAAAAgwDQAAAAHAAAA",
+              "ViewState": "AQIAACoAAAAAAAAAAAAIwDMAAAALAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
               "WhenOpened": "2024-04-29T12:16:55.27Z",
               "EditorCaption": ""
@@ -131,7 +129,7 @@
               "RelativeDocumentMoniker": "Views\\Home\\SprOperation.cshtml",
               "ToolTip": "D:\\\u043A\u043E\u043B\u043B\u0435\u0434\u0436\\4 \u043A\u0443\u0440\u0441\\\u041F\u0440\u0430\u043A\u0442\u0438\u043A\u0430\\Web\\NardSmena\\Views\\Home\\SprOperation.cshtml",
               "RelativeToolTip": "Views\\Home\\SprOperation.cshtml",
-              "ViewState": "AQIAAEYAAAAAAAAAAAAuwFgAAABlAAAA",
+              "ViewState": "AQIAAIQBAAAAAAAAAAAAAIcBAABaAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2024-04-29T12:12:25.98Z",
               "EditorCaption": ""

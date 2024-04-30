@@ -53,3 +53,7 @@ input[type="radio"]:focus {
     box-shadow: none;
     border: none;
 }
+
+#alertContainer .alert {
+    margin-bottom: 10px;
+}

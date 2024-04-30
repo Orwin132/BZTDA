@@ -59,5 +59,68 @@ $(document).ready(function () {
             }
         });
     });
+
+    $('#copyBtn').click(function () {
+        var selectedRow = $('input[name="selection"]:checked').closest('tr');
+
+        if (selectedRow.length === 0) {
+            $('#confirmModalCopy').modal('hide');
+
+            setTimeout(function () {
+                $('#alertCopy').show();
+
+                setTimeout(function () {
+                    $('#alertCopy').fadeOut();
+                }, 6000);
+            }, 400);
+
+            return;
+        }
+
+        var detailId = selectedRow.find('td:eq(1) input').val();
+        $.ajax({
+            url: '/Home/CopyOperation',
+            method: 'POST',
+            data: { id: detailId },
+            success: function (result) {
+                if (result.success) {
+                    localStorage.setItem('showSuccessAlert', 'true');
+                } else {
+                    localStorage.setItem('showErrorAlert', 'true');
+                    localStorage.setItem('alertMessage', result.message);
+                }
+                location.reload();
+            },
+            error: function () {
+                localStorage.setItem('showErrorAlert', 'true');
+                localStorage.setItem('alertMessage', 'Произошла ошибка при выполнении AJAX запроса');
+                location.reload();
+            }
+        });
+    });
+
+    $(document).ready(function () {
+        if (localStorage.getItem('showSuccessAlert') === 'true') {
+            $('#alertSuccessCopy').show();
+
+            setTimeout(function () {
+                $('#alertSuccessCopy').fadeOut();
+            }, 3000);
+
+            localStorage.removeItem('showSuccessAlert');
+        }
+
+        if (localStorage.getItem('showErrorAlert') === 'true') {
+            $('#errorAlertCopy').show();
+            $('.text-errorCopy').text(localStorage.getItem('alertMessage'));
+
+            setTimeout(function () {
+                $('#errorAlertCopy').fadeOut();
+            }, 10000);
+
+            localStorage.removeItem('showErrorAlert');
+            localStorage.removeItem('alertMessage');
+        }
+    });
 });
 
