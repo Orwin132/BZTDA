@@ -5,32 +5,34 @@
 
 <div class="container-fluid" style="margin-top: 3rem">
     <div class="row">
-        <div class="col-md-6">
-            <table class="table">
-                <thead>
-                    <tr>
-                        <th>Табельный №</th>
-                        <th>Цех</th>
-                        <th>Участок</th>
-                        <th>ФИО</th>
-                        <th>Профессия</th>
-                    </tr>
-                </thead>
-                <tbody>
-                   @foreach (var sprRab in Model.SprRabList)
-                    {
+        <div class="col-6">
+            <div class="table-responsive">
+                <table class="table">
+                    <thead>
                         <tr>
-                            <td>@sprRab.TabNomer</td>
-                            <td>@sprRab.Ceh</td>
-                            <td>@sprRab.Uch</td>
-                            <td>@sprRab.FIO</td>
-                            <td>@sprRab.PROFF</td>
+                            <th>Табельный №</th>
+                            <th>Цех</th>
+                            <th>Участок</th>
+                            <th>ФИО</th>
+                            <th>Профессия</th>
                         </tr>
-                    }
-                </tbody>
-            </table>
+                    </thead>
+                    <tbody>
+                        @foreach (var sprRab in Model.SprRabList)
+                        {
+                            <tr>
+                                <td>@sprRab.TabNomer</td>
+                                <td>@sprRab.Ceh</td>
+                                <td>@sprRab.Uch</td>
+                                <td>@sprRab.FIO</td>
+                                <td>@sprRab.PROFF.KodProf</td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
         </div>
-        <div class="col-md-6">
+        <div class="col-6" style="height: 700px; overflow-y: auto">
             <table class="table">
                 <thead>
                     <tr>
@@ -39,11 +41,11 @@
                     </tr>
                 </thead>
                 <tbody>
-                    @foreach (var sprRab in Model.SprRabList)
+                    @foreach (var proff in Model.ProffList)
                     {
                         <tr>
-                            <td>@sprRab.KodProfessii</td>
-                            <td>@sprRab.PROFF</td>
+                            <td>@proff.KodProf</td>
+                            <td>@proff.NameProf</td>
                         </tr>
                     }
                 </tbody>
@@ -53,16 +55,28 @@
 
 
     <div class="row mt-3">
-        <div class="col-md-6">
-            <div class="form-floating mb-3">
+        <div class="col-6">
+            <div class="form-floating mb-2">
                 <input type="text" class="form-control focus-ring" id="search-id" placeholder="Введите табельный №">
                 <label for="search-id">Поиск по табельному №</label>
             </div>
         </div>
-        <div class="col-md-6">
-            <div class="form-floating mb-3">
-                <input type="text" class="form-control focus-ring" id="search-surname" placeholder="Введите фамилию">
+        <div class="col-6">
+            <div class="form-floating mb-2">
+                <input type="text" class="form-control focus-ring" id="search-proffessia" placeholder="Введите название профессии">
+                <label for="search-proffessia">Поиск по профессии</label>
+            </div>
+        </div>
+        <div class="col-6">
+            <div class="form-floating mb-5">
+                <input type="text" class="form-control focus-ring" id="search-surname" placeholder="Введите фамилию" />
                 <label for="search-surname">Поиск по фамилии</label>
+            </div>
+        </div>
+        <div class="col-6">
+            <div class="form-floating mb-5">
+                <input type="text" class="form-control focus-ring" id="search-kod" placeholder="Введите код" />
+                <label for="search-kod">Поиск по коду</label>
             </div>
         </div>
     </div>

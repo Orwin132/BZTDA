@@ -74,10 +74,12 @@ namespace NardSmena.Controllers
         public async Task<IActionResult> SprRab()
         {
             var sprRabList = await _context.SPRRAB.ToListAsync();
+            var proffList = await _context.PROFF.ToListAsync();
 
             var viewModel = new CombinedViewModelSprRab
             {
-                SprRabList = sprRabList
+                SprRabList = sprRabList,
+                ProffList = proffList
             };
 
             return View(viewModel);
