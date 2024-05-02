@@ -15,7 +15,7 @@
       Исправлена сортировка на странице "Детали и операции", обновлен интерфейс админ-панели
     </p>
     <li>
-      Updated GUI and fixed data in table (SprOperation), addedd alert in page SprOperation:
+      Updated GUI and fixed data in table (SprOperation), added alert in page SprOperation:
       <p>
         Обновлен интерфейс страниц, исправлена некорректное отображение данных второй таблицы на странице 'Детали и операции'. Добавлена всплывающее уведомление на странице 'Детали и операции'
       </p>
