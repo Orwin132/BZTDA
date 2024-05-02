@@ -49,6 +49,10 @@ document.addEventListener('DOMContentLoaded', function () {
             if (e.keyCode == 119) { // Код клавиши F8
                 $('#confirmModalCopy').modal('show');
             }
+
+            if (e.keyCode == 45) { // Код клавиши INSERT
+                $('#insertRowsTable').modal('show');
+            }
         });
     });
 });
@@ -79,5 +83,28 @@ $(document).ready(function () {
             });
             row.toggle(match);
         });
+    });
+
+    $('#insertKodDetal').click(function () {
+        $('#newRow').show();
+        $('#insertRowsTable').modal('hide');
+
+        $('.text-successAddRow').text('Новая запись успешно добавлена');
+
+        $('#alertSuccessAdd').show();
+
+        setTimeout(function () {
+            $('#alertSuccessAdd').fadeOut();
+        }, 3000);
+
+        $('.text-warningInfoAdd').html('Для сохранения данных нажмите клавишу <strong>F1</strong>');
+
+        setTimeout(function () {
+            $('#alertWarningInfoAdd').show();
+
+            setTimeout(function () {
+                $('#alertWarningInfoAdd').fadeOut();
+            }, 6000);
+        }, 6000)
     });
 });

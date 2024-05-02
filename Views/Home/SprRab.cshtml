@@ -7,7 +7,7 @@
     <div class="row">
         <div class="col-6">
             <div class="table-responsive">
-                <table class="table">
+                <table class="table" id="sprRab">
                     <thead>
                         <tr>
                             <th>Табельный №</th>
@@ -33,23 +33,25 @@
             </div>
         </div>
         <div class="col-6" style="height: 700px; overflow-y: auto">
-            <table class="table">
-                <thead>
-                    <tr>
-                        <th>Код</th>
-                        <th>Профессия</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    @foreach (var proff in Model.ProffList)
-                    {
+            <div class="table-responsive">
+                <table class="table" id="proff">
+                    <thead>
                         <tr>
-                            <td>@proff.KodProf</td>
-                            <td>@proff.NameProf</td>
+                            <th>Код</th>
+                            <th>Профессия</th>
                         </tr>
-                    }
-                </tbody>
-            </table>
+                    </thead>
+                    <tbody>
+                        @foreach (var proff in Model.ProffList)
+                        {
+                            <tr>
+                                <td>@proff.KodProf</td>
+                                <td>@proff.NameProf</td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
         </div>
     </div>
 
@@ -69,8 +71,8 @@
         </div>
         <div class="col-6">
             <div class="form-floating mb-5">
-                <input type="text" class="form-control focus-ring" id="search-surname" placeholder="Введите фамилию" />
-                <label for="search-surname">Поиск по фамилии</label>
+                <input type="text" class="form-control focus-ring" id="search-surname" placeholder="Введите ФИО" />
+                <label for="search-surname">Поиск по ФИО</label>
             </div>
         </div>
         <div class="col-6">
@@ -81,3 +83,5 @@
         </div>
     </div>
 </div>
+
+<script src="~/js/SprRab/SprRabHandler.js"></script>

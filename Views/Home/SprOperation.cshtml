@@ -50,6 +50,28 @@
                                         <input type="text" class="focus-ring form-control" value="@sprOper.Rascenka" />
                                     </td>
                                 </tr>
+                                <tr id="newRow" style="display: none">
+                                    <td>
+                                        <div class="form-check d-flex align-items-center justify-content-center">
+                                            <input type="radio" name="selection" class="form-check-input" style="width: 25px; height: 25px" />
+                                        </div>
+                                    </td>
+                                    <td class="d-flex align-items-center justify-content-center">
+                                        <input type="text" class="focus-ring form-control w-auto" value="" />
+                                    </td>
+                                    <td>
+                                        <input type="text" class="focus-ring form-control" value="" />
+                                    </td>
+                                    <td>
+                                        <input type="text" class="focus-ring form-control" value="" />
+                                    </td>
+                                    <td>
+                                        <input type="text" class="focus-ring form-control" value="" />
+                                    </td>
+                                    <td>
+                                        <input type="text" class="focus-ring form-control" value="" />
+                                    </td>
+                                </tr>
                             }
                         </tbody>
                     </table>
@@ -389,11 +411,53 @@
     </div>
 </div>
 
+<div class="modal fade" tabindex="-1" aria-hidden="true" aria-labelledby="insertRowsTable" id="insertRowsTable">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Вставить новую запись в таблицу</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                Выберите для какой таблицы вставить новую запись:
+                <p></p>
+                <div class="container d-flex align-items-center justify-content-center">
+                    <div class="row">
+                        <div class="col">
+                            <button type="button" class="btn btn-outline-danger btn-kod" id="insertKodDetal">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-table" viewBox="0 0 16 16">
+                                    <path d="M0 2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2zm15 2h-4v3h4zm0 4h-4v3h4zm0 4h-4v3h3a1 1 0 0 0 1-1zm-5 3v-3H6v3zm-5 0v-3H1v2a1 1 0 0 0 1 1zm-4-4h4V8H1zm0-4h4V4H1zm5-3v3h4V4zm4 4H6v3h4z" />
+                                </svg> Код детали</button>
+                        </div>
+                        <div class="col">
+                            <button type="button" class="btn btn-outline-danger btn-kod" id="insertKodOperation">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-file-spreadsheet-fill" viewBox="0 0 16 16">
+                                    <path d="M12 0H4a2 2 0 0 0-2 2v4h12V2a2 2 0 0 0-2-2m2 7h-4v2h4zm0 3h-4v2h4zm0 3h-4v3h2a2 2 0 0 0 2-2zm-5 3v-3H6v3zm-4 0v-3H2v1a2 2 0 0 0 2 2zm-3-4h3v-2H2zm0-3h3V7H2zm4 0V7h3v2zm0 1h3v2H6z" />
+                                </svg> Код операции
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
 <div id="alertContainer" class="position-fixed bottom-0 end-0" style="z-index: 5; width: 600px">
-    <div class="alert alert-primary alert-dismissible fade show" role="alert">
-        <h5>Информация</h5>
+    <div class="alert alert-info alert-dismissible fade show" role="alert">
         <div>
-            <span>Для копирования записи из первой таблицы, выделите строку в ячейке <strong class="text-decoration-underline">Выбор</strong></span>
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-info-circle-fill" viewBox="0 0 16 16">
+                <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16m.93-9.412-1 4.705c-.07.34.029.533.304.533.194 0 .487-.07.686-.246l-.088.416c-.287.346-.92.598-1.465.598-.703 0-1.002-.422-.808-1.319l.738-3.468c.064-.293.006-.399-.287-.47l-.451-.081.082-.381 2.29-.287zM8 5.5a1 1 0 1 1 0-2 1 1 0 0 1 0 2" />
+            </svg> <span>Для копирования записи из первой таблицы, отметьте строку в столбце <strong>Выбор</strong> и нажмите на клавишу <strong>F8</strong></span>
+        </div>
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+
+    <div class="alert alert-info alert-dismissible fade show" role="alert">
+        <div>
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-info-circle-fill" viewBox="0 0 16 16">
+                <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16m.93-9.412-1 4.705c-.07.34.029.533.304.533.194 0 .487-.07.686-.246l-.088.416c-.287.346-.92.598-1.465.598-.703 0-1.002-.422-.808-1.319l.738-3.468c.064-.293.006-.399-.287-.47l-.451-.081.082-.381 2.29-.287zM8 5.5a1 1 0 1 1 0-2 1 1 0 0 1 0 2" />
+            </svg> <span>Для добавления записи в таблицу нажмите клавишу <strong>INSERT</strong></span>
         </div>
         <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
     </div>
@@ -420,6 +484,14 @@
 
     <div id="alertErrorDelete" class="alert alert-danger fade show" role="alert" style="display: none">
         <i class="bi bi-x-circle-fill"></i> <span class="text-errorDeleteRow"></span>
+    </div>
+
+    <div id="alertSuccessAdd" class="alert alert-success fade show" role="alert" style="display: none">
+        <i class="bi bi-check-circle-fill"></i> <span class="text-successAddRow"></span>
+    </div>
+
+    <div id="alertWarningInfoAdd" class="alert alert-warning fade show" role="role" style="display: none">
+        <i class="bi bi-exclamation-triangle-fill"></i> <span class="text-warningInfoAdd"></span>
     </div>
 </div>
 

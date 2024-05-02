@@ -46,7 +46,7 @@ input[type="radio"]:focus {
 
 .focus-ring:focus {
     box-shadow: 0 0 0 0.2rem rgba(255, 0, 0, 0.35);
-    border-color: lightcoral
+    border-color: lightcoral;
 }
 
 .btn-close:focus {
@@ -56,4 +56,12 @@ input[type="radio"]:focus {
 
 #alertContainer .alert {
     margin-bottom: 10px;
+}
+
+table {
+    max-height: 700px;
+}
+
+.btn-kod {
+    width: 200px;
 }

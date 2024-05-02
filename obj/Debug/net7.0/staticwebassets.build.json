@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "Gk4TXPPTdvYlJmP9TfQJM671slfygNjlZc7RtDV4DJw=",
+  "Hash": "LaHze73pMXTqiNRqTWwoN/kPPfKEiBemr8T1iRya1g8=",
   "Source": "NardSmena",
   "BasePath": "_content/NardSmena",
   "Mode": "Default",
@@ -2276,6 +2276,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\js\\SprOperation\\SprOperationRequests.js"
+    },
+    {
+      "Identity": "D:\\колледж\\4 курс\\Практика\\Web\\NardSmena\\wwwroot\\js\\SprRab\\SprRabHandler.js",
+      "SourceId": "NardSmena",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\колледж\\4 курс\\Практика\\Web\\NardSmena\\wwwroot\\",
+      "BasePath": "_content/NardSmena",
+      "RelativePath": "js/SprRab/SprRabHandler.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\SprRab\\SprRabHandler.js"
     },
     {
       "Identity": "D:\\колледж\\4 курс\\Практика\\Web\\NardSmena\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",

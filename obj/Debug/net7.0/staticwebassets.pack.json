@@ -469,6 +469,10 @@
       "PackagePath": "staticwebassets\\js\\SprOperation\\data-tables\\sprOperation.js"
     },
     {
+      "Id": "D:\\колледж\\4 курс\\Практика\\Web\\NardSmena\\wwwroot\\js\\SprRab\\SprRabHandler.js",
+      "PackagePath": "staticwebassets\\js\\SprRab\\SprRabHandler.js"
+    },
+    {
       "Id": "D:\\колледж\\4 курс\\Практика\\Web\\NardSmena\\wwwroot\\js\\site.js",
       "PackagePath": "staticwebassets\\js\\site.js"
     },
