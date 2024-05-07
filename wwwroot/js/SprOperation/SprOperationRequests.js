@@ -1,4 +1,5 @@
 $(document).ready(function () {
+    var newRow = {};
     $(document).keyup(function (e) {
         if (e.which === 113) { // Код клавиши F2
             var rashRascenkiUrl = $('#table').data('rash-rascenki-url');
@@ -14,25 +15,49 @@ $(document).ready(function () {
                 }
             });
         }
+
+        if (e.which === 112) {
+            newData.kodDetal = $('#newKodDetal').val();
+            newData.NameDetal = $('#newNameDetal').val();
+            newData.ShifrDetal = $('#newShifrDetal').val();
+            newData.TimeComput = $('#newTimeComput').val();
+            newData.Rascenka = $('#newRascenka').val();
+
+            $.ajax({
+                url: '/Home/SaveNewRow',
+                type: 'POST',
+                data: newData,
+                success: function (response) {
+                    if (response.success) {
+                        $('#newKodDetal').val('');
+                        $('newNameDetal').val('');
+                        $('#newShifrDetal').val('');
+                        $('#newTimeComput').val('');
+                        $('#newRascenka').val('');
+
+                        $('#newRow').hide();
+
+                        localStorage.setItem('showSuccessAlertInsertNewRow', 'true');
+                        localStorage.setItem('showSuccessAlertInsertNewRowMessage', response.message);
+
+                        location.reload();
+                    } else {
+                        localStorage.setItem('showErrorAlertInsertNewRow', 'true');
+
+                        location.reload();
+                    }
+                },
+                error: function (xhr, status, error) {
+                    $('.text-errorInsertNewRow').text('Произошла ошибка при сохранении данных: ', xhr, status, error);
+                    $('#alertErrorInsertNewRow').show();
+
+                    setTimeout(function () {
+                        $('#alertErrorInsertNewRow').fadeOut();
+                    }, 3000);
+                }
+            })
+        }
     });
-
-    function copyCellData(cell) {
-        var copyDetailsUrl = $('table2').data('copy-details-url');
-
-        $.ajax({
-            url: copyDetailsUrl,
-            type: 'POST',
-
-            success: function (data) {
-                console.log('Method CopyOperation succesful.');
-            },
-            error: function (error) {
-                console.error('Method execution error CopyOperation: ', error);
-            }
-        });
-
-        console.log('Copy data for rows: ', cell);
-    }
 
     $('#btnDeleteRow').click(function () {
         var kodDetalDelete = $('#kodDetalDelete').val();
@@ -174,6 +199,11 @@ $(document).ready(function () {
 
             localStorage.removeItem('showErrorAlertDelete');
             localStorage.removeItem('errorMessageDelete');
+        }
+
+        if (localStorage.getItem('showSuccessAlertInsertNewRow') === 'true') {
+            $('$alertSuccessInsertNewrow').show('');
+            $('.text-successInsertNewRow').text(localStorage.getItem(''))
         }
     });
 });

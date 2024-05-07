@@ -658,7 +658,7 @@ namespace NardSmena.Migrations
 
                     b.HasKey("RoleAssignmentId");
 
-                    b.ToTable("RoleAssignmentViewModels", "dbo");
+                    b.ToTable("RoleAssignments", "dbo");
                 });
 
             modelBuilder.Entity("NardSmena.Models.SPRMETAL", b =>

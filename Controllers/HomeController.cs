@@ -174,6 +174,35 @@ namespace NardSmena.Controllers
             }
         }
 
+        public ActionResult Compare()
+        {
+            try
+            {
+                if (!_context.Sravnenie.Any())
+                {
+                    TempData["ErrorMessage"] = "Сравнительная таблица пуста. Сравнительный анализ не выполнен";
+                    return RedirectToAction("SprOperation","Home");
+                }
+
+                var sprOper = _context.Sproper.ToList();
+                var sravnenie = _context.Sproper.ToList();
+
+                var commonRecords = sprOper.Intersect(sravnenie).ToList();
+
+                TempData["CommnoRecords"] = commonRecords;
+
+                TempData["Message"] = "Сравнительный анализ успешно выполнен";
+
+                return RedirectToAction("SprOperation", "Home");
+            }
+            catch (Exception ex)
+            {
+                TempData["ErrorMessage"] = $"Произошла ошибка при выполнении сравнительного анализа: {ex.Message}";
+
+                return RedirectToAction("SprOperation", "Home");
+            }
+        }
+
 
         public IActionResult RashRascenki()
         {

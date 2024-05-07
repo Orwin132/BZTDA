@@ -9,10 +9,18 @@ function sortTable(n, isNumeric) {
             shouldSwitch = false;
             x = rows[i].getElementsByTagName("TD")[n].querySelector('input').value;
             y = rows[i + 1].getElementsByTagName("TD")[n].querySelector('input').value;
-            if (isNumeric ? parseFloat(x) > parseFloat(y) : x.toLowerCase() > y.toLowerCase()) {
+            if (isNumeric) {
+                x = x.replace(/\s/g, '').replace(',', '.');
+                y = y.replace(/\s/g, '').replace(',', '.');
+                if (parseFloat(x) > parseFloat(y)) {
+                    shouldSwitch = true;
+                    break;
+                }
+            } else if (x.toLowerCase() > y.toLowerCase()) {
                 shouldSwitch = true;
                 break;
             }
+
         }
         if (shouldSwitch) {
             rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
@@ -54,6 +62,11 @@ document.addEventListener('DOMContentLoaded', function () {
                 $('#insertRowsTable').modal('show');
             }
         });
+
+        setTimeout(function () {
+            $('#alertkeyupF8').fadeOut();
+            $('#alertkeyupINSERT').fadeOut();
+        }, 10000);
     });
 });
 

@@ -58,8 +58,9 @@ input[type="radio"]:focus {
     margin-bottom: 10px;
 }
 
-table {
-    max-height: 700px;
+.table-responsive {
+    height: 700px;
+    overflow-y: auto;
 }
 
 .btn-kod {

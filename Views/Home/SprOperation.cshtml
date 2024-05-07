@@ -50,34 +50,34 @@
                                         <input type="text" class="focus-ring form-control" value="@sprOper.Rascenka" />
                                     </td>
                                 </tr>
-                                <tr id="newRow" style="display: none">
-                                    <td>
-                                        <div class="form-check d-flex align-items-center justify-content-center">
-                                            <input type="radio" name="selection" class="form-check-input" style="width: 25px; height: 25px" />
-                                        </div>
-                                    </td>
-                                    <td class="d-flex align-items-center justify-content-center">
-                                        <input type="text" class="focus-ring form-control w-auto" value="" />
-                                    </td>
-                                    <td>
-                                        <input type="text" class="focus-ring form-control" value="" />
-                                    </td>
-                                    <td>
-                                        <input type="text" class="focus-ring form-control" value="" />
-                                    </td>
-                                    <td>
-                                        <input type="text" class="focus-ring form-control" value="" />
-                                    </td>
-                                    <td>
-                                        <input type="text" class="focus-ring form-control" value="" />
-                                    </td>
-                                </tr>
                             }
                         </tbody>
+                        <tr id="newRow" style="display: none">
+                            <td>
+                                <div class="form-check d-flex align-items-center justify-content-center">
+                                    <input type="radio" name="selection" class="form-check-input" style="width: 25px; height: 25px" />
+                                </div>
+                            </td>
+                            <td class="d-flex align-items-center justify-content-center">
+                                <input type="text" class="focus-ring form-control w-auto" id="newKodDetal" value="" />
+                            </td>
+                            <td>
+                                <input type="text" class="focus-ring form-control" id="newNameDetal" value="" />
+                            </td>
+                            <td>
+                                <input type="text" class="focus-ring form-control" id="newShifrDetal" value="" />
+                            </td>
+                            <td>
+                                <input type="text" class="focus-ring form-control" id="newTimeComput" value="" />
+                            </td>
+                            <td>
+                                <input type="text" class="focus-ring form-control" id="newRascenka" value="" />
+                            </td>
+                        </tr>
                     </table>
                 </div>
             </div>
-            <div class="container mb-5 mt-3" id="table2">
+            <div class="container mb-5 mt-3" id="table3">
                 <div class="input-group mb-2 mt-2 w-75">
                     <button class="btn btn-outline-danger" type="button" id="confirmDeleteButton2" data-bs-toggle="modal" data-bs-target="#confirmModalDelete2">Удалить строку</button>
                 </div>
@@ -168,7 +168,7 @@
                 <input type="radio" class="btn-check" name="btnradio" id="btnradio3" autocomplete="off" onclick="sortTable(3, false)" />
                 <label class="btn btn-outline-danger mb-2 labelSort" for="btnradio3">Шифр</label>
 
-                <input type="radio" class="btn-check" name="btnradio" id="btnradio4" autocomplete="off" onclick="sortTable(4, false)" />
+                <input type="radio" class="btn-check" name="btnradio" id="btnradio4" autocomplete="off" onclick="sortTable(4, true)" />
                 <label class="btn btn-outline-danger mb-2 labelSort" for="btnradio4">Время</label>
 
                 <input type="radio" class="btn-check" name="btnradio" id="btnradio5" autocomplete="off" onclick="sortTable(5, true)" />
@@ -444,7 +444,7 @@
 </div>
 
 <div id="alertContainer" class="position-fixed bottom-0 end-0" style="z-index: 5; width: 600px">
-    <div class="alert alert-info alert-dismissible fade show" role="alert">
+    <div class="alert alert-info alert-dismissible fade show" role="alert" id="alertkeyupF8">
         <div>
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-info-circle-fill" viewBox="0 0 16 16">
                 <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16m.93-9.412-1 4.705c-.07.34.029.533.304.533.194 0 .487-.07.686-.246l-.088.416c-.287.346-.92.598-1.465.598-.703 0-1.002-.422-.808-1.319l.738-3.468c.064-.293.006-.399-.287-.47l-.451-.081.082-.381 2.29-.287zM8 5.5a1 1 0 1 1 0-2 1 1 0 0 1 0 2" />
@@ -453,7 +453,7 @@
         <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
     </div>
 
-    <div class="alert alert-info alert-dismissible fade show" role="alert">
+    <div class="alert alert-info alert-dismissible fade show" role="alert" id="alertkeyupINSERT">
         <div>
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-info-circle-fill" viewBox="0 0 16 16">
                 <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16m.93-9.412-1 4.705c-.07.34.029.533.304.533.194 0 .487-.07.686-.246l-.088.416c-.287.346-.92.598-1.465.598-.703 0-1.002-.422-.808-1.319l.738-3.468c.064-.293.006-.399-.287-.47l-.451-.081.082-.381 2.29-.287zM8 5.5a1 1 0 1 1 0-2 1 1 0 0 1 0 2" />
@@ -492,6 +492,14 @@
 
     <div id="alertWarningInfoAdd" class="alert alert-warning fade show" role="role" style="display: none">
         <i class="bi bi-exclamation-triangle-fill"></i> <span class="text-warningInfoAdd"></span>
+    </div>
+
+    <div id="alertErrorInsertNewRow" class="alert alert-danger fade show" role="alert" style="display: none">
+        <i class="bi bi-x-circle-fill"></i> <span class="text-errorInsertNewRow"></span>
+    </div>
+
+    <div id="alertSuccessInsertNewrow" class="alert alert-success fade show" role="alert" style="display: none">
+        <i class="bi bi-check-circle-fill"></i> <span class="text-successInsertNewRow"></span>
     </div>
 </div>
 
