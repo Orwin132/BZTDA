@@ -200,7 +200,7 @@
                             <li><a class="dropdown-item" id="deselectAll">Разотметить все</a></li>
                         </ul>
                     </div>
-                    <button class="btn btn-outline mb-2" type="button"><i class="bi bi-clipboard-data"></i> Сравнительный анализ</button>
+                    <button class="btn btn-outline mb-2" type="button" id="btnAnalyze"><i class="bi bi-clipboard-data"></i> Сравнительный анализ</button>
                     <button class="btn btn-outline mb-2" type="button"><i class="bi bi-calculator"></i> Перерасчет</button>
                     <button id="tarifButton" class="btn btn-outline mb-2" type="button" data-bs-toggle="modal" data-bs-target="#tarifModal"><i class="bi bi-table"></i> Тарифная сетка</button>
                     
@@ -261,58 +261,16 @@
                                                 </tr>
                                             </thead>
                                             <tbody>
-                                                <tr>
-                                                    <th scope="row">Январь</th>
-                                                    <td>160</td>
-                                                </tr>
-                                                <tr>
-                                                    <th scope="row">Февраль</th>
-                                                    <td>168</td>
-                                                </tr>
-                                                <tr>
-                                                    <th scope="row">Март</th>
-                                                    <td>167</td>
-                                                </tr>
-                                                <tr>
-                                                    <th scope="row">Апрель</th>
-                                                    <td>175</td>
-                                                </tr>
-                                                <tr>
-                                                    <th scope="row">Май</th>
-                                                    <td>166</td>
-                                                </tr>
-                                                <tr>
-                                                    <th scope="row">Июнь</th>
-                                                    <td>160</td>
-                                                </tr>
-                                                <tr>
-                                                    <th scope="row">Июль</th>
-                                                    <td>175</td>
-                                                </tr>
-                                                <tr>
-                                                    <th scope="row">Август</th>
-                                                    <td>176</td>
-                                                </tr>
-                                                <tr>
-                                                    <th scope="row">Сентябрь</th>
-                                                    <td>168</td>
-                                                </tr>
-                                                <tr>
-                                                    <th scope="row">Октябрь</th>
-                                                    <td>184</td>
-                                                </tr>
-                                                <tr>
-                                                    <th scope="row">Ноябрь</th>
-                                                    <td>151</td>
-                                                </tr>
-                                                <tr>
-                                                    <th scope="row">Декабрь</th>
-                                                    <td>158</td>
-                                                </tr>
+                                                @foreach (var msFndVr in Model.MsFndVrList)
+                                                {
+                                                    <tr>
+                                                        <td scope="row">@msFndVr.NaimMes</td>
+                                                        <td scope="row">@msFndVr.MFVrem</td>
+                                                    </tr>
+                                                }
                                             </tbody>
                                         </table>
                                     </div>
-
                                 </div>
                             </div>
                         </div>
@@ -443,7 +401,67 @@
     </div>
 </div>
 
-<div id="alertContainer" class="position-fixed bottom-0 end-0" style="z-index: 5; width: 600px">
+<div class="modal fade" tabindex="-1" aria-hidden="true" aria-labelledby="SaveNewRowLabel" id="saveNewRowModal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">
+                    Добавление новой записи в <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-server" viewBox="0 0 16 16">
+                        <path d="M1.333 2.667C1.333 1.194 4.318 0 8 0s6.667 1.194 6.667 2.667V4c0 1.473-2.985 2.667-6.667 2.667S1.333 5.473 1.333 4z" />
+                        <path d="M1.333 6.334v3C1.333 10.805 4.318 12 8 12s6.667-1.194 6.667-2.667V6.334a6.5 6.5 0 0 1-1.458.79C11.81 7.684 9.967 8 8 8s-3.809-.317-5.208-.876a6.5 6.5 0 0 1-1.458-.79z" />
+                        <path d="M14.667 11.668a6.5 6.5 0 0 1-1.458.789c-1.4.56-3.242.876-5.21.876-1.966 0-3.809-.316-5.208-.876a6.5 6.5 0 0 1-1.458-.79v1.666C1.333 14.806 4.318 16 8 16s6.667-1.194 6.667-2.667z" />
+                    </svg>
+                </h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <span>
+                    Вы точно хотите добавить новую запись в базу данных?
+                </span>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-outline-secondary btn-cancel" data-bs-dismiss="modal">Отмена</button>
+                <button type="button" class="btn btn-outline-danger btn-save" id="btnSave">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus-circle-fill" id="circle-plus" viewBox="0 0 16 16">
+                        <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0M8.5 4.5a.5.5 0 0 0-1 0v3h-3a.5.5 0 0 0 0 1h3v3a.5.5 0 0 0 1 0v-3h3a.5.5 0 0 0 0-1h-3z" />
+                    </svg>
+                    Добавить</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" tabindex="-1" aria-hidden="true" aria-labelledby="showCompareTable" id="modalCompareTable">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Сравнительный анализ</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="table-responsive">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>Выбор</th>
+                                <th>Код детали</th>
+                                <th>Наименование</th>
+                                <th>Шифр</th>
+                                <th>Общее время</th>
+                                <th>Расценка</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="position-fixed bottom-0 end-0" style="z-index: 5; width: 600px; margin-bottom: 10px !important">
     <div class="alert alert-info alert-dismissible fade show" role="alert" id="alertkeyupF8">
         <div>
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-info-circle-fill" viewBox="0 0 16 16">
@@ -461,7 +479,9 @@
         </div>
         <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
     </div>
+</div>
 
+<div id="alertContainer" class="position-fixed top-0 start-50 translate-middle-x mt-2" style="z-index: 5; width: 600px">
     <div id="alertCopy" class="alert alert-warning fade show" role="alert" style="display: none">
         <i class="bi bi-exclamation-triangle-fill"></i> <span>Пожалуйста, выберите строку для копирования</span>
     </div>
@@ -500,6 +520,14 @@
 
     <div id="alertSuccessInsertNewrow" class="alert alert-success fade show" role="alert" style="display: none">
         <i class="bi bi-check-circle-fill"></i> <span class="text-successInsertNewRow"></span>
+    </div>
+
+    <div id="alertSuccessCompare" class="alert alert-success fade show" role="alert" style="display: none">
+        <i class="bi bi-check-circle-fill"></i> <span class="text-successCompare"></span>
+    </div>
+
+    <div id="alertErrorCompare" class="alert alert-danger fade show" role="alert" style="display: none">
+        <i class="bi bi-x-circle-fill"></i> <span class="text-errorCompare"></span>
     </div>
 </div>
 

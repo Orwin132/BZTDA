@@ -61,6 +61,10 @@ document.addEventListener('DOMContentLoaded', function () {
             if (e.keyCode == 45) { // Код клавиши INSERT
                 $('#insertRowsTable').modal('show');
             }
+
+            if (e.keyCode == 115) { // Код клавиши F4
+                $('#saveNewRowModal').modal('show');
+            }
         });
 
         setTimeout(function () {
@@ -110,7 +114,7 @@ $(document).ready(function () {
             $('#alertSuccessAdd').fadeOut();
         }, 3000);
 
-        $('.text-warningInfoAdd').html('Для сохранения данных нажмите клавишу <strong>F1</strong>');
+        $('.text-warningInfoAdd').html('Для сохранения данных нажмите клавишу <strong>F4</strong>');
 
         setTimeout(function () {
             $('#alertWarningInfoAdd').show();
@@ -119,5 +123,10 @@ $(document).ready(function () {
                 $('#alertWarningInfoAdd').fadeOut();
             }, 6000);
         }, 6000)
+    });
+
+    $('#btnSave').click(function () {
+        $('#circle-plus').hide();
+        $('#btnSave').text('').addClass('disabled').append('<span class="spinner-border spinner-border-sm" aria-hidden="true"></span>').append('<span role="status"> Подождите...</span>');
     });
 });

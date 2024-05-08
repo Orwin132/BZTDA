@@ -152,6 +152,31 @@ $(document).ready(function () {
         });
     });
 
+    $('#btnAnalyze').click(function () {
+        $.ajax({
+            url: '/Home/Compare',
+            method: 'GET',
+            success: function (result) {
+                if (result.success) {
+                    localStorage.setItem('showSuccessAlertCompare', 'true');
+                    localStorage.setItem('alertMessageCompare', result.message);
+                    localStorage.setItem('dataCompare', JSON.stringify(result.data));
+                } else {
+                    localStorage.setItem('showErrorCompare', 'true');
+                    localStorage.setItem('alertErrorMessageCompare', result.message);
+                }
+
+                location.reload();
+            },
+            error: function () {
+                localStorage.setItem('showErrorCompare', 'true');
+                localStorage.setItem('alertErrorMessageCompare', 'Произошла ошибка при выполнении запроса');
+
+                location.reload();
+            }
+        });
+    });
+
     $(document).ready(function () {
         if (localStorage.getItem('showSuccessAlert') === 'true') {
             $('#alertSuccessCopy').show();
@@ -204,6 +229,30 @@ $(document).ready(function () {
         if (localStorage.getItem('showSuccessAlertInsertNewRow') === 'true') {
             $('$alertSuccessInsertNewrow').show('');
             $('.text-successInsertNewRow').text(localStorage.getItem(''))
+        }
+
+        if (localStorage.getItem('showSuccessAlertCompare') === 'true') {
+            $('#alertSuccessCompare').show();
+            $('.text-successCompare').text(localStorage.getItem('alertMessageCompare'));
+
+            setTimeout(function () {
+                $('#alertSuccessCompare').fadeOut();
+            }, 3000);
+
+            localStorage.removeItem('showSuccessAlertCompare');
+            localStorage.removeItem('alertMessageCompare');
+        }
+
+        if (localStorage.getItem('showErrorCompare') === 'true') {
+            $('#alertErrorCompare').show();
+            $('.text-errorCompare').text(localStorage.getItem('alertErrorMessageCompare'));
+
+            setTimeout(function () {
+                $('#alertErrorCompare').fadeOut();
+            }, 3000);
+
+            localStorage.removeItem('showErrorCompare');
+            localStorage.removeItem('alertErrorMessageCompare');
         }
     });
 });

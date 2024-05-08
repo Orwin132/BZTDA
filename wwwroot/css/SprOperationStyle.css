@@ -54,9 +54,7 @@ input[type="radio"]:focus {
     border: none;
 }
 
-#alertContainer .alert {
-    margin-bottom: 10px;
-}
+
 
 .table-responsive {
     height: 700px;

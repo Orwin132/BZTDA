@@ -58,13 +58,15 @@ namespace NardSmena.Controllers
             var otpVredList = await _context.OtpVred.ToListAsync();
             var sprOperList = await _context.Sproper.ToListAsync();
             var sprDetList = await _context.SprDet.ToListAsync();
+            var msFndVrList = await _context.MsFndVr.ToListAsync();
 
             var viewModel = new CombinedViewModelSprOperation
             {
                 TarifList = tarifList,
                 OtpVredList = otpVredList,
                 SprOperList = sprOperList,
-                SprDetList = sprDetList
+                SprDetList = sprDetList,
+                MsFndVrList = msFndVrList
             };
 
             return View(viewModel);
@@ -180,8 +182,7 @@ namespace NardSmena.Controllers
             {
                 if (!_context.Sravnenie.Any())
                 {
-                    TempData["ErrorMessage"] = "Сравнительная таблица пуста. Сравнительный анализ не выполнен";
-                    return RedirectToAction("SprOperation","Home");
+                    return Json(new { success = false, message = "Сравнительная таблица пуста. Сравнительный анализ не выполнен." });
                 }
 
                 var sprOper = _context.Sproper.ToList();
@@ -189,17 +190,13 @@ namespace NardSmena.Controllers
 
                 var commonRecords = sprOper.Intersect(sravnenie).ToList();
 
-                TempData["CommnoRecords"] = commonRecords;
+                TempData["CommonRecords"] = commonRecords;
 
-                TempData["Message"] = "Сравнительный анализ успешно выполнен";
-
-                return RedirectToAction("SprOperation", "Home");
+                return Json(new { success = true, message = "Сравнительный анализ успешно выполнен", data = commonRecords });
             }
             catch (Exception ex)
             {
-                TempData["ErrorMessage"] = $"Произошла ошибка при выполнении сравнительного анализа: {ex.Message}";
-
-                return RedirectToAction("SprOperation", "Home");
+                return Json(new { success = false, message = $"Произошла ошибка при выоплнении сравнительного анализа: {ex.Message}" });
             }
         }
 
