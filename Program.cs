@@ -96,6 +96,7 @@ app.Use(async (context, next) =>
         await context.SignOutAsync(CookieAuthenticationDefaults.AuthenticationScheme);
     }
     await next();
+
 });
 
 

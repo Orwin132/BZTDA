@@ -21,8 +21,8 @@
           "Microsoft.EntityFrameworkCore.Design": "7.0.13",
           "Microsoft.EntityFrameworkCore.SqlServer": "7.0.13",
           "Microsoft.VisualStudio.Web.CodeGeneration.Design": "7.0.9",
+          "Select.HtmlToPdf": "23.2.0",
           "dBASE.NET": "1.2.1",
-          "datatables.net-bs4": "2.0.3",
           "DotNetDBF": "6.0.0.3"
         },
         "runtime": {
@@ -61,23 +61,6 @@
             "assemblyVersion": "1.7.0.0",
             "fileVersion": "1.700.22.46903"
           }
-        }
-      },
-      "bootstrap/4.0.0": {
-        "dependencies": {
-          "jQuery": "3.0.0",
-          "popper.js": "1.12.9"
-        }
-      },
-      "datatables.net/1.12.1": {
-        "dependencies": {
-          "jQuery": "3.0.0"
-        }
-      },
-      "datatables.net-bs4/2.0.3": {
-        "dependencies": {
-          "bootstrap": "4.0.0",
-          "datatables.net": "1.12.1"
         }
       },
       "dBASE.NET/1.2.1": {
@@ -668,7 +651,6 @@
           }
         }
       },
-      "jQuery/3.0.0": {},
       "Microsoft.AspNet.Identity.Core/2.2.4": {
         "runtime": {
           "lib/net45/Microsoft.AspNet.Identity.Core.dll": {
@@ -1998,7 +1980,6 @@
           }
         }
       },
-      "popper.js/1.12.9": {},
       "runtime.debian.8-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.0": {},
       "runtime.fedora.23-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.0": {},
       "runtime.fedora.24-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.0": {},
@@ -2081,6 +2062,7 @@
           }
         }
       },
+      "Select.HtmlToPdf/23.2.0": {},
       "System.AppContext/4.3.0": {
         "dependencies": {
           "System.Runtime": "4.3.0"
@@ -2927,27 +2909,6 @@
       "path": "azure.identity/1.7.0",
       "hashPath": "azure.identity.1.7.0.nupkg.sha512"
     },
-    "bootstrap/4.0.0": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-aW3kJMmptC2GD4+hIa3x3fSrPF4VkrWQ2PRBEJg+o7lMRMi7u4UW9igY/GP02/wrIpH/CusL+mQIM42YhvA3XQ==",
-      "path": "bootstrap/4.0.0",
-      "hashPath": "bootstrap.4.0.0.nupkg.sha512"
-    },
-    "datatables.net/1.12.1": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-7ArWbq7HCVj6uciLXUoFlW1ZvfYNbCPxFnniAjD4NKb/iAsTYWGZYRjdH3Ir8+0N8rR6muPTF5nZ4Mqf1nUn9A==",
-      "path": "datatables.net/1.12.1",
-      "hashPath": "datatables.net.1.12.1.nupkg.sha512"
-    },
-    "datatables.net-bs4/2.0.3": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-4JxQ6mVjTs16sNul5aDvLlXsEgCBMP46nqEASUWdcfT20vct7yxDmNJ+AhZAcFgvk1OBqf02nZzK47tir/Q4vg==",
-      "path": "datatables.net-bs4/2.0.3",
-      "hashPath": "datatables.net-bs4.2.0.3.nupkg.sha512"
-    },
     "dBASE.NET/1.2.1": {
       "type": "package",
       "serviceable": true,
@@ -3325,13 +3286,6 @@
       "sha512": "sha512-VIXB7HCUC34OoaGnO3HJVtSv2/wljPhjV7eKH4+TFPgQdJj2lvHNKY41Dtg0Bphu7X5UaXFR4zrYYyo+GNOjbA==",
       "path": "humanizer.core.zh-hant/2.14.1",
       "hashPath": "humanizer.core.zh-hant.2.14.1.nupkg.sha512"
-    },
-    "jQuery/3.0.0": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-xFfntV19HzCtKdJWOp/XT9PUY3SslokTDDLFJZdBug36j1XVhw1+vPQ/n7Gd5y+jdpesn5B1m1yn1qIUq57jlA==",
-      "path": "jquery/3.0.0",
-      "hashPath": "jquery.3.0.0.nupkg.sha512"
     },
     "Microsoft.AspNet.Identity.Core/2.2.4": {
       "type": "package",
@@ -3970,13 +3924,6 @@
       "path": "owin/1.0.0",
       "hashPath": "owin.1.0.0.nupkg.sha512"
     },
-    "popper.js/1.12.9": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-WfoI8YXFx31zr8w6AvYMmqKihR3a/wLc5wBhu41ApgBukTM8C2UHNSRFrO6485SDQ/HKoSn9yiEMgfBx1LVNNw==",
-      "path": "popper.js/1.12.9",
-      "hashPath": "popper.js.1.12.9.nupkg.sha512"
-    },
     "runtime.debian.8-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.0": {
       "type": "package",
       "serviceable": true,
@@ -4116,6 +4063,13 @@
       "sha512": "sha512-YhEdSQUsTx+C8m8Bw7ar5/VesXvCFMItyZF7G1AUY+OM0VPZUOeAVpJ4Wl6fydBGUYZxojTDR3I6Bj/+BPkJNA==",
       "path": "runtime.win-x86.runtime.native.system.data.sqlclient.sni/4.4.0",
       "hashPath": "runtime.win-x86.runtime.native.system.data.sqlclient.sni.4.4.0.nupkg.sha512"
+    },
+    "Select.HtmlToPdf/23.2.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-5WlFJbacmdAsGkduRMS5WarLu8k5dY0BdMRgXhO5S9YdyuOWFeSyF8jIhYkzyCGnK6pcTlUccRQQ2Yu/Eh96oA==",
+      "path": "select.htmltopdf/23.2.0",
+      "hashPath": "select.htmltopdf.23.2.0.nupkg.sha512"
     },
     "System.AppContext/4.3.0": {
       "type": "package",

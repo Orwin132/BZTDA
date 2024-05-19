@@ -161,10 +161,8 @@ namespace NardSmena.Controllers
                 // Найти все связанные записи в таблице Sproper
                 var relatedRecords = await _context.Sproper.Where(s => s.KodDetal == kodDetalDelete).ToListAsync();
 
-                // Удалить все связанные записи
                 _context.Sproper.RemoveRange(relatedRecords);
 
-                // Удалить саму запись
                 _context.SprDet.Remove(kodDetal);
                 await _context.SaveChangesAsync();
 
@@ -200,19 +198,13 @@ namespace NardSmena.Controllers
             }
         }
 
-
-        public IActionResult RashRascenki()
+        [HttpPost]
+        public async Task<IActionResult> RashRascenki()
         {
-            // Проверяем, находится ли SprOper в состоянии редактирования или вставки,
-            // и сохраняем изменения, если необходимо
-            if (_context.Sproper.Any(s => _context.Entry(s).State == EntityState.Modified || _context.Entry(s).State == EntityState.Added))
-                _context.SaveChanges();
-
-            // Если SprOper находится в состоянии просмотра
-            if (_context.Sproper.All(s => _context.Entry(s).State == EntityState.Unchanged))
+            try
             {
                 // Получаем данные из таблицы SprOper
-                var sprOperData = _context.Sproper.ToList();
+                var sprOperData = await _context.Sproper.ToListAsync();
 
                 foreach (var sprOper in sprOperData)
                 {
@@ -234,16 +226,18 @@ namespace NardSmena.Controllers
                 }
 
                 // Сохраняем изменения
-                _context.SaveChanges();
-            }
+                await _context.SaveChangesAsync();
 
-            // Возвращаем пользователю какой-либо результат (например, перенаправляем на другую страницу)
-            return RedirectToAction("Index", "Home");
+                return Json(new { success = true, message = "Операция успешно выполнена. Данные обновлены" });
+            }
+            catch (Exception ex)
+            {
+                return Json(new { success = false, message = $"Произошла ошибка выполнения операции: {ex.Message}" });
+            }
         }
 
         private string NormalizeOperationName(string name)
         {
-            // Нормализуем названия операций
             if (name != null)
             {
                 if (name.StartsWith("слесарная")) name = "слесарная";
@@ -258,7 +252,6 @@ namespace NardSmena.Controllers
 
         private double GetTarif(int group)
         {
-            // Получаем тариф в зависимости от группы
             switch (group)
             {
                 case 1: return _context.TARIF.First().Tarif1;
@@ -270,7 +263,6 @@ namespace NardSmena.Controllers
 
         private double CalculateRascenka(Sproper sprOper, double TR)
         {
-            // Рассчитываем расценку в зависимости от наличия процента
             if (sprOper.Procent == null)
                 return Okrug(( sprOper.TimeOperation * TR ) / 60);
             else
@@ -279,24 +271,48 @@ namespace NardSmena.Controllers
 
         private double Okrug(double value)
         {
-            // Округляем значение
             return Math.Round(value, 3);
         }
 
         [HttpPost]
-        public async Task<IActionResult> DeleteRecord(int id)
+        public async Task<IActionResult> UpdateTable([FromBody] SprOper_SprDet request)
         {
-            var record = await _context.Sproper.FindAsync(id);
-            if (record == null)
+            try
             {
-                return NotFound();
+                foreach (var updatedSprOper in request.Sproper)
+                {
+                    var sprOper = await _context.Sproper.FirstOrDefaultAsync(s => s.NomStr == updatedSprOper.NomStr);
+
+                    if (sprOper != null)
+                    {
+                        sprOper.KodDetal = updatedSprOper.KodDetal;
+                        sprOper.TimeComput = updatedSprOper.TimeComput;
+                        sprOper.Rascenka = updatedSprOper.Rascenka;
+                    }
+                }
+
+                foreach (var updatedSprDet in request.SprDet)
+                {
+                    var sprDet = await _context.SprDet.FirstOrDefaultAsync(d => d.KodDetal == updatedSprDet.KodDetal);
+
+                    if (sprDet != null)
+                    {
+                        sprDet.KodDetal = updatedSprDet.KodDetal;
+                        sprDet.NameDetal = updatedSprDet.NameDetal;
+                        sprDet.ShifrDetal = updatedSprDet.ShifrDetal;
+                    }
+                }
+
+                await _context.SaveChangesAsync();
+
+                return Json(new { success = true, message = "Данные успешно обновлены" });
             }
-
-            _context.Sproper.Remove(record);
-            await _context.SaveChangesAsync();
-
-            return Ok();
+            catch (Exception ex)
+            {
+                return StatusCode(500, new { message = $"Произошла ошибка: {ex.Message}" });
+            }
         }
+
 
         public override void OnActionExecuted(ActionExecutedContext filterContext)
         {

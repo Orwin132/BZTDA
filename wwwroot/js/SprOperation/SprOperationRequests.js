@@ -2,16 +2,26 @@ $(document).ready(function () {
     var newRow = {};
     $(document).keyup(function (e) {
         if (e.which === 113) { // Код клавиши F2
-            var rashRascenkiUrl = $('#table').data('rash-rascenki-url');
 
             $.ajax({
-                url: rashRascenkiUrl,
+                url: '/Home/RashRascenki',
                 type: 'POST',
-                success: function (data) {
-                    console.log('Method RashRascenki succesful.');
+                success: function (response) {
+                    if (response.success) {
+                        localStorage.setItem('showAlertRash', 'true');
+                        localStorage.setItem('showTextRash', response.message);
+
+                        location.reload();
+                    } else {
+                        localStorage.setItem('showErrorAlertRash', 'true');
+                        localStorage.setItem('showErrorTextRash', 'Произошла ошибка');
+
+                        location.reload();
+                    }
                 },
-                error: function (error) {
-                    console.error('Method execution error RashRascenki: ', error);
+                error: function (xhr, status, error) {
+                    localStorage.setItem('showErrorAlertRash', 'true');
+                    localStorage.setItem('shwoErrorTextRash', 'Произошла ошибка при выполнении AJAX-запроса: ', xhr, status, error);
                 }
             });
         }
@@ -55,7 +65,64 @@ $(document).ready(function () {
                         $('#alertErrorInsertNewRow').fadeOut();
                     }, 3000);
                 }
-            })
+            });
+        }
+
+        if (e.which === 36) {
+            var selectedRow = $('input[name="selection"]:checked').closest('tr');
+
+            var NomStr = selectedRow.find('input[type="hidden"]').val();
+            var KodDetal = selectedRow.find('input[type="text"]').eq(0).val();
+            var NameDetal = selectedRow.find('input[type="text"]').eq(1).val();
+            var ShifrDetal = selectedRow.find('input[type="text"]').eq(2).val();
+            var TimeComput = selectedRow.find('input[type="text"]').eq(3).val();
+            var Rascenka = selectedRow.find('input[type="text"]').eq(4).val();
+
+            localStorage.setItem('NomStr', NomStr);
+            localStorage.setItem('KodDetal', KodDetal);
+            localStorage.setItem('NameDetal', NameDetal);
+            localStorage.setItem('ShifrDetal', ShifrDetal);
+            localStorage.setItem('TimeComput', TimeComput);
+            localStorage.setItem('Rascenka', Rascenka);
+
+            $.ajax({
+                url: '/Home/UpdateTable',
+                type: 'POST',
+                data: JSON.stringify({
+                    'updatedSprOperList': [{
+                        'NomStr': NomStr,
+                        'KodDetal': KodDetal,
+                        'Rascenka': Rascenka
+                    }],
+                    'updatedSprDetList': [{
+                        'KodDetal': KodDetal,
+                        'NameDetal': NameDetal,
+                        'ShifrDetal': ShifrDetal
+                    }]
+                }),
+                contentType: "application/json; charset=utf-8",
+                dataType: "json",
+                success: function (response) {
+                    if (response.success) {
+
+                        localStorage.setItem('showAlertUpdateTabe', 'true');
+                        localStorage.setItem('showAlertUpdateTableText', response.message);
+
+                        location.reload();
+                    } else {
+                        localStorage.setItem('showErrorAlertUpdateTable', 'true');
+                        localStorage.setItem('showErrorAlertUpdateTableText', response.message);
+
+                        location.reload();
+                    }
+                },
+                error: function () {
+                    localStorage.setItem('showErrorAlertUpdateTable', 'true');
+                    localStorage.setItem('showErrorAlertUpdateTableText', 'An error occurred while updating the table.');
+
+                    location.reload();
+                }
+            });
         }
     });
 
@@ -95,19 +162,6 @@ $(document).ready(function () {
             error: function () {
                 localStorage.setItem('showErrorAlertDelete', 'true');
                 localStorage.setItem('errorMessageDelete', 'Произошла ошибка при выполнении AJAX запроса');
-            }
-        });
-    });
-
-    $("#confirmDeleteButton2").click(function () {
-        $.ajax({
-            url: '/HomeController/DeleteRecord',
-            type: 'POST',
-            data: {
-                id: id
-            },
-            success: function (result) {
-                console.log('Operation succesful');
             }
         });
     });
@@ -175,6 +229,14 @@ $(document).ready(function () {
                 location.reload();
             }
         });
+    });
+
+    $('#btn-close-alert1').click(function () {
+        localStorage.setItem('hideAlert1', 'true');
+    });
+
+    $('#btn-close-alert2').click(function () {
+        localStorage.setItem('hideAlert2', 'true');
     });
 
     $(document).ready(function () {
@@ -253,6 +315,59 @@ $(document).ready(function () {
 
             localStorage.removeItem('showErrorCompare');
             localStorage.removeItem('alertErrorMessageCompare');
+        }
+
+        if (localStorage.getItem('showAlertRash') === 'true') {
+            $('#alertSuccessRash').show();
+            $('.text-successRash').text(localStorage.getItem('showTextRash'));
+
+            setTimeout(function () {
+                $('#alertSuccessRash').fadeOut();
+            }, 3000);
+
+            localStorage.removeItem('showAlertRash');
+            localStorage.removeItem('showTextRash');
+        }
+
+        if (localStorage.getItem('showErrorAlertRash') === 'true') {
+            $('#alertErrorRash').show();
+            $('.text-errorRash').text(localStorage.getItem('showErrorTextRash'));
+
+            setTimeout(function () {
+                $('#alertErrorRash').fadeOut();
+            }, 3000);
+        }
+
+        if (localStorage.getItem('hideAlert1') === 'true') {
+            $('#alertkeyupF8').hide();
+        }
+
+        if (localStorage.getItem('hideAlert2') === 'true') {
+            $('#alertkeyupINSERT').hide();
+        }
+
+        if (localStorage.getItem('showAlertUpdateTable') === 'true') {
+            $('#alertSuccessUpdateTable').show();
+            $('.text-successUpdateTable').text(localStorage.getItem('showAlertUpdateTableText'));
+
+            setTimeout(function () {
+                $('#alertSuccessUpdateTable').fadeOut();
+            }, 3000);
+
+            localStorage.removeItem('showAlertUpdateTable');
+            localStorage.removeItem('showAlertUpdateTableText');
+        }
+
+        if (localStorage.getItem('showErrorAlertUpdateTable') === 'true') {
+            $('#alertErrorUpdateTable').show();
+            $('.text-errorUpdateTable').text(localStorage.getItem('showErrorAlertUpdateTableText'));
+
+            setTimeout(function () {
+                $('#alertErrorUpdateTable').fadeOut();
+            }, 3000);
+
+            localStorage.removeItem('showErrorAlertUpdateTable');
+            localStorage.removeItem('showErrorAlertUpdateTableText');
         }
     });
 });

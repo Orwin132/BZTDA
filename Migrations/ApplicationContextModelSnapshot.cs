@@ -764,10 +764,10 @@ namespace NardSmena.Migrations
                     b.Property<string>("NameDetal")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<short>("PrDopPrem")
+                    b.Property<short?>("PrDopPrem")
                         .HasColumnType("smallint");
 
-                    b.Property<bool>("Selected")
+                    b.Property<bool?>("Selected")
                         .HasColumnType("bit");
 
                     b.Property<string>("ShifrDetal")

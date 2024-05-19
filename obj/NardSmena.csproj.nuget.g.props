@@ -14,37 +14,15 @@
     <SourceRoot Include="C:\Program Files (x86)\Microsoft Visual Studio\Shared\NuGetPackages\" />
   </ItemGroup>
   <ItemGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
-    <Content Include="$(NuGetPackageRoot)datatables.net-bs4\2.0.3\contentFiles\any\any\wwwroot\css\dataTables.bootstrap4.css" Condition="Exists('$(NuGetPackageRoot)datatables.net-bs4\2.0.3\contentFiles\any\any\wwwroot\css\dataTables.bootstrap4.css')">
-      <NuGetPackageId>datatables.net-bs4</NuGetPackageId>
-      <NuGetPackageVersion>2.0.3</NuGetPackageVersion>
+    <Content Include="$(NuGetPackageRoot)select.htmltopdf\23.2.0\contentFiles\any\any\Select.Html.dep" Condition="Exists('$(NuGetPackageRoot)select.htmltopdf\23.2.0\contentFiles\any\any\Select.Html.dep')">
+      <NuGetPackageId>Select.HtmlToPdf</NuGetPackageId>
+      <NuGetPackageVersion>23.2.0</NuGetPackageVersion>
       <NuGetItemType>Content</NuGetItemType>
       <Pack>false</Pack>
-      <Private>False</Private>
-      <Link>wwwroot\css\dataTables.bootstrap4.css</Link>
-    </Content>
-    <Content Include="$(NuGetPackageRoot)datatables.net-bs4\2.0.3\contentFiles\any\any\wwwroot\css\dataTables.bootstrap4.min.css" Condition="Exists('$(NuGetPackageRoot)datatables.net-bs4\2.0.3\contentFiles\any\any\wwwroot\css\dataTables.bootstrap4.min.css')">
-      <NuGetPackageId>datatables.net-bs4</NuGetPackageId>
-      <NuGetPackageVersion>2.0.3</NuGetPackageVersion>
-      <NuGetItemType>Content</NuGetItemType>
-      <Pack>false</Pack>
-      <Private>False</Private>
-      <Link>wwwroot\css\dataTables.bootstrap4.min.css</Link>
-    </Content>
-    <Content Include="$(NuGetPackageRoot)datatables.net-bs4\2.0.3\contentFiles\any\any\wwwroot\js\dataTables.bootstrap4.js" Condition="Exists('$(NuGetPackageRoot)datatables.net-bs4\2.0.3\contentFiles\any\any\wwwroot\js\dataTables.bootstrap4.js')">
-      <NuGetPackageId>datatables.net-bs4</NuGetPackageId>
-      <NuGetPackageVersion>2.0.3</NuGetPackageVersion>
-      <NuGetItemType>Content</NuGetItemType>
-      <Pack>false</Pack>
-      <Private>False</Private>
-      <Link>wwwroot\js\dataTables.bootstrap4.js</Link>
-    </Content>
-    <Content Include="$(NuGetPackageRoot)datatables.net-bs4\2.0.3\contentFiles\any\any\wwwroot\js\dataTables.bootstrap4.min.js" Condition="Exists('$(NuGetPackageRoot)datatables.net-bs4\2.0.3\contentFiles\any\any\wwwroot\js\dataTables.bootstrap4.min.js')">
-      <NuGetPackageId>datatables.net-bs4</NuGetPackageId>
-      <NuGetPackageVersion>2.0.3</NuGetPackageVersion>
-      <NuGetItemType>Content</NuGetItemType>
-      <Pack>false</Pack>
-      <Private>False</Private>
-      <Link>wwwroot\js\dataTables.bootstrap4.min.js</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <TargetPath>Select.Html.dep</TargetPath>
+      <Private>True</Private>
+      <Link>Select.Html.dep</Link>
     </Content>
   </ItemGroup>
   <ImportGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
@@ -56,6 +34,5 @@
     <PkgMicrosoft_CodeAnalysis_Analyzers Condition=" '$(PkgMicrosoft_CodeAnalysis_Analyzers)' == '' ">C:\Users\Delux\.nuget\packages\microsoft.codeanalysis.analyzers\3.3.3</PkgMicrosoft_CodeAnalysis_Analyzers>
     <PkgMicrosoft_CodeAnalysis_AnalyzerUtilities Condition=" '$(PkgMicrosoft_CodeAnalysis_AnalyzerUtilities)' == '' ">C:\Users\Delux\.nuget\packages\microsoft.codeanalysis.analyzerutilities\3.3.0</PkgMicrosoft_CodeAnalysis_AnalyzerUtilities>
     <PkgEntityFramework Condition=" '$(PkgEntityFramework)' == '' ">C:\Users\Delux\.nuget\packages\entityframework\6.4.4</PkgEntityFramework>
-    <PkgjQuery Condition=" '$(PkgjQuery)' == '' ">C:\Users\Delux\.nuget\packages\jquery\3.0.0</PkgjQuery>
   </PropertyGroup>
 </Project>

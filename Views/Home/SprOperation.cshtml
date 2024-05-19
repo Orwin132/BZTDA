@@ -13,7 +13,7 @@
                     <button class="btn btn-outline-danger" type="button" id="confirmDeleteButton" data-bs-toggle="modal" data-bs-target="#confirmModalDelete">Удалить</button>
                 </div>
                 <div class="table-responsive">
-                    <table class="table table-hover table-bordered caption-top" id="table2" data-rash-rascenki-url="@Url.Action("RashRascenki", "Home")" data-copy-details-url="@Url.Action("CopyOperation", "Home")">
+                    <table class="table table-hover table-bordered caption-top" id="table2">
                         <thead class="text-center">
                             <tr>
                                 <th>Выбор</th>
@@ -36,6 +36,7 @@
                                     </td>
                                     <td class="d-flex align-items-center justify-content-center">
                                         <input type="text" class="focus-ring form-control w-auto" value="@sprOper.KodDetal" />
+                                        <input type="hidden" value="@sprOper.NomStr" />
                                     </td>
                                     <td>
                                         <input type="text" class="focus-ring form-control" value="@sprDet?.NameDetal" />
@@ -82,7 +83,7 @@
                     <button class="btn btn-outline-danger" type="button" id="confirmDeleteButton2" data-bs-toggle="modal" data-bs-target="#confirmModalDelete2">Удалить строку</button>
                 </div>
                 <div class="table-responsive">
-                    <table class="table table-hover table-bordered" id="table" data-rash-rascenki-url="@Url.Action("RashRascenki", "Home")">
+                    <table class="table table-hover table-bordered" id="table">
                         <thead class="text-center">
                             <tr>
                                 <th style="width: 5vw">Обх.</th>
@@ -186,10 +187,10 @@
                         <i class="bi bi-printer"></i> Печать
                     </button>
                     <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="#">Печать</a></li>
-                        <li><a class="dropdown-item" href="#">Полная быстрая печать</a></li>
-                        <li><a class="dropdown-item" href="#">Сокращенная быстрая печать</a></li>
-                        <li><a class="dropdown-item" href="#">Норма за 8ч. и 7ч.</a></li>
+                        <li><a class="dropdown-item" asp-action="PrintLaborStandardsSprOperation" asp-controller="Reports" asp-route-printTitle="Нормы труда">Печать</a></li>
+                        <li><a class="dropdown-item" asp-action="PrintTimeStandards" asp-controller="Reports" asp-route-printTitle="Нормы времени и расценки">Полная быстрая печать</a></li>
+                        <li><a class="dropdown-item" asp-action="PrintSprOperation" asp-controller="Reports" asp-route-printTitle="Справочник по деталям">Сокращенная быстрая печать</a></li>
+                        <li><a class="dropdown-item" asp-action="PrintLaborStandardsSprOperationNorma" asp-controller="Reports" asp-route-printTitle="Нормы труда">Норма за 8ч. и 7ч.</a></li>
                     </ul>
                     <div class="dropdown mb-2">
                         <button class="btn btn-outline dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -412,7 +413,7 @@
                         <path d="M14.667 11.668a6.5 6.5 0 0 1-1.458.789c-1.4.56-3.242.876-5.21.876-1.966 0-3.809-.316-5.208-.876a6.5 6.5 0 0 1-1.458-.79v1.666C1.333 14.806 4.318 16 8 16s6.667-1.194 6.667-2.667z" />
                     </svg>
                 </h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                <button type="button" class="btn-close" id="btn-close-modalNewRow" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
                 <span>
@@ -468,7 +469,9 @@
                 <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16m.93-9.412-1 4.705c-.07.34.029.533.304.533.194 0 .487-.07.686-.246l-.088.416c-.287.346-.92.598-1.465.598-.703 0-1.002-.422-.808-1.319l.738-3.468c.064-.293.006-.399-.287-.47l-.451-.081.082-.381 2.29-.287zM8 5.5a1 1 0 1 1 0-2 1 1 0 0 1 0 2" />
             </svg> <span>Для копирования записи из первой таблицы, отметьте строку в столбце <strong>Выбор</strong> и нажмите на клавишу <strong>F8</strong></span>
         </div>
-        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        <button type="button" class="btn-close" id="btn-close-alert1" data-bs-dismiss="alert" aria-label="Close"></button>
+        <hr />
+        <p class="mb-0">После нажатия на <i class="bi bi-x-lg"></i> уведомление больше не появится при последующих визитах или перезагрузках сайта</p>
     </div>
 
     <div class="alert alert-info alert-dismissible fade show" role="alert" id="alertkeyupINSERT">
@@ -477,7 +480,9 @@
                 <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16m.93-9.412-1 4.705c-.07.34.029.533.304.533.194 0 .487-.07.686-.246l-.088.416c-.287.346-.92.598-1.465.598-.703 0-1.002-.422-.808-1.319l.738-3.468c.064-.293.006-.399-.287-.47l-.451-.081.082-.381 2.29-.287zM8 5.5a1 1 0 1 1 0-2 1 1 0 0 1 0 2" />
             </svg> <span>Для добавления записи в таблицу нажмите клавишу <strong>INSERT</strong></span>
         </div>
-        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        <button type="button" class="btn-close" id="btn-close-alert2" data-bs-dismiss="alert" aria-label="Close"></button>
+        <hr />
+        <p class="mb-0">После нажатия на <i class="bi bi-x-lg"></i> уведомление больше не появится при последующих визитах или перезагрузках сайта</p>
     </div>
 </div>
 
@@ -528,6 +533,22 @@
 
     <div id="alertErrorCompare" class="alert alert-danger fade show" role="alert" style="display: none">
         <i class="bi bi-x-circle-fill"></i> <span class="text-errorCompare"></span>
+    </div>
+
+    <div id="alertSuccessRash" class="alert alert-success fade show" role="alert" style="display: none">
+        <i class="bi bi-check-circle-fill"></i> <span class="text-successRash"></span>
+    </div>
+
+    <div id="alertErrorRash" class="alert alert-danger fade show" role="alert" style="display: none">
+        <i class="bi bi-x-circle-fill"></i> <span class="text-errorRash"></span>
+    </div>
+
+    <div id="alertSuccessUpdateTable" class="alert alert-success fade show" role="alert" style="display: none">
+        <i class="bi bi-check-circle-fill"></i> <span class="text-successUpdateTable"></span>
+    </div>
+
+    <div id="alertErrorUpdateTable" class="alert alert-danger fade show" role="alert" style="display: none">
+        <i class="bi bi-x-circle-fill"></i> <span class="text-errorUpdateTable"></span>
     </div>
 </div>
 

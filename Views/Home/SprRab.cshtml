@@ -5,12 +5,12 @@
 
 <div class="container-fluid" style="margin-top: 3rem">
     <div class="row">
-        <div class="col-6">
+        <div class="col-6" style="height: 700px; overflow-y: auto">
             <div class="table-responsive">
                 <table class="table" id="sprRab">
-                    <thead>
+                    <thead class="text-center">
                         <tr>
-                            <th>Табельный №</th>
+                            <th>Табельный</th>
                             <th>Цех</th>
                             <th>Участок</th>
                             <th>ФИО</th>
@@ -21,11 +21,11 @@
                         @foreach (var sprRab in Model.SprRabList)
                         {
                             <tr>
-                                <td>@sprRab.TabNomer</td>
-                                <td>@sprRab.Ceh</td>
-                                <td>@sprRab.Uch</td>
-                                <td>@sprRab.FIO</td>
-                                <td>@sprRab.PROFF.KodProf</td>
+                                <td class="text-center">@sprRab.TabNomer</td>
+                                <td class="text-center">@sprRab.Ceh</td>
+                                <td class="text-center">@sprRab.Uch</td>
+                                <td class="text-break">@sprRab.FIO</td>
+                                <td class="text-center">@sprRab.PROFF.KodProf</td>
                             </tr>
                         }
                     </tbody>
