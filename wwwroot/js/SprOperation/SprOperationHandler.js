@@ -78,13 +78,9 @@ document.addEventListener('DOMContentLoaded', function () {
 $(document).ready(function () {
     $('#flexCheckPremia').change(function () {
         if (this.checked) {
-            $('#table2 thead tr, #table thead tr').append($('<th>').text('Доп.премия'));
-
-            $('#table2 tbody tr, #table tbody tr').each(function () {
-                $(this).append($('<td>').append($('<input type="text" class="focus-ring form-control" value="0">')));
-            });
+            $('#table2 th.dpPrem, #table2 td.dpPrem').show();
         } else {
-            $('#table2 thead tr th:last-child, #table thead tr th:last-child, #table2 tbody tr td:last-child, #table tbody tr td:last-child').remove();
+            $('#table2 th.dpPrem, #table2 td.dpPrem').hide();
         }
     });
 

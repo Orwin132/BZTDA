@@ -3,6 +3,18 @@
   "WorkspaceRootPath": "D:\\\u043A\u043E\u043B\u043B\u0435\u0434\u0436\\4 \u043A\u0443\u0440\u0441\\\u041F\u0440\u0430\u043A\u0442\u0438\u043A\u0430\\Web\\NardSmena\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{8644A159-F75B-4F79-A61B-1F6FF1F25F73}|NardSmena.csproj|d:\\\u043A\u043E\u043B\u043B\u0435\u0434\u0436\\4 \u043A\u0443\u0440\u0441\\\u043F\u0440\u0430\u043A\u0442\u0438\u043A\u0430\\web\\nardsmena\\wwwroot\\js\\sproperation\\sproperationhandler.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{8644A159-F75B-4F79-A61B-1F6FF1F25F73}|NardSmena.csproj|solutionrelative:wwwroot\\js\\sproperation\\sproperationhandler.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8644A159-F75B-4F79-A61B-1F6FF1F25F73}|NardSmena.csproj|d:\\\u043A\u043E\u043B\u043B\u0435\u0434\u0436\\4 \u043A\u0443\u0440\u0441\\\u043F\u0440\u0430\u043A\u0442\u0438\u043A\u0430\\web\\nardsmena\\views\\home\\sproperation.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{8644A159-F75B-4F79-A61B-1F6FF1F25F73}|NardSmena.csproj|solutionrelative:views\\home\\sproperation.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8644A159-F75B-4F79-A61B-1F6FF1F25F73}|NardSmena.csproj|d:\\\u043A\u043E\u043B\u043B\u0435\u0434\u0436\\4 \u043A\u0443\u0440\u0441\\\u043F\u0440\u0430\u043A\u0442\u0438\u043A\u0430\\web\\nardsmena\\views\\reports\\printtabel_rv_sz.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{8644A159-F75B-4F79-A61B-1F6FF1F25F73}|NardSmena.csproj|solutionrelative:views\\reports\\printtabel_rv_sz.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{8644A159-F75B-4F79-A61B-1F6FF1F25F73}|NardSmena.csproj|d:\\\u043A\u043E\u043B\u043B\u0435\u0434\u0436\\4 \u043A\u0443\u0440\u0441\\\u043F\u0440\u0430\u043A\u0442\u0438\u043A\u0430\\web\\nardsmena\\views\\reports\\reference_for_botiz_by_profession.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{8644A159-F75B-4F79-A61B-1F6FF1F25F73}|NardSmena.csproj|solutionrelative:views\\reports\\reference_for_botiz_by_profession.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
@@ -13,14 +25,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{8644A159-F75B-4F79-A61B-1F6FF1F25F73}|NardSmena.csproj|d:\\\u043A\u043E\u043B\u043B\u0435\u0434\u0436\\4 \u043A\u0443\u0440\u0441\\\u043F\u0440\u0430\u043A\u0442\u0438\u043A\u0430\\web\\nardsmena\\controllers\\reportscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{8644A159-F75B-4F79-A61B-1F6FF1F25F73}|NardSmena.csproj|solutionrelative:controllers\\reportscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8644A159-F75B-4F79-A61B-1F6FF1F25F73}|NardSmena.csproj|d:\\\u043A\u043E\u043B\u043B\u0435\u0434\u0436\\4 \u043A\u0443\u0440\u0441\\\u043F\u0440\u0430\u043A\u0442\u0438\u043A\u0430\\web\\nardsmena\\views\\reports\\printtabel_rv_sz.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{8644A159-F75B-4F79-A61B-1F6FF1F25F73}|NardSmena.csproj|solutionrelative:views\\reports\\printtabel_rv_sz.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8644A159-F75B-4F79-A61B-1F6FF1F25F73}|NardSmena.csproj|d:\\\u043A\u043E\u043B\u043B\u0435\u0434\u0436\\4 \u043A\u0443\u0440\u0441\\\u043F\u0440\u0430\u043A\u0442\u0438\u043A\u0430\\web\\nardsmena\\views\\home\\sproperation.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{8644A159-F75B-4F79-A61B-1F6FF1F25F73}|NardSmena.csproj|solutionrelative:views\\home\\sproperation.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{8644A159-F75B-4F79-A61B-1F6FF1F25F73}|NardSmena.csproj|d:\\\u043A\u043E\u043B\u043B\u0435\u0434\u0436\\4 \u043A\u0443\u0440\u0441\\\u043F\u0440\u0430\u043A\u0442\u0438\u043A\u0430\\web\\nardsmena\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -54,7 +58,7 @@
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 9,
               "Title": "Program.cs",
               "DocumentMoniker": "D:\\\u043A\u043E\u043B\u043B\u0435\u0434\u0436\\4 \u043A\u0443\u0440\u0441\\\u041F\u0440\u0430\u043A\u0442\u0438\u043A\u0430\\Web\\NardSmena\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
@@ -63,8 +67,7 @@
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAGoAAAAXAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-01-31T11:10:56.574Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Bookmark",
@@ -73,19 +76,32 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "SprOperationHandler.js",
+              "DocumentMoniker": "D:\\\u043A\u043E\u043B\u043B\u0435\u0434\u0436\\4 \u043A\u0443\u0440\u0441\\\u041F\u0440\u0430\u043A\u0442\u0438\u043A\u0430\\Web\\NardSmena\\wwwroot\\js\\SprOperation\\SprOperationHandler.js",
+              "RelativeDocumentMoniker": "wwwroot\\js\\SprOperation\\SprOperationHandler.js",
+              "ToolTip": "D:\\\u043A\u043E\u043B\u043B\u0435\u0434\u0436\\4 \u043A\u0443\u0440\u0441\\\u041F\u0440\u0430\u043A\u0442\u0438\u043A\u0430\\Web\\NardSmena\\wwwroot\\js\\SprOperation\\SprOperationHandler.js",
+              "RelativeToolTip": "wwwroot\\js\\SprOperation\\SprOperationHandler.js",
+              "ViewState": "AQIAACUAAAAAAAAAAAAgwDEAAAAzAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2024-06-05T16:36:21.904Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "Reference_For_BOTiZ_By_Profession.cshtml",
               "DocumentMoniker": "D:\\\u043A\u043E\u043B\u043B\u0435\u0434\u0436\\4 \u043A\u0443\u0440\u0441\\\u041F\u0440\u0430\u043A\u0442\u0438\u043A\u0430\\Web\\NardSmena\\Views\\Reports\\Reference_For_BOTiZ_By_Profession.cshtml",
               "RelativeDocumentMoniker": "Views\\Reports\\Reference_For_BOTiZ_By_Profession.cshtml",
               "ToolTip": "D:\\\u043A\u043E\u043B\u043B\u0435\u0434\u0436\\4 \u043A\u0443\u0440\u0441\\\u041F\u0440\u0430\u043A\u0442\u0438\u043A\u0430\\Web\\NardSmena\\Views\\Reports\\Reference_For_BOTiZ_By_Profession.cshtml",
               "RelativeToolTip": "Views\\Reports\\Reference_For_BOTiZ_By_Profession.cshtml",
-              "ViewState": "AQIAADAAAAAAAAAAAAAAAEgAAAAOAAAA",
+              "ViewState": "AQIAAAwAAAAAAAAAAAAAABMAAAAXAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2024-06-05T09:30:54.477Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 5,
               "Title": "ReportsController.cs",
               "DocumentMoniker": "D:\\\u043A\u043E\u043B\u043B\u0435\u0434\u0436\\4 \u043A\u0443\u0440\u0441\\\u041F\u0440\u0430\u043A\u0442\u0438\u043A\u0430\\Web\\NardSmena\\Controllers\\ReportsController.cs",
               "RelativeDocumentMoniker": "Controllers\\ReportsController.cs",
@@ -93,25 +109,24 @@
               "RelativeToolTip": "Controllers\\ReportsController.cs",
               "ViewState": "AQIAAD4AAAAAAAAAAAAiwFwAAAAaAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-05T09:06:57.818Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-05T09:06:57.818Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 1,
               "Title": "SprOperation.cshtml",
               "DocumentMoniker": "D:\\\u043A\u043E\u043B\u043B\u0435\u0434\u0436\\4 \u043A\u0443\u0440\u0441\\\u041F\u0440\u0430\u043A\u0442\u0438\u043A\u0430\\Web\\NardSmena\\Views\\Home\\SprOperation.cshtml",
               "RelativeDocumentMoniker": "Views\\Home\\SprOperation.cshtml",
               "ToolTip": "D:\\\u043A\u043E\u043B\u043B\u0435\u0434\u0436\\4 \u043A\u0443\u0440\u0441\\\u041F\u0440\u0430\u043A\u0442\u0438\u043A\u0430\\Web\\NardSmena\\Views\\Home\\SprOperation.cshtml",
               "RelativeToolTip": "Views\\Home\\SprOperation.cshtml",
-              "ViewState": "AQIAAKUAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "ViewState": "AQIAAD0AAAAAAAAAAAAIwFEAAAAcAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2024-06-05T09:04:51.388Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 4,
               "Title": "Tabel.cshtml",
               "DocumentMoniker": "D:\\\u043A\u043E\u043B\u043B\u0435\u0434\u0436\\4 \u043A\u0443\u0440\u0441\\\u041F\u0440\u0430\u043A\u0442\u0438\u043A\u0430\\Web\\NardSmena\\Views\\Home\\Tabel.cshtml",
               "RelativeDocumentMoniker": "Views\\Home\\Tabel.cshtml",
@@ -119,12 +134,11 @@
               "RelativeToolTip": "Views\\Home\\Tabel.cshtml",
               "ViewState": "AQIAAA8AAAAAAAAAAAAAACgAAAAUAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-06-05T09:04:41.563Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-05T09:04:41.563Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 7,
               "Title": "PrintTimeStandards.cshtml",
               "DocumentMoniker": "D:\\\u043A\u043E\u043B\u043B\u0435\u0434\u0436\\4 \u043A\u0443\u0440\u0441\\\u041F\u0440\u0430\u043A\u0442\u0438\u043A\u0430\\Web\\NardSmena\\Views\\Reports\\PrintTimeStandards.cshtml",
               "RelativeDocumentMoniker": "Views\\Reports\\PrintTimeStandards.cshtml",
@@ -132,25 +146,24 @@
               "RelativeToolTip": "Views\\Reports\\PrintTimeStandards.cshtml",
               "ViewState": "AQIAAD8AAAAAAAAAAAAAAFoAAAAxAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-06-05T08:41:17.822Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-05T08:41:17.822Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 2,
               "Title": "PrintTabel_RV_SZ.cshtml",
               "DocumentMoniker": "D:\\\u043A\u043E\u043B\u043B\u0435\u0434\u0436\\4 \u043A\u0443\u0440\u0441\\\u041F\u0440\u0430\u043A\u0442\u0438\u043A\u0430\\Web\\NardSmena\\Views\\Reports\\PrintTabel_RV_SZ.cshtml",
               "RelativeDocumentMoniker": "Views\\Reports\\PrintTabel_RV_SZ.cshtml",
               "ToolTip": "D:\\\u043A\u043E\u043B\u043B\u0435\u0434\u0436\\4 \u043A\u0443\u0440\u0441\\\u041F\u0440\u0430\u043A\u0442\u0438\u043A\u0430\\Web\\NardSmena\\Views\\Reports\\PrintTabel_RV_SZ.cshtml",
               "RelativeToolTip": "Views\\Reports\\PrintTabel_RV_SZ.cshtml",
-              "ViewState": "AQIAADkAAAAAAAAAAAAAwF8AAAAJAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABMAAAAgAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2024-06-05T08:41:14.034Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 8,
               "Title": "Index.cshtml",
               "DocumentMoniker": "D:\\\u043A\u043E\u043B\u043B\u0435\u0434\u0436\\4 \u043A\u0443\u0440\u0441\\\u041F\u0440\u0430\u043A\u0442\u0438\u043A\u0430\\Web\\NardSmena\\Views\\RoleAssignment\\Index.cshtml",
               "RelativeDocumentMoniker": "Views\\RoleAssignment\\Index.cshtml",
@@ -158,12 +171,11 @@
               "RelativeToolTip": "Views\\RoleAssignment\\Index.cshtml",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAMAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-06-03T08:43:55.845Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-03T08:43:55.845Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 10,
               "Title": "_Layout.cshtml",
               "DocumentMoniker": "D:\\\u043A\u043E\u043B\u043B\u0435\u0434\u0436\\4 \u043A\u0443\u0440\u0441\\\u041F\u0440\u0430\u043A\u0442\u0438\u043A\u0430\\Web\\NardSmena\\Views\\Shared\\_Layout.cshtml",
               "RelativeDocumentMoniker": "Views\\Shared\\_Layout.cshtml",
@@ -175,7 +187,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "HomeController.cs",
               "DocumentMoniker": "D:\\\u043A\u043E\u043B\u043B\u0435\u0434\u0436\\4 \u043A\u0443\u0440\u0441\\\u041F\u0440\u0430\u043A\u0442\u0438\u043A\u0430\\Web\\NardSmena\\Controllers\\HomeController.cs",
               "RelativeDocumentMoniker": "Controllers\\HomeController.cs",
@@ -183,8 +195,7 @@
               "RelativeToolTip": "Controllers\\HomeController.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAADkAAAAJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-29T12:24:33.157Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-29T12:24:33.157Z"
             }
           ]
         },

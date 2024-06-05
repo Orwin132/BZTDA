@@ -22,6 +22,7 @@
                                 <th>Шифр</th>
                                 <th>Общее время</th>
                                 <th>Расценка</th>
+                                <th class="dpPrem" style="display: none;">Доп.премия</th>
                             </tr>
                         </thead>
                         <tbody class="text-center" id="tbody2">
@@ -49,6 +50,9 @@
                                     </td>
                                     <td>
                                         <input type="text" class="focus-ring form-control" value="@sprOper.Rascenka" />
+                                    </td>
+                                    <td class="dpPrem" style="display: none;">
+                                        <input type="text" class="focus-ring form-control" value="@sprOper.DpPrem" />
                                     </td>
                                 </tr>
                             }
