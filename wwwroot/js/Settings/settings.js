@@ -9,7 +9,6 @@
         theme = "light-mode";
     }
 
-    // Сохраняем тему на сервере
     var xhr = new XMLHttpRequest();
     xhr.open("POST", "/Settings/SwitchTheme", true);
     xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");

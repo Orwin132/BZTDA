@@ -22,7 +22,7 @@
         </div>
         <div class="col-6">
             <div class="container d-flex align-items-start justify-content-start mt-3">
-                <span class="text-nameOrganization">Наименование организации: ОАО "БЗТДиА"</span>
+                <span class="text-nameOrganization">Наименование организации: ОАО "ТДиА"</span>
             </div>
         </div>
         <div class="col-6">
@@ -72,6 +72,7 @@
                         <td scope="row">
                             @{
                                 double timeComput = sprOper.TimeComput;
+
                                 int norm7h = timeComput > 0 ? (int)(420 / timeComput) : 0;
                             }
                             @norm7h

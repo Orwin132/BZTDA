@@ -95,6 +95,17 @@ namespace NardSmena.Controllers
 
                     if (user != null)
                     {
+                        var option = new CookieOptions();
+
+                        if (model.RememberMe)
+                        {
+                            option.Expires = DateTime.Now.AddMonths(1);
+                            option.Secure = true;
+                            option.HttpOnly = true;
+                            option.SameSite = SameSiteMode.Strict;;
+                            Response.Cookies.Append("Login", model.UserName, option);
+                        }
+
                         var returnUrl = model.RememberMe ? "/Home/Index" : model.ReturnUrl;
 
                         TempData["SuccessMessage"] = $"Вы в системе, {model.UserName}. Продолжайте работу!";

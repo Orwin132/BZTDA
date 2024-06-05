@@ -1,7 +1,7 @@
 ﻿@{
 	ViewData["Title"] = "Табель";
 }
-
+@model List<NardSmena.Models.Tabel>
 <div class="container mt-3">
 	<div class="row">
 		<div class="col-md-10 mb-3">
@@ -23,17 +23,29 @@
                     </tr>
                 </thead>
                 <tbody>
-                    
-                    </tr>
+                    @foreach (var tabel in Model)
+                    {
+                        <tr>
+                            <td>@tabel.SPRRAB.PROFF</td>
+                            <td>@tabel.TabNomer</td>
+                            <td>@tabel.TimeFact</td>
+                            <td>@tabel.SPRRAB.FIO</td>
+                            <td>@tabel.SPRRAB.Uch</td>
+                            <td>@tabel.KodOpl</td>
+                            <td>@tabel.NormoVremia</td>
+                            <td>@tabel.PrVip</td>
+                            <td>@tabel.Moon</td>
+                        </tr>
+                    }
                 </tbody>
             </table>
 		</div>
         <div class="col-md-2">
             <div class="d-flex flex-column align-items-end position-fixed mt-3">
-                <button class="btn btn-outline"><i class="bi bi-printer"></i> Печать табеля</button>
-                <button class="btn btn-outline"><i class="bi bi-printer"></i> Печать справки по профессиям</button>
-                <button class="btn btn-outline"><i class="bi bi-file-earmark-text"></i> Формирование полного отчета</button>
-                <button class="btn btn-outline"><i class="bi bi-clock"></i> Подключение отработанных часов</button>
+                <a class="btn btn-outline" asp-controller="Reports" asp-action="PrintTabel_RV_SZ" asp-route-printTitle="Табель учета рабочего времени и сдельной зарплаты"><i class="bi bi-printer"></i> Печать табеля</a>
+                <a class="btn btn-outline" asp-controller="Reports" asp-action="Reference_For_BOTiZ_By_Profession" asp-route-printTitle="Справка для БОТиЗ по профессии"><i class="bi bi-printer"></i> Печать справки по профессиям</a>
+                <a class="btn btn-outline" asp-controller="Reports" asp-action=""><i class="bi bi-file-earmark-text"></i> Формирование полного отчета</a>
+                <a class="btn btn-outline" asp-controller="Reports" asp-action=""><i class="bi bi-clock"></i> Подключение отработанных часов</a>
             </div>
 	    </div>
     </div>

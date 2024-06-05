@@ -22,7 +22,7 @@
         </div>
         <div class="col-6">
             <div class="container d-flex align-items-start justify-content-start mt-3">
-                <span class="text-nameOrganization">Наименование организации: ОАО "БЗТДиА"</span>
+                <span class="text-nameOrganization">Наименование организации: ОАО "ТДиА"</span>
             </div>
         </div>
         <div class="col-6">
@@ -37,7 +37,7 @@
         </div>
         <div class="col-12">
             <div class="container d-flex align-items-center justify-content-center">
-                <h1 class="display-2">@ViewData["PrintTitle"]</h1>
+                <h1 id="printTitle" class="display-2">@ViewData["PrintTitle"]</h1>
             </div>
         </div>
     </div>
@@ -80,11 +80,15 @@
     $('#btnPrint').click(function () {
         $('#btnPrint').hide();
         $('#text-back').hide();
+        $('#printTitle').removeClass('display-2');
+        $('#printTitle').addClass('display-3');
         window.print();
     });
 
     $(window).on('afterprint', function () {
         $('#btnPrint').show();
         $('#text-back').show();
+        $('#printTitle').removeClass('display-3');
+        $('#printTitle').addClass('display-2');
     });
 </script>

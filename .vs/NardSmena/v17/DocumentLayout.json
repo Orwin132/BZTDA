@@ -3,84 +3,44 @@
   "WorkspaceRootPath": "D:\\\u043A\u043E\u043B\u043B\u0435\u0434\u0436\\4 \u043A\u0443\u0440\u0441\\\u041F\u0440\u0430\u043A\u0442\u0438\u043A\u0430\\Web\\NardSmena\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{8644A159-F75B-4F79-A61B-1F6FF1F25F73}|NardSmena.csproj|d:\\\u043A\u043E\u043B\u043B\u0435\u0434\u0436\\4 \u043A\u0443\u0440\u0441\\\u043F\u0440\u0430\u043A\u0442\u0438\u043A\u0430\\web\\nardsmena\\views\\reports\\printlaborstandardssproperationnorma.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{8644A159-F75B-4F79-A61B-1F6FF1F25F73}|NardSmena.csproj|solutionrelative:views\\reports\\printlaborstandardssproperationnorma.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8644A159-F75B-4F79-A61B-1F6FF1F25F73}|NardSmena.csproj|d:\\\u043A\u043E\u043B\u043B\u0435\u0434\u0436\\4 \u043A\u0443\u0440\u0441\\\u043F\u0440\u0430\u043A\u0442\u0438\u043A\u0430\\web\\nardsmena\\views\\home\\sproperation.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{8644A159-F75B-4F79-A61B-1F6FF1F25F73}|NardSmena.csproj|solutionrelative:views\\home\\sproperation.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8644A159-F75B-4F79-A61B-1F6FF1F25F73}|NardSmena.csproj|d:\\\u043A\u043E\u043B\u043B\u0435\u0434\u0436\\4 \u043A\u0443\u0440\u0441\\\u043F\u0440\u0430\u043A\u0442\u0438\u043A\u0430\\web\\nardsmena\\controllers\\reportscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8644A159-F75B-4F79-A61B-1F6FF1F25F73}|NardSmena.csproj|solutionrelative:controllers\\reportscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8644A159-F75B-4F79-A61B-1F6FF1F25F73}|NardSmena.csproj|d:\\\u043A\u043E\u043B\u043B\u0435\u0434\u0436\\4 \u043A\u0443\u0440\u0441\\\u043F\u0440\u0430\u043A\u0442\u0438\u043A\u0430\\web\\nardsmena\\views\\reports\\printtimestandards.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{8644A159-F75B-4F79-A61B-1F6FF1F25F73}|NardSmena.csproj|solutionrelative:views\\reports\\printtimestandards.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8644A159-F75B-4F79-A61B-1F6FF1F25F73}|NardSmena.csproj|d:\\\u043A\u043E\u043B\u043B\u0435\u0434\u0436\\4 \u043A\u0443\u0440\u0441\\\u043F\u0440\u0430\u043A\u0442\u0438\u043A\u0430\\web\\nardsmena\\views\\reports\\printsproperation.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{8644A159-F75B-4F79-A61B-1F6FF1F25F73}|NardSmena.csproj|solutionrelative:views\\reports\\printsproperation.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8644A159-F75B-4F79-A61B-1F6FF1F25F73}|NardSmena.csproj|d:\\\u043A\u043E\u043B\u043B\u0435\u0434\u0436\\4 \u043A\u0443\u0440\u0441\\\u043F\u0440\u0430\u043A\u0442\u0438\u043A\u0430\\web\\nardsmena\\views\\reports\\printlaborstandardssproperation.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{8644A159-F75B-4F79-A61B-1F6FF1F25F73}|NardSmena.csproj|solutionrelative:views\\reports\\printlaborstandardssproperation.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8644A159-F75B-4F79-A61B-1F6FF1F25F73}|NardSmena.csproj|d:\\\u043A\u043E\u043B\u043B\u0435\u0434\u0436\\4 \u043A\u0443\u0440\u0441\\\u043F\u0440\u0430\u043A\u0442\u0438\u043A\u0430\\web\\nardsmena\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8644A159-F75B-4F79-A61B-1F6FF1F25F73}|NardSmena.csproj|solutionrelative:controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8644A159-F75B-4F79-A61B-1F6FF1F25F73}|NardSmena.csproj|d:\\\u043A\u043E\u043B\u043B\u0435\u0434\u0436\\4 \u043A\u0443\u0440\u0441\\\u043F\u0440\u0430\u043A\u0442\u0438\u043A\u0430\\web\\nardsmena\\views\\home\\sprrab.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{8644A159-F75B-4F79-A61B-1F6FF1F25F73}|NardSmena.csproj|solutionrelative:views\\home\\sprrab.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8644A159-F75B-4F79-A61B-1F6FF1F25F73}|NardSmena.csproj|d:\\\u043A\u043E\u043B\u043B\u0435\u0434\u0436\\4 \u043A\u0443\u0440\u0441\\\u043F\u0440\u0430\u043A\u0442\u0438\u043A\u0430\\web\\nardsmena\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8644A159-F75B-4F79-A61B-1F6FF1F25F73}|NardSmena.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{8644A159-F75B-4F79-A61B-1F6FF1F25F73}|NardSmena.csproj|d:\\\u043A\u043E\u043B\u043B\u0435\u0434\u0436\\4 \u043A\u0443\u0440\u0441\\\u043F\u0440\u0430\u043A\u0442\u0438\u043A\u0430\\web\\nardsmena\\views\\reports\\reference_for_botiz_by_profession.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{8644A159-F75B-4F79-A61B-1F6FF1F25F73}|NardSmena.csproj|solutionrelative:views\\reports\\reference_for_botiz_by_profession.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{8644A159-F75B-4F79-A61B-1F6FF1F25F73}|NardSmena.csproj|d:\\\u043A\u043E\u043B\u043B\u0435\u0434\u0436\\4 \u043A\u0443\u0440\u0441\\\u043F\u0440\u0430\u043A\u0442\u0438\u043A\u0430\\web\\nardsmena\\views\\home\\tabel.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{8644A159-F75B-4F79-A61B-1F6FF1F25F73}|NardSmena.csproj|solutionrelative:views\\home\\tabel.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{8644A159-F75B-4F79-A61B-1F6FF1F25F73}|NardSmena.csproj|d:\\\u043A\u043E\u043B\u043B\u0435\u0434\u0436\\4 \u043A\u0443\u0440\u0441\\\u043F\u0440\u0430\u043A\u0442\u0438\u043A\u0430\\web\\nardsmena\\controllers\\reportscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8644A159-F75B-4F79-A61B-1F6FF1F25F73}|NardSmena.csproj|solutionrelative:controllers\\reportscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8644A159-F75B-4F79-A61B-1F6FF1F25F73}|NardSmena.csproj|d:\\\u043A\u043E\u043B\u043B\u0435\u0434\u0436\\4 \u043A\u0443\u0440\u0441\\\u043F\u0440\u0430\u043A\u0442\u0438\u043A\u0430\\web\\nardsmena\\views\\reports\\printtabel_rv_sz.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{8644A159-F75B-4F79-A61B-1F6FF1F25F73}|NardSmena.csproj|solutionrelative:views\\reports\\printtabel_rv_sz.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8644A159-F75B-4F79-A61B-1F6FF1F25F73}|NardSmena.csproj|d:\\\u043A\u043E\u043B\u043B\u0435\u0434\u0436\\4 \u043A\u0443\u0440\u0441\\\u043F\u0440\u0430\u043A\u0442\u0438\u043A\u0430\\web\\nardsmena\\views\\home\\sproperation.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{8644A159-F75B-4F79-A61B-1F6FF1F25F73}|NardSmena.csproj|solutionrelative:views\\home\\sproperation.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8644A159-F75B-4F79-A61B-1F6FF1F25F73}|NardSmena.csproj|d:\\\u043A\u043E\u043B\u043B\u0435\u0434\u0436\\4 \u043A\u0443\u0440\u0441\\\u043F\u0440\u0430\u043A\u0442\u0438\u043A\u0430\\web\\nardsmena\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8644A159-F75B-4F79-A61B-1F6FF1F25F73}|NardSmena.csproj|solutionrelative:controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8644A159-F75B-4F79-A61B-1F6FF1F25F73}|NardSmena.csproj|d:\\\u043A\u043E\u043B\u043B\u0435\u0434\u0436\\4 \u043A\u0443\u0440\u0441\\\u043F\u0440\u0430\u043A\u0442\u0438\u043A\u0430\\web\\nardsmena\\views\\reports\\printtimestandards.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{8644A159-F75B-4F79-A61B-1F6FF1F25F73}|NardSmena.csproj|solutionrelative:views\\reports\\printtimestandards.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8644A159-F75B-4F79-A61B-1F6FF1F25F73}|NardSmena.csproj|d:\\\u043A\u043E\u043B\u043B\u0435\u0434\u0436\\4 \u043A\u0443\u0440\u0441\\\u043F\u0440\u0430\u043A\u0442\u0438\u043A\u0430\\web\\nardsmena\\views\\roleassignment\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{8644A159-F75B-4F79-A61B-1F6FF1F25F73}|NardSmena.csproj|solutionrelative:views\\roleassignment\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8644A159-F75B-4F79-A61B-1F6FF1F25F73}|NardSmena.csproj|d:\\\u043A\u043E\u043B\u043B\u0435\u0434\u0436\\4 \u043A\u0443\u0440\u0441\\\u043F\u0440\u0430\u043A\u0442\u0438\u043A\u0430\\web\\nardsmena\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8644A159-F75B-4F79-A61B-1F6FF1F25F73}|NardSmena.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{8644A159-F75B-4F79-A61B-1F6FF1F25F73}|NardSmena.csproj|d:\\\u043A\u043E\u043B\u043B\u0435\u0434\u0436\\4 \u043A\u0443\u0440\u0441\\\u043F\u0440\u0430\u043A\u0442\u0438\u043A\u0430\\web\\nardsmena\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{8644A159-F75B-4F79-A61B-1F6FF1F25F73}|NardSmena.csproj|solutionrelative:views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8644A159-F75B-4F79-A61B-1F6FF1F25F73}|NardSmena.csproj|d:\\\u043A\u043E\u043B\u043B\u0435\u0434\u0436\\4 \u043A\u0443\u0440\u0441\\\u043F\u0440\u0430\u043A\u0442\u0438\u043A\u0430\\web\\nardsmena\\controllers\\homeimportcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8644A159-F75B-4F79-A61B-1F6FF1F25F73}|NardSmena.csproj|solutionrelative:controllers\\homeimportcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8644A159-F75B-4F79-A61B-1F6FF1F25F73}|NardSmena.csproj|d:\\\u043A\u043E\u043B\u043B\u0435\u0434\u0436\\4 \u043A\u0443\u0440\u0441\\\u043F\u0440\u0430\u043A\u0442\u0438\u043A\u0430\\web\\nardsmena\\wwwroot\\css\\sproperationstyle.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
-      "RelativeMoniker": "D:0:0:{8644A159-F75B-4F79-A61B-1F6FF1F25F73}|NardSmena.csproj|solutionrelative:wwwroot\\css\\sproperationstyle.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8644A159-F75B-4F79-A61B-1F6FF1F25F73}|NardSmena.csproj|d:\\\u043A\u043E\u043B\u043B\u0435\u0434\u0436\\4 \u043A\u0443\u0440\u0441\\\u043F\u0440\u0430\u043A\u0442\u0438\u043A\u0430\\web\\nardsmena\\wwwroot\\js\\sproperation\\sproperationrequests.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
-      "RelativeMoniker": "D:0:0:{8644A159-F75B-4F79-A61B-1F6FF1F25F73}|NardSmena.csproj|solutionrelative:wwwroot\\js\\sproperation\\sproperationrequests.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8644A159-F75B-4F79-A61B-1F6FF1F25F73}|NardSmena.csproj|d:\\\u043A\u043E\u043B\u043B\u0435\u0434\u0436\\4 \u043A\u0443\u0440\u0441\\\u043F\u0440\u0430\u043A\u0442\u0438\u043A\u0430\\web\\nardsmena\\models\\sprdet.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8644A159-F75B-4F79-A61B-1F6FF1F25F73}|NardSmena.csproj|solutionrelative:models\\sprdet.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8644A159-F75B-4F79-A61B-1F6FF1F25F73}|NardSmena.csproj|d:\\\u043A\u043E\u043B\u043B\u0435\u0434\u0436\\4 \u043A\u0443\u0440\u0441\\\u043F\u0440\u0430\u043A\u0442\u0438\u043A\u0430\\web\\nardsmena\\wwwroot\\js\\sproperation\\sproperationhandler.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
-      "RelativeMoniker": "D:0:0:{8644A159-F75B-4F79-A61B-1F6FF1F25F73}|NardSmena.csproj|solutionrelative:wwwroot\\js\\sproperation\\sproperationhandler.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8644A159-F75B-4F79-A61B-1F6FF1F25F73}|NardSmena.csproj|d:\\\u043A\u043E\u043B\u043B\u0435\u0434\u0436\\4 \u043A\u0443\u0440\u0441\\\u043F\u0440\u0430\u043A\u0442\u0438\u043A\u0430\\web\\nardsmena\\models\\combinedviewmodelsproperation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8644A159-F75B-4F79-A61B-1F6FF1F25F73}|NardSmena.csproj|solutionrelative:models\\combinedviewmodelsproperation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8644A159-F75B-4F79-A61B-1F6FF1F25F73}|NardSmena.csproj|d:\\\u043A\u043E\u043B\u043B\u0435\u0434\u0436\\4 \u043A\u0443\u0440\u0441\\\u043F\u0440\u0430\u043A\u0442\u0438\u043A\u0430\\web\\nardsmena\\models\\sravnenie.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8644A159-F75B-4F79-A61B-1F6FF1F25F73}|NardSmena.csproj|solutionrelative:models\\sravnenie.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8644A159-F75B-4F79-A61B-1F6FF1F25F73}|NardSmena.csproj|d:\\\u043A\u043E\u043B\u043B\u0435\u0434\u0436\\4 \u043A\u0443\u0440\u0441\\\u043F\u0440\u0430\u043A\u0442\u0438\u043A\u0430\\web\\nardsmena\\wwwroot\\js\\sprrab\\sprrabhandler.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
-      "RelativeMoniker": "D:0:0:{8644A159-F75B-4F79-A61B-1F6FF1F25F73}|NardSmena.csproj|solutionrelative:wwwroot\\js\\sprrab\\sprrabhandler.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8644A159-F75B-4F79-A61B-1F6FF1F25F73}|NardSmena.csproj|d:\\\u043A\u043E\u043B\u043B\u0435\u0434\u0436\\4 \u043A\u0443\u0440\u0441\\\u043F\u0440\u0430\u043A\u0442\u0438\u043A\u0430\\web\\nardsmena\\models\\combinedviewmodelsprrab.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8644A159-F75B-4F79-A61B-1F6FF1F25F73}|NardSmena.csproj|solutionrelative:models\\combinedviewmodelsprrab.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -100,10 +60,11 @@
               "RelativeDocumentMoniker": "Program.cs",
               "ToolTip": "D:\\\u043A\u043E\u043B\u043B\u0435\u0434\u0436\\4 \u043A\u0443\u0440\u0441\\\u041F\u0440\u0430\u043A\u0442\u0438\u043A\u0430\\Web\\NardSmena\\Program.cs",
               "RelativeToolTip": "Program.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAApAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAGoAAAAXAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-01-31T11:10:56.574Z",
-              "IsPinned": true
+              "IsPinned": true,
+              "EditorCaption": ""
             },
             {
               "$type": "Bookmark",
@@ -112,90 +73,15 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "PrintLaborStandardsSprOperationNorma.cshtml",
-              "DocumentMoniker": "D:\\\u043A\u043E\u043B\u043B\u0435\u0434\u0436\\4 \u043A\u0443\u0440\u0441\\\u041F\u0440\u0430\u043A\u0442\u0438\u043A\u0430\\Web\\NardSmena\\Views\\Reports\\PrintLaborStandardsSprOperationNorma.cshtml",
-              "RelativeDocumentMoniker": "Views\\Reports\\PrintLaborStandardsSprOperationNorma.cshtml",
-              "ToolTip": "D:\\\u043A\u043E\u043B\u043B\u0435\u0434\u0436\\4 \u043A\u0443\u0440\u0441\\\u041F\u0440\u0430\u043A\u0442\u0438\u043A\u0430\\Web\\NardSmena\\Views\\Reports\\PrintLaborStandardsSprOperationNorma.cshtml",
-              "RelativeToolTip": "Views\\Reports\\PrintLaborStandardsSprOperationNorma.cshtml",
-              "ViewState": "AQIAAAMAAAAAAAAAAAAAAE0AAAAdAAAA",
+              "Title": "Reference_For_BOTiZ_By_Profession.cshtml",
+              "DocumentMoniker": "D:\\\u043A\u043E\u043B\u043B\u0435\u0434\u0436\\4 \u043A\u0443\u0440\u0441\\\u041F\u0440\u0430\u043A\u0442\u0438\u043A\u0430\\Web\\NardSmena\\Views\\Reports\\Reference_For_BOTiZ_By_Profession.cshtml",
+              "RelativeDocumentMoniker": "Views\\Reports\\Reference_For_BOTiZ_By_Profession.cshtml",
+              "ToolTip": "D:\\\u043A\u043E\u043B\u043B\u0435\u0434\u0436\\4 \u043A\u0443\u0440\u0441\\\u041F\u0440\u0430\u043A\u0442\u0438\u043A\u0430\\Web\\NardSmena\\Views\\Reports\\Reference_For_BOTiZ_By_Profession.cshtml",
+              "RelativeToolTip": "Views\\Reports\\Reference_For_BOTiZ_By_Profession.cshtml",
+              "ViewState": "AQIAADAAAAAAAAAAAAAAAEgAAAAOAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-05-19T11:19:43.923Z",
+              "WhenOpened": "2024-06-05T09:30:54.477Z",
               "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "PrintSprOperation.cshtml",
-              "DocumentMoniker": "D:\\\u043A\u043E\u043B\u043B\u0435\u0434\u0436\\4 \u043A\u0443\u0440\u0441\\\u041F\u0440\u0430\u043A\u0442\u0438\u043A\u0430\\Web\\NardSmena\\Views\\Reports\\PrintSprOperation.cshtml",
-              "RelativeDocumentMoniker": "Views\\Reports\\PrintSprOperation.cshtml",
-              "ToolTip": "D:\\\u043A\u043E\u043B\u043B\u0435\u0434\u0436\\4 \u043A\u0443\u0440\u0441\\\u041F\u0440\u0430\u043A\u0442\u0438\u043A\u0430\\Web\\NardSmena\\Views\\Reports\\PrintSprOperation.cshtml",
-              "RelativeToolTip": "Views\\Reports\\PrintSprOperation.cshtml",
-              "ViewState": "AQIAADQAAAAAAAAAAAAiwFkAAAAJAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-05-19T11:16:28.317Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "PrintTimeStandards.cshtml",
-              "DocumentMoniker": "D:\\\u043A\u043E\u043B\u043B\u0435\u0434\u0436\\4 \u043A\u0443\u0440\u0441\\\u041F\u0440\u0430\u043A\u0442\u0438\u043A\u0430\\Web\\NardSmena\\Views\\Reports\\PrintTimeStandards.cshtml",
-              "RelativeDocumentMoniker": "Views\\Reports\\PrintTimeStandards.cshtml",
-              "ToolTip": "D:\\\u043A\u043E\u043B\u043B\u0435\u0434\u0436\\4 \u043A\u0443\u0440\u0441\\\u041F\u0440\u0430\u043A\u0442\u0438\u043A\u0430\\Web\\NardSmena\\Views\\Reports\\PrintTimeStandards.cshtml",
-              "RelativeToolTip": "Views\\Reports\\PrintTimeStandards.cshtml",
-              "ViewState": "AQIAADQAAAAAAAAAAAAiwFkAAAAJAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-05-19T11:12:02.273Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "SprRab.cshtml",
-              "DocumentMoniker": "D:\\\u043A\u043E\u043B\u043B\u0435\u0434\u0436\\4 \u043A\u0443\u0440\u0441\\\u041F\u0440\u0430\u043A\u0442\u0438\u043A\u0430\\Web\\NardSmena\\Views\\Home\\SprRab.cshtml",
-              "RelativeDocumentMoniker": "Views\\Home\\SprRab.cshtml",
-              "ToolTip": "D:\\\u043A\u043E\u043B\u043B\u0435\u0434\u0436\\4 \u043A\u0443\u0440\u0441\\\u041F\u0440\u0430\u043A\u0442\u0438\u043A\u0430\\Web\\NardSmena\\Views\\Home\\SprRab.cshtml",
-              "RelativeToolTip": "Views\\Home\\SprRab.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAuAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-05-18T15:20:37.484Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "Tabel.cshtml",
-              "DocumentMoniker": "D:\\\u043A\u043E\u043B\u043B\u0435\u0434\u0436\\4 \u043A\u0443\u0440\u0441\\\u041F\u0440\u0430\u043A\u0442\u0438\u043A\u0430\\Web\\NardSmena\\Views\\Home\\Tabel.cshtml",
-              "RelativeDocumentMoniker": "Views\\Home\\Tabel.cshtml",
-              "ToolTip": "D:\\\u043A\u043E\u043B\u043B\u0435\u0434\u0436\\4 \u043A\u0443\u0440\u0441\\\u041F\u0440\u0430\u043A\u0442\u0438\u043A\u0430\\Web\\NardSmena\\Views\\Home\\Tabel.cshtml",
-              "RelativeToolTip": "Views\\Home\\Tabel.cshtml",
-              "ViewState": "AQIAAAYAAAAAAAAAAAAAAAAAAAACAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-05-14T09:18:13.376Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "_Layout.cshtml",
-              "DocumentMoniker": "D:\\\u043A\u043E\u043B\u043B\u0435\u0434\u0436\\4 \u043A\u0443\u0440\u0441\\\u041F\u0440\u0430\u043A\u0442\u0438\u043A\u0430\\Web\\NardSmena\\Views\\Shared\\_Layout.cshtml",
-              "RelativeDocumentMoniker": "Views\\Shared\\_Layout.cshtml",
-              "ToolTip": "D:\\\u043A\u043E\u043B\u043B\u0435\u0434\u0436\\4 \u043A\u0443\u0440\u0441\\\u041F\u0440\u0430\u043A\u0442\u0438\u043A\u0430\\Web\\NardSmena\\Views\\Shared\\_Layout.cshtml",
-              "RelativeToolTip": "Views\\Shared\\_Layout.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAABtAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-05-13T11:40:26.365Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "HomeImportController.cs",
-              "DocumentMoniker": "D:\\\u043A\u043E\u043B\u043B\u0435\u0434\u0436\\4 \u043A\u0443\u0440\u0441\\\u041F\u0440\u0430\u043A\u0442\u0438\u043A\u0430\\Web\\NardSmena\\Controllers\\HomeImportController.cs",
-              "RelativeDocumentMoniker": "Controllers\\HomeImportController.cs",
-              "ToolTip": "D:\\\u043A\u043E\u043B\u043B\u0435\u0434\u0436\\4 \u043A\u0443\u0440\u0441\\\u041F\u0440\u0430\u043A\u0442\u0438\u043A\u0430\\Web\\NardSmena\\Controllers\\HomeImportController.cs",
-              "RelativeToolTip": "Controllers\\HomeImportController.cs",
-              "ViewState": "AQIAABsAAAAAAAAAAAAowA4AAAAIAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-13T09:24:14.085Z"
             },
             {
               "$type": "Document",
@@ -205,145 +91,100 @@
               "RelativeDocumentMoniker": "Controllers\\ReportsController.cs",
               "ToolTip": "D:\\\u043A\u043E\u043B\u043B\u0435\u0434\u0436\\4 \u043A\u0443\u0440\u0441\\\u041F\u0440\u0430\u043A\u0442\u0438\u043A\u0430\\Web\\NardSmena\\Controllers\\ReportsController.cs",
               "RelativeToolTip": "Controllers\\ReportsController.cs",
-              "ViewState": "AQIAACsAAAAAAAAAAAAiwEwAAAAjAAAA",
+              "ViewState": "AQIAAD4AAAAAAAAAAAAiwFwAAAAaAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-12T10:59:28.739Z",
+              "WhenOpened": "2024-06-05T09:06:57.818Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "PrintLaborStandardsSprOperation.cshtml",
-              "DocumentMoniker": "D:\\\u043A\u043E\u043B\u043B\u0435\u0434\u0436\\4 \u043A\u0443\u0440\u0441\\\u041F\u0440\u0430\u043A\u0442\u0438\u043A\u0430\\Web\\NardSmena\\Views\\Reports\\PrintLaborStandardsSprOperation.cshtml",
-              "RelativeDocumentMoniker": "Views\\Reports\\PrintLaborStandardsSprOperation.cshtml",
-              "ToolTip": "D:\\\u043A\u043E\u043B\u043B\u0435\u0434\u0436\\4 \u043A\u0443\u0440\u0441\\\u041F\u0440\u0430\u043A\u0442\u0438\u043A\u0430\\Web\\NardSmena\\Views\\Reports\\PrintLaborStandardsSprOperation.cshtml",
-              "RelativeToolTip": "Views\\Reports\\PrintLaborStandardsSprOperation.cshtml",
-              "ViewState": "AQIAADQAAAAAAAAAAAAcwFkAAAAJAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-05-12T10:26:21.27Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 17,
-              "Title": "Sravnenie.cs",
-              "DocumentMoniker": "D:\\\u043A\u043E\u043B\u043B\u0435\u0434\u0436\\4 \u043A\u0443\u0440\u0441\\\u041F\u0440\u0430\u043A\u0442\u0438\u043A\u0430\\Web\\NardSmena\\Models\\Sravnenie.cs",
-              "RelativeDocumentMoniker": "Models\\Sravnenie.cs",
-              "ToolTip": "D:\\\u043A\u043E\u043B\u043B\u0435\u0434\u0436\\4 \u043A\u0443\u0440\u0441\\\u041F\u0440\u0430\u043A\u0442\u0438\u043A\u0430\\Web\\NardSmena\\Models\\Sravnenie.cs",
-              "RelativeToolTip": "Models\\Sravnenie.cs",
-              "ViewState": "AQIAAA4AAAAAAAAAAAAxwB8AAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-07T14:55:44.93Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "SprDet.cs",
-              "DocumentMoniker": "D:\\\u043A\u043E\u043B\u043B\u0435\u0434\u0436\\4 \u043A\u0443\u0440\u0441\\\u041F\u0440\u0430\u043A\u0442\u0438\u043A\u0430\\Web\\NardSmena\\Models\\SprDet.cs",
-              "RelativeDocumentMoniker": "Models\\SprDet.cs",
-              "ToolTip": "D:\\\u043A\u043E\u043B\u043B\u0435\u0434\u0436\\4 \u043A\u0443\u0440\u0441\\\u041F\u0440\u0430\u043A\u0442\u0438\u043A\u0430\\Web\\NardSmena\\Models\\SprDet.cs",
-              "RelativeToolTip": "Models\\SprDet.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAAFAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-07T12:24:47.333Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 18,
-              "Title": "SprRabHandler.js",
-              "DocumentMoniker": "D:\\\u043A\u043E\u043B\u043B\u0435\u0434\u0436\\4 \u043A\u0443\u0440\u0441\\\u041F\u0440\u0430\u043A\u0442\u0438\u043A\u0430\\Web\\NardSmena\\wwwroot\\js\\SprRab\\SprRabHandler.js",
-              "RelativeDocumentMoniker": "wwwroot\\js\\SprRab\\SprRabHandler.js",
-              "ToolTip": "D:\\\u043A\u043E\u043B\u043B\u0435\u0434\u0436\\4 \u043A\u0443\u0440\u0441\\\u041F\u0440\u0430\u043A\u0442\u0438\u043A\u0430\\Web\\NardSmena\\wwwroot\\js\\SprRab\\SprRabHandler.js",
-              "RelativeToolTip": "wwwroot\\js\\SprRab\\SprRabHandler.js",
-              "ViewState": "AQIAAAEAAAAAAAAAAAA2wBYAAAALAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
-              "WhenOpened": "2024-05-02T13:44:11.522Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "CombinedViewModelSprOperation.cs",
-              "DocumentMoniker": "D:\\\u043A\u043E\u043B\u043B\u0435\u0434\u0436\\4 \u043A\u0443\u0440\u0441\\\u041F\u0440\u0430\u043A\u0442\u0438\u043A\u0430\\Web\\NardSmena\\Models\\CombinedViewModelSprOperation.cs",
-              "RelativeDocumentMoniker": "Models\\CombinedViewModelSprOperation.cs",
-              "ToolTip": "D:\\\u043A\u043E\u043B\u043B\u0435\u0434\u0436\\4 \u043A\u0443\u0440\u0441\\\u041F\u0440\u0430\u043A\u0442\u0438\u043A\u0430\\Web\\NardSmena\\Models\\CombinedViewModelSprOperation.cs",
-              "RelativeToolTip": "Models\\CombinedViewModelSprOperation.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-01T10:56:32.381Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 4,
               "Title": "SprOperation.cshtml",
               "DocumentMoniker": "D:\\\u043A\u043E\u043B\u043B\u0435\u0434\u0436\\4 \u043A\u0443\u0440\u0441\\\u041F\u0440\u0430\u043A\u0442\u0438\u043A\u0430\\Web\\NardSmena\\Views\\Home\\SprOperation.cshtml",
               "RelativeDocumentMoniker": "Views\\Home\\SprOperation.cshtml",
               "ToolTip": "D:\\\u043A\u043E\u043B\u043B\u0435\u0434\u0436\\4 \u043A\u0443\u0440\u0441\\\u041F\u0440\u0430\u043A\u0442\u0438\u043A\u0430\\Web\\NardSmena\\Views\\Home\\SprOperation.cshtml",
               "RelativeToolTip": "Views\\Home\\SprOperation.cshtml",
-              "ViewState": "AQIAAOcAAAAAAAAAAAAAAMAAAAChAAAA",
+              "ViewState": "AQIAAKUAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-04-29T12:12:25.98Z",
+              "WhenOpened": "2024-06-05T09:04:51.388Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
-              "Title": "CombinedViewModelSprRab.cs",
-              "DocumentMoniker": "D:\\\u043A\u043E\u043B\u043B\u0435\u0434\u0436\\4 \u043A\u0443\u0440\u0441\\\u041F\u0440\u0430\u043A\u0442\u0438\u043A\u0430\\Web\\NardSmena\\Models\\CombinedViewModelSprRab.cs",
-              "RelativeDocumentMoniker": "Models\\CombinedViewModelSprRab.cs",
-              "ToolTip": "D:\\\u043A\u043E\u043B\u043B\u0435\u0434\u0436\\4 \u043A\u0443\u0440\u0441\\\u041F\u0440\u0430\u043A\u0442\u0438\u043A\u0430\\Web\\NardSmena\\Models\\CombinedViewModelSprRab.cs",
-              "RelativeToolTip": "Models\\CombinedViewModelSprRab.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-01T10:56:29.199Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "SprOperationRequests.js",
-              "DocumentMoniker": "D:\\\u043A\u043E\u043B\u043B\u0435\u0434\u0436\\4 \u043A\u0443\u0440\u0441\\\u041F\u0440\u0430\u043A\u0442\u0438\u043A\u0430\\Web\\NardSmena\\wwwroot\\js\\SprOperation\\SprOperationRequests.js",
-              "RelativeDocumentMoniker": "wwwroot\\js\\SprOperation\\SprOperationRequests.js",
-              "ToolTip": "D:\\\u043A\u043E\u043B\u043B\u0435\u0434\u0436\\4 \u043A\u0443\u0440\u0441\\\u041F\u0440\u0430\u043A\u0442\u0438\u043A\u0430\\Web\\NardSmena\\wwwroot\\js\\SprOperation\\SprOperationRequests.js",
-              "RelativeToolTip": "wwwroot\\js\\SprOperation\\SprOperationRequests.js",
-              "ViewState": "AQIAAHQAAAAAAAAAAAAuwHYAAAAkAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
-              "WhenOpened": "2024-04-30T09:41:15.347Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "SprOperationStyle.css",
-              "DocumentMoniker": "D:\\\u043A\u043E\u043B\u043B\u0435\u0434\u0436\\4 \u043A\u0443\u0440\u0441\\\u041F\u0440\u0430\u043A\u0442\u0438\u043A\u0430\\Web\\NardSmena\\wwwroot\\css\\SprOperationStyle.css",
-              "RelativeDocumentMoniker": "wwwroot\\css\\SprOperationStyle.css",
-              "ToolTip": "D:\\\u043A\u043E\u043B\u043B\u0435\u0434\u0436\\4 \u043A\u0443\u0440\u0441\\\u041F\u0440\u0430\u043A\u0442\u0438\u043A\u0430\\Web\\NardSmena\\wwwroot\\css\\SprOperationStyle.css",
-              "RelativeToolTip": "wwwroot\\css\\SprOperationStyle.css",
-              "ViewState": "AQIAAA8AAAAAAAAAAIBZwDgAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2024-04-29T12:59:40.289Z"
+              "DocumentIndex": 1,
+              "Title": "Tabel.cshtml",
+              "DocumentMoniker": "D:\\\u043A\u043E\u043B\u043B\u0435\u0434\u0436\\4 \u043A\u0443\u0440\u0441\\\u041F\u0440\u0430\u043A\u0442\u0438\u043A\u0430\\Web\\NardSmena\\Views\\Home\\Tabel.cshtml",
+              "RelativeDocumentMoniker": "Views\\Home\\Tabel.cshtml",
+              "ToolTip": "D:\\\u043A\u043E\u043B\u043B\u0435\u0434\u0436\\4 \u043A\u0443\u0440\u0441\\\u041F\u0440\u0430\u043A\u0442\u0438\u043A\u0430\\Web\\NardSmena\\Views\\Home\\Tabel.cshtml",
+              "RelativeToolTip": "Views\\Home\\Tabel.cshtml",
+              "ViewState": "AQIAAA8AAAAAAAAAAAAAACgAAAAUAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-06-05T09:04:41.563Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 6,
+              "Title": "PrintTimeStandards.cshtml",
+              "DocumentMoniker": "D:\\\u043A\u043E\u043B\u043B\u0435\u0434\u0436\\4 \u043A\u0443\u0440\u0441\\\u041F\u0440\u0430\u043A\u0442\u0438\u043A\u0430\\Web\\NardSmena\\Views\\Reports\\PrintTimeStandards.cshtml",
+              "RelativeDocumentMoniker": "Views\\Reports\\PrintTimeStandards.cshtml",
+              "ToolTip": "D:\\\u043A\u043E\u043B\u043B\u0435\u0434\u0436\\4 \u043A\u0443\u0440\u0441\\\u041F\u0440\u0430\u043A\u0442\u0438\u043A\u0430\\Web\\NardSmena\\Views\\Reports\\PrintTimeStandards.cshtml",
+              "RelativeToolTip": "Views\\Reports\\PrintTimeStandards.cshtml",
+              "ViewState": "AQIAAD8AAAAAAAAAAAAAAFoAAAAxAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-06-05T08:41:17.822Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "PrintTabel_RV_SZ.cshtml",
+              "DocumentMoniker": "D:\\\u043A\u043E\u043B\u043B\u0435\u0434\u0436\\4 \u043A\u0443\u0440\u0441\\\u041F\u0440\u0430\u043A\u0442\u0438\u043A\u0430\\Web\\NardSmena\\Views\\Reports\\PrintTabel_RV_SZ.cshtml",
+              "RelativeDocumentMoniker": "Views\\Reports\\PrintTabel_RV_SZ.cshtml",
+              "ToolTip": "D:\\\u043A\u043E\u043B\u043B\u0435\u0434\u0436\\4 \u043A\u0443\u0440\u0441\\\u041F\u0440\u0430\u043A\u0442\u0438\u043A\u0430\\Web\\NardSmena\\Views\\Reports\\PrintTabel_RV_SZ.cshtml",
+              "RelativeToolTip": "Views\\Reports\\PrintTabel_RV_SZ.cshtml",
+              "ViewState": "AQIAADkAAAAAAAAAAAAAwF8AAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-06-05T08:41:14.034Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "D:\\\u043A\u043E\u043B\u043B\u0435\u0434\u0436\\4 \u043A\u0443\u0440\u0441\\\u041F\u0440\u0430\u043A\u0442\u0438\u043A\u0430\\Web\\NardSmena\\Views\\RoleAssignment\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\RoleAssignment\\Index.cshtml",
+              "ToolTip": "D:\\\u043A\u043E\u043B\u043B\u0435\u0434\u0436\\4 \u043A\u0443\u0440\u0441\\\u041F\u0440\u0430\u043A\u0442\u0438\u043A\u0430\\Web\\NardSmena\\Views\\RoleAssignment\\Index.cshtml",
+              "RelativeToolTip": "Views\\RoleAssignment\\Index.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAMAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-06-03T08:43:55.845Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "D:\\\u043A\u043E\u043B\u043B\u0435\u0434\u0436\\4 \u043A\u0443\u0440\u0441\\\u041F\u0440\u0430\u043A\u0442\u0438\u043A\u0430\\Web\\NardSmena\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "D:\\\u043A\u043E\u043B\u043B\u0435\u0434\u0436\\4 \u043A\u0443\u0440\u0441\\\u041F\u0440\u0430\u043A\u0442\u0438\u043A\u0430\\Web\\NardSmena\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AQIAAK4AAAAAAAAAAAAAAAwAAAA4AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-05-13T11:40:26.365Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
               "Title": "HomeController.cs",
               "DocumentMoniker": "D:\\\u043A\u043E\u043B\u043B\u0435\u0434\u0436\\4 \u043A\u0443\u0440\u0441\\\u041F\u0440\u0430\u043A\u0442\u0438\u043A\u0430\\Web\\NardSmena\\Controllers\\HomeController.cs",
               "RelativeDocumentMoniker": "Controllers\\HomeController.cs",
               "ToolTip": "D:\\\u043A\u043E\u043B\u043B\u0435\u0434\u0436\\4 \u043A\u0443\u0440\u0441\\\u041F\u0440\u0430\u043A\u0442\u0438\u043A\u0430\\Web\\NardSmena\\Controllers\\HomeController.cs",
               "RelativeToolTip": "Controllers\\HomeController.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAADkAAAAJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-04-29T12:24:33.157Z",
               "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "SprOperationHandler.js",
-              "DocumentMoniker": "D:\\\u043A\u043E\u043B\u043B\u0435\u0434\u0436\\4 \u043A\u0443\u0440\u0441\\\u041F\u0440\u0430\u043A\u0442\u0438\u043A\u0430\\Web\\NardSmena\\wwwroot\\js\\SprOperation\\SprOperationHandler.js",
-              "RelativeDocumentMoniker": "wwwroot\\js\\SprOperation\\SprOperationHandler.js",
-              "ToolTip": "D:\\\u043A\u043E\u043B\u043B\u0435\u0434\u0436\\4 \u043A\u0443\u0440\u0441\\\u041F\u0440\u0430\u043A\u0442\u0438\u043A\u0430\\Web\\NardSmena\\wwwroot\\js\\SprOperation\\SprOperationHandler.js",
-              "RelativeToolTip": "wwwroot\\js\\SprOperation\\SprOperationHandler.js",
-              "ViewState": "AQIAAFUAAAAAAAAAAAAYwEgAAAANAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
-              "WhenOpened": "2024-04-29T12:16:55.27Z"
             }
           ]
         },

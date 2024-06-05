@@ -1,0 +1,96 @@
+﻿@{
+    ViewData["Title"] = "Печать";
+    var dateTime = DateTime.Now;
+    var date = DateOnly.FromDateTime(dateTime);
+}
+
+<style>
+    header {
+        display: none;
+    }
+
+    footer {
+        display: none;
+    }
+</style>
+
+<div class="container-fluid">
+    <div class="row mt-3 mb-4">
+        <div class="container d-flex align-items-end justify-content-end mt-5">
+            <a asp-action="SprOperation" asp-controller="Home" class="link-danger text-decoration-none" id="text-back"><i class="bi bi-arrow-left"></i> Вернуться</a>
+        </div>
+        <div class="col-6">
+            <div class="container d-flex align-items-start justify-content-start mt-3">
+                <span class="text-nameOrganization">Наименование организации: ОАО "ТДиА"</span>
+            </div>
+        </div>
+        <div class="col-6">
+            <div class="container d-flex align-items-end justify-content-end mt-3">
+                <span class="text-datetime">Текущая дата: @date</span>
+            </div>
+        </div>
+        <div class="col-12">
+            <div class="container d-flex align-items-center justify-content-center">
+                <img id="logo" src="~/logo.png" width="128" height="128" />
+            </div>
+        </div>
+        <div class="col-12">
+            <div class="container d-flex align-items-center justify-content-center">
+                <h1 id="printTitle" class="display-2 text-center">@ViewData["PrintTitle"]</h1>
+            </div>
+        </div>
+    </div>
+    <form id="printSettingsForm" class="mb-3">
+        <div class="container d-flex align-items-end justify-content-end">
+            <button type="button" class="btn btn-outline-danger" onclick="printToPdf()" id="btnPrint"><i class="bi bi-printer"></i> Печать</button>
+        </div>
+    </form>
+
+    <div class="d-flex align-items-center justify-content-center mb-4">
+        <table class="table table-striped text-center">
+            <thead>
+                <tr>
+                    <th scope="col">Тип</th>
+                    <th scope="col">Таб. №</th>
+                    <th scope="col">Профессия</th>
+                    <th scope="col">ФИО</th>
+                    <th scope="col">Уч</th>
+                    <th scope="col">К-во выраб. нормо-ч.</th>
+                    <th scope="col">К-во выр. нормо-ч. отк. тех</th>
+                    <th scope="col">К-во выр. нормо-ч. вых. д.</th>
+                    <th scope="col">К-во выр. нормо-ч. всего</th>
+                    <th scope="col">К-во отр.ч. за мес</th>
+                    <th scope="col">К-во отр.ч. вых.д.</th>
+                    <th scope="col">К-во отр.ч. всего</th>
+                    <th scope="col">Проц. выполн норм</th>
+                    <th scope="col">Проц. выполн без 3</th>
+                    <th scope="col">Сдельно по нарядам, руб.</th>
+                    <th scope="col">Доплата по разрешению, руб.</th>
+                    <th scope="col">Сдельно выходного дня</th>
+                    <th scope="col">Всего руб.</th>
+                    <th scope="col">Среднечас. зараб., руб.</th>
+                </tr>
+            </thead>
+            <tbody>
+                
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<script>
+    $('#btnPrint').click(function () {
+        $('#btnPrint').hide();
+        $('#text-back').hide();
+        $('#printTitle').hide();
+        $('#logo').hide();
+        window.print();
+    });
+
+    $(window).on('afterprint', function () {
+        $('#btnPrint').show();
+        $('#text-back').show();
+        $('#printTitle').show();
+        $('#logo').show();
+    });
+</script>

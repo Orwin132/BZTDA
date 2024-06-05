@@ -30,7 +30,7 @@ builder.Services.AddScoped<ICopyDataService, DataCopyServices>();
 
 builder.Services.AddSession(options =>
 {
-    options.IdleTimeout = TimeSpan.FromMinutes(30);
+    options.IdleTimeout = TimeSpan.FromDays(2);
     options.Cookie.HttpOnly = true;
     options.Cookie.IsEssential = true;
 });
@@ -45,8 +45,9 @@ builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationSc
     {
         options.LoginPath = new Microsoft.AspNetCore.Http.PathString("/Account/Login");
         options.AccessDeniedPath = "/Account/AccessDenied";
-        options.Cookie.Name = "Authorization";
-        options.ExpireTimeSpan = TimeSpan.FromDays(1);
+        options.Cookie.Name = "Login";
+        options.Cookie.IsEssential = true;
+        options.ExpireTimeSpan = TimeSpan.FromDays(2);
     });
 
 var app = builder.Build();

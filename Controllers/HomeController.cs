@@ -40,9 +40,11 @@ namespace NardSmena.Controllers
         }
 
         [Authorize(Roles="admin, ceh1, ceh2")]
-        public IActionResult Tabel()
+        public async Task<IActionResult> Tabel()
         {
-            return View();
+            var tabel = await _context.Tabel.ToListAsync();
+
+            return View(tabel);
         }
 
         [Authorize(Roles="admin, ceh1, ceh2")]

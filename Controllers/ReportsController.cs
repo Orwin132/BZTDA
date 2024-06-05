@@ -76,6 +76,22 @@ namespace NardSmena.Controllers
 
             return View(viewModel);
         }
+
+        public async Task<IActionResult> PrintTabel_RV_SZ(string printTitle)
+        {
+            var table = await _context.Tabel.ToListAsync();
+
+            ViewData["PrintTitle"] = printTitle;
+
+            return View();
+        }
+
+        public async Task<IActionResult> Reference_For_BOTiZ_By_Profession(string printTitle)
+        {
+            ViewData["PrintTitle"] = printTitle;
+
+            return View();
+        }
     }
 }
 
